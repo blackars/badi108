@@ -1,0 +1,54 @@
+---
+const amenities = [
+  { name: 'Alberca con Carril de Nado', svg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c1.5-1.5 3.5-1.5 5 0s3.5 1.5 5 0 3.5-1.5 5 0 3.5 1.5 5 0M2 17c1.5-1.5 3.5-1.5 5 0s3.5 1.5 5 0 3.5-1.5 5 0 3.5 1.5 5 0M2 7c1.5-1.5 3.5-1.5 5 0s3.5 1.5 5 0 3.5-1.5 5 0 3.5 1.5 5 0"/></svg>' },
+  { name: 'Gimnasio', svg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6.5 6.5h11M6.5 17.5h11M4 6.5v11M20 6.5v11M2 12h2M20 12h2M7 12h10"/></svg>' },
+  { name: 'Spa & Vapor', svg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M8 4v3M16 4v3M4 10h16v2a8 8 0 01-16 0v-2z"/><path d="M8 18c0 1.1.9 2 2 2s2-.9 2-2M12 18c0 1.1.9 2 2 2s2-.9 2-2"/></svg>' },
+  { name: 'Barbería', svg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="5" r="3"/><path d="M12 8v4M9 12l3 10 3-10"/></svg>' },
+  { name: 'Cancha de Tenis', svg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M18 4c-4 4-4 12 0 16M6 4c4 4 4 12 0 16"/></svg>' },
+  { name: 'Cancha de Pádel', svg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 3v18M3 12h18"/></svg>' },
+  { name: 'Jacuzzi', svg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 16h20v2a4 4 0 01-4 4H6a4 4 0 01-4-4v-2zM6 16V8a2 2 0 012-2h0a2 2 0 012 2v8M14 16V8a2 2 0 012-2h0a2 2 0 012 2v8"/></svg>' },
+  { name: 'Chapoteadero', svg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 14h16v4a4 4 0 01-4 4H8a4 4 0 01-4-4v-4zM8 14V6M12 14V4M16 14V8"/></svg>' },
+  { name: 'Fogatero', svg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2c0 4-4 6-4 10a4 4 0 008 0c0-4-4-6-4-10z"/><path d="M12 18a2 2 0 002-2c0-2-2-3-2-5-0 2-2 3-2 5a2 2 0 002 2z"/></svg>' },
+  { name: 'Áreas Verdes', svg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22V8M12 8c-3-4-7-4-7-1 0 4 3 6 7 1zM12 8c3-4 7-4 7-1 0 4-3 6-7 1z"/></svg>' },
+  { name: 'Mirador', svg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12s4-8 10-8 10 8 10 8-4 8-10 8-10-8-10-8z"/><circle cx="12" cy="12" r="3"/></svg>' },
+  { name: 'Casa Club', svg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V10"/></svg>' },
+  { name: 'Plaza Homenaje', svg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>' },
+  { name: 'Andadores', svg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="5" r="2"/><path d="M10 22l2-7 3 3v6M7 12l3-2 2 4"/></svg>' },
+  { name: 'Área de Juegos', svg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="10" r="1"/><circle cx="18" cy="12" r="1"/></svg>' },
+  { name: 'Espacios Comunes', svg: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>' },
+];
+---
+<section id="amenidades" class="py-20 bg-light">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-14 fade-in">
+      <p class="text-gold text-sm tracking-[0.2em] uppercase mb-3">Lo Que Te Espera</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Nuestras Amenidades</h2>
+      <div class="w-14 h-0.5 bg-gold mx-auto mb-6"></div>
+      <p class="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">
+        La Serena es un homenaje al pintoresco pueblo mágico de San Miguel de Allende. Honra su belleza en cada espacio, buscando que vivas una experiencia sin igual.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {amenities.map((amenity) => (
+        <div class="fade-in bg-white p-5 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 text-center group cursor-pointer hover:-translate-y-1 border border-gray-100">
+          <div class="w-10 h-10 mx-auto mb-3 text-primary group-hover:text-gold transition-colors" set:html={amenity.svg} />
+          <p class="text-xs text-dark font-medium leading-tight">{amenity.name}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-14 fade-in">
+      <div class="relative rounded-xl overflow-hidden shadow-xl">
+        <img src="/images/amenidades-spa.jpg" alt="Amenidades La Serena" class="w-full h-64 md:h-80 object-cover" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent flex items-center">
+          <div class="p-6 md:p-10">
+            <p class="text-gold text-xs tracking-[0.2em] uppercase mb-2">Experiencia Única</p>
+            <h3 class="text-2xl md:text-3xl font-bold text-white mb-3">Acabados de Primer Nivel</h3>
+            <p class="text-white/80 max-w-md text-sm">Espacios diseñados con los más altos estándares de calidad y confort.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

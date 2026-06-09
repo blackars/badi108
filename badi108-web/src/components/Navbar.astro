@@ -1,0 +1,67 @@
+---
+---
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+  <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2.5">
+      <div class="w-10 h-10 rounded-full border-2 border-gold flex items-center justify-center bg-white">
+        <svg class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 3L2 12h3v9h6v-6h2v6h6v-9h3L12 3z"/>
+        </svg>
+      </div>
+      <div class="text-white">
+        <span class="text-[9px] tracking-widest block font-light">Real Estate</span>
+        <span class="text-sm font-bold tracking-wider">BADI 108</span>
+      </div>
+    </a>
+    <div class="hidden md:flex items-center gap-6">
+      <a href="#inicio" class="text-white/70 hover:text-gold transition-colors text-xs tracking-wide">Inicio</a>
+      <a href="#proyecto" class="text-white/70 hover:text-gold transition-colors text-xs tracking-wide">La Serena</a>
+      <a href="#tipologias" class="text-white/70 hover:text-gold transition-colors text-xs tracking-wide">Tipologías</a>
+      <a href="#amenidades" class="text-white/70 hover:text-gold transition-colors text-xs tracking-wide">Amenidades</a>
+      <a href="#contacto" class="text-white/70 hover:text-gold transition-colors text-xs tracking-wide">Contacto</a>
+      <a href="#contacto" class="bg-gold hover:bg-gold-dark text-white px-4 py-1.5 rounded text-xs tracking-wide transition-colors">
+        Agenda tu Visita
+      </a>
+    </div>
+    <button id="mobile-menu-btn" class="md:hidden text-white">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-primary/95 backdrop-blur-sm">
+    <div class="px-6 py-3 flex flex-col gap-3">
+      <a href="#inicio" class="text-white/70 hover:text-gold transition-colors text-xs">Inicio</a>
+      <a href="#proyecto" class="text-white/70 hover:text-gold transition-colors text-xs">La Serena</a>
+      <a href="#tipologias" class="text-white/70 hover:text-gold transition-colors text-xs">Tipologías</a>
+      <a href="#amenidades" class="text-white/70 hover:text-gold transition-colors text-xs">Amenidades</a>
+      <a href="#contacto" class="text-white/70 hover:text-gold transition-colors text-xs">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      navbar?.classList.add('bg-primary', 'shadow-lg');
+      navbar?.classList.remove('bg-transparent');
+    } else {
+      navbar?.classList.remove('bg-primary', 'shadow-lg');
+      navbar?.classList.add('bg-transparent');
+    }
+  });
+
+  mobileBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden');
+    });
+  });
+</script>

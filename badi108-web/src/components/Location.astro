@@ -1,0 +1,53 @@
+---
+const landmarks = [
+  'Centro Histórico',
+  'El Mirador',
+  'Museo Casa Allende',
+  'Centro Cultural La Aurora',
+  'Mercado de Artesanías',
+  'Teatro Ángela Peralta',
+  'Centro Cultural Ignacio Ramírez',
+  'Club de Golf Malanquín',
+];
+---
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="fade-in">
+        <p class="text-gold text-sm tracking-[0.2em] uppercase mb-3">Ubicación Privilegiada</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">A 5 Minutos del Centro Histórico</h2>
+        <div class="w-14 h-0.5 bg-gold mb-6"></div>
+        <p class="text-gray-500 mb-4 text-sm">
+          Carretera San Miguel - Celaya 41, Fracc. Villa de Los Frailes, 37790, San Miguel de Allende, Gto.
+        </p>
+        <div class="grid grid-cols-2 gap-2 mb-6">
+          {landmarks.map((landmark) => (
+            <div class="flex items-center gap-2 text-xs text-gray-500">
+              <svg class="w-3.5 h-3.5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+              {landmark}
+            </div>
+          ))}
+        </div>
+        <a href="https://maps.google.com" target="_blank" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded text-xs tracking-wide transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          Ver en Google Maps
+        </a>
+      </div>
+      <div class="fade-in">
+        <div class="relative rounded-xl overflow-hidden shadow-xl">
+          <img src="/images/ubicacion.jpg" alt="Ubicación La Serena" class="w-full h-[400px] object-cover" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end">
+            <div class="p-6">
+              <div class="bg-gold inline-block px-3 py-1.5 rounded text-white text-xs font-bold tracking-wider">
+                LA SERENA RESIDENCIAL
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

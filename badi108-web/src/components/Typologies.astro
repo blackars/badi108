@@ -4,28 +4,28 @@ const typologies = [
     name: 'UMARÁN',
     type: 'Casa',
     area: '167.41 m²',
-    image: '/images/proto-1.jpg',
+    image: `${import.meta.env.BASE_URL}/images/proto-1.jpg`,
     specs: ['Sala Comedor', 'Cocina', 'Terraza', 'Lavado'],
   },
   {
     name: 'STO. DOMINGO',
     type: 'Pent House',
     area: '226.63 m²',
-    image: '/images/proto-2.jpg',
+    image: `${import.meta.env.BASE_URL}/images/proto-2.jpg`,
     specs: ['4 Recámaras', '4 Baños', 'Roof Garden', 'Terraza'],
   },
   {
     name: 'SAN FRANCISCO',
     type: 'Departamento',
     area: '142.80 m²',
-    image: '/images/proto-3.jpg',
+    image: `${import.meta.env.BASE_URL}/images/proto-3.jpg`,
     specs: ['3 Recámaras', '3 Baños', 'Balcón', 'Estac.'],
   },
   {
     name: 'LA CONCHA',
     type: 'Casa',
     area: '198.50 m²',
-    image: '/images/proto-4.jpg',
+    image: `${import.meta.env.BASE_URL}/images/proto-4.jpg`,
     specs: ['3 Recámaras', '3.5 Baños', 'Jardín', 'Terraza'],
   },
 ];
@@ -65,7 +65,7 @@ const typologies = [
 
     <div class="mt-14 fade-in">
       <div class="relative rounded-xl overflow-hidden">
-        <img src="/images/prototipos.jpg" alt="Interiores La Serena" class="w-full h-64 md:h-80 object-cover" loading="lazy" />
+        <img src={`${import.meta.env.BASE_URL}/images/prototipos.jpg`} alt="Interiores La Serena" class="w-full h-64 md:h-80 object-cover" loading="lazy" />
         <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent flex items-end">
           <div class="p-6 md:p-10">
             <p class="text-gold text-xs tracking-[0.2em] uppercase mb-2">Arquitectura Colonial</p>

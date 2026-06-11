@@ -1,27 +1,6 @@
-# Dependencies
-node_modules/
-.pnpm-store/
-
-# Build output
-dist/
-.build/
-
-# Astro cache
-.astro/
-
-# Environment
-.env
-.env.local
-.env.production
-
 # OS
 .DS_Store
 Thumbs.db
 
-# IDE
-.vscode/
-.idea/
-
-# Temp
-*.tmp
-*.log
+# Locked directory
+badi108-web/

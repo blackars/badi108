@@ -1,79 +1,149 @@
 ---
-const typologies = [
+import PropertyGallery from './PropertyGallery.astro';
+import fs from 'fs';
+import path from 'path';
+
+const IMAGE_BASE = path.join(process.cwd(), 'public', 'images', 'propiedades');
+const URL_BASE = `${import.meta.env.BASE_URL}/images/propiedades`;
+
+function getImages(folder) {
+  const dir = path.join(IMAGE_BASE, folder);
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir)
+    .filter(f => /\.(jpg|jpeg|png|webp)$/i.test(f))
+    .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+}
+
+const properties = [
   {
-    name: 'UMARÁN',
-    type: 'Casa',
-    area: '167.41 m²',
-    image: `${import.meta.env.BASE_URL}/images/proto-1.jpg`,
-    specs: ['Sala Comedor', 'Cocina', 'Terraza', 'Lavado'],
-  },
-  {
-    name: 'STO. DOMINGO',
-    type: 'Pent House',
-    area: '226.63 m²',
-    image: `${import.meta.env.BASE_URL}/images/proto-2.jpg`,
-    specs: ['4 Recámaras', '4 Baños', 'Roof Garden', 'Terraza'],
-  },
-  {
-    name: 'SAN FRANCISCO',
+    id: 'aldama',
+    name: 'ALDAMA',
+    location: 'Hidalgo 24-D',
     type: 'Departamento',
-    area: '142.80 m²',
-    image: `${import.meta.env.BASE_URL}/images/proto-3.jpg`,
-    specs: ['3 Recámaras', '3 Baños', 'Balcón', 'Estac.'],
+    price: 'Desde $2,850,000',
+    specs: ['Sala Comedor', 'Cocina', 'Terraza', 'Lavado'],
+    thumb: `${URL_BASE}/aldama/IMAGEN 1.jpeg`,
   },
   {
-    name: 'LA CONCHA',
-    type: 'Casa',
-    area: '198.50 m²',
-    image: `${import.meta.env.BASE_URL}/images/proto-4.jpg`,
-    specs: ['3 Recámaras', '3.5 Baños', 'Jardín', 'Terraza'],
+    id: 'guadiana',
+    name: 'GUADIANA',
+    location: 'Insurgentes 9-A',
+    type: 'Departamento',
+    price: 'Desde $2,650,000',
+    specs: ['3 Recámaras', '2 Baños', 'Balcón', 'Estacionamiento'],
+    thumb: `${URL_BASE}/guadiana/IMAGEN 1.jpeg`,
+  },
+  {
+    id: 'recreo',
+    name: 'RECREO',
+    location: 'Insurgentes 10-D',
+    type: 'Departamento',
+    price: 'Desde $3,150,000',
+    specs: ['Sala Comedor', 'Cocina Integral', 'Roof Garden', 'Lavadero'],
+    thumb: `${URL_BASE}/recreo/00.jpeg`,
+  },
+  {
+    id: 'santo-domingo',
+    name: 'SANTO DOMINGO',
+    location: 'Insurgentes 6-D',
+    type: 'Pent House',
+    price: 'Desde $4,200,000',
+    specs: ['4 Recámaras', '4 Baños', 'Roof Garden', 'Terraza'],
+    thumb: `${URL_BASE}/santo-domingo/IMAGEN 07.jpeg`,
+  },
+  {
+    id: 'zacateros',
+    name: 'ZACATEROS',
+    location: 'Relox 16-D',
+    type: 'Departamento',
+    price: 'Desde $2,950,000',
+    specs: ['3 Recámaras', '3 Baños', 'Balcón', 'Estacionamiento'],
+    thumb: `${URL_BASE}/zacateros/IMAGEN 1.jpeg`,
   },
 ];
+
+const withImages = properties.map(p => ({
+  ...p,
+  images: getImages(p.id),
+}));
+
+const propertyImages = Object.fromEntries(
+  withImages.map(p => [p.id, p.images])
+);
 ---
-<section id="tipologias" class="py-20 bg-dark">
+
+<section id="propiedades" class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-6">
     <div class="text-center mb-14 fade-in">
-      <p class="text-gold text-sm tracking-[0.2em] uppercase mb-3">Diseñados para Ti</p>
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Nuestros Prototipos</h2>
+      <p class="text-gold text-sm tracking-[0.2em] uppercase mb-3">Oferta Inmobiliaria</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Propiedades Disponibles</h2>
       <div class="w-14 h-0.5 bg-gold mx-auto mb-6"></div>
-      <p class="text-gray-400 max-w-xl mx-auto text-sm leading-relaxed">
-        Detrás de la artesanía que tiene cada puerta, descubrirás prototipos diseñados minuciosamente para que tú y tu familia reciban la comodidad que se merecen.
+      <p class="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">
+        Descubre nuestra selección de propiedades en San Miguel de Allende. Cada espacio ha sido diseñado para ofrecerte el confort y la calidad que mereces.
       </p>
     </div>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      {typologies.map((typo) => (
-        <div class="fade-in card-hover bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 group">
-          <div class="relative h-52 overflow-hidden">
-            <img src={typo.image} alt={typo.name} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
-            <div class="absolute top-3 right-3 bg-gold text-white text-[10px] px-2.5 py-1 rounded-full font-semibold uppercase tracking-wider">
-              {typo.type}
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {withImages.map((prop) => (
+        <div class="fade-in group cursor-pointer" data-property={prop.id}>
+          <div class="relative h-64 overflow-hidden border border-gray-200">
+            <img
+              src={prop.thumb}
+              alt={prop.name}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            />
+            <div class="absolute top-3 left-3 bg-gold text-white text-[10px] px-3 py-1 font-semibold uppercase tracking-wider">
+              {prop.type}
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+              <span class="text-white text-xs tracking-widest uppercase border border-white/40 px-4 py-2">
+                Ver Galería
+              </span>
             </div>
           </div>
-          <div class="p-5">
-            <h3 class="text-lg font-bold text-white mb-1">{typo.name}</h3>
-            <p class="text-gold text-xl font-bold mb-3">{typo.area}</p>
-            <div class="flex flex-wrap gap-1.5">
-              {typo.specs.map((spec) => (
-                <span class="text-[10px] bg-white/10 text-white/60 px-2 py-0.5 rounded-full">{spec}</span>
+          <div class="py-4 border-b border-gray-100">
+            <div class="flex items-start justify-between mb-1">
+              <h3 class="text-lg font-bold text-dark">{prop.name}</h3>
+              <span class="text-gold text-sm font-bold">{prop.price}</span>
+            </div>
+            <p class="text-gray-400 text-xs mb-3">{prop.location}</p>
+            <div class="flex flex-wrap gap-2">
+              {prop.specs.map((spec) => (
+                <span class="text-[10px] bg-gray-100 text-gray-500 px-2 py-0.5">{spec}</span>
               ))}
             </div>
           </div>
         </div>
       ))}
     </div>
-
-    <div class="mt-14 fade-in">
-      <div class="relative rounded-xl overflow-hidden">
-        <img src={`${import.meta.env.BASE_URL}/images/prototipos.jpg`} alt="Interiores La Serena" class="w-full h-64 md:h-80 object-cover" loading="lazy" />
-        <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent flex items-end">
-          <div class="p-6 md:p-10">
-            <p class="text-gold text-xs tracking-[0.2em] uppercase mb-2">Arquitectura Colonial</p>
-            <h3 class="text-2xl md:text-3xl font-bold text-white mb-3">Encanto y Confort</h3>
-            <p class="text-white/70 max-w-lg text-sm">Enamórate de la arquitectura colonial que expone cada uno de los rincones de La Serena.</p>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
+
+{withImages.map((prop) => (
+  <PropertyGallery propertyId={prop.id} />
+))}
+
+<script define:vars={{ propertyImages }}>
+  const galleries = {};
+
+  function initGallery(id, images) {
+    if (!galleries[id]) {
+      galleries[id] = new window.Gallery(id, images);
+    }
+  }
+
+  Object.entries(propertyImages).forEach(([id, images]) => {
+    if (images && images.length > 0) {
+      initGallery(id, images);
+    }
+  });
+
+  document.querySelectorAll('[data-property]').forEach(card => {
+    const id = card.dataset.property;
+    card.addEventListener('click', () => {
+      const gallery = galleries[id];
+      if (gallery) gallery.show(0);
+    });
+  });
+</script>

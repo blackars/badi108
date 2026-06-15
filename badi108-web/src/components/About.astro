@@ -1,38 +1,83 @@
-<section id="proyecto" class="py-20 bg-white">
+---
+const base = import.meta.env.BASE_URL;
+---
+<section class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-6">
-    <div class="grid md:grid-cols-2 gap-12 items-center">
-      <div class="fade-in">
-        <p class="text-gold text-sm tracking-[0.2em] uppercase mb-3">Quiénes Somos</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4 leading-tight">
-          BADI 108<br/>Real Estate
-        </h2>
+    <div class="text-center mb-14 fade-in">
+      <p class="text-gold text-sm tracking-[0.2em] uppercase mb-3">¿Por Qué BADI 108?</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Tu Mejor Inversión Inmobiliaria</h2>
+      <div class="w-14 h-0.5 bg-gold mx-auto mb-6"></div>
+      <p class="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed">
+        En BADI 108 nos dedicamos a la compra, venta y desarrollo de propiedades residenciales en los mercados más exclusivos de México. Con presencia en San Miguel de Allende y la Ciudad de México, ofrecemos soluciones inmobiliarias que se adaptan a tus necesidades.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 mb-14">
+      <div class="fade-in text-center p-6 border border-gray-200">
+        <div class="w-12 h-12 bg-primary mx-auto mb-4 flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+        </div>
+        <h3 class="text-sm font-bold text-dark mb-2">Confianza y Transparencia</h3>
+        <p class="text-gray-400 text-xs leading-relaxed">
+          Cada operación inmobiliaria se realiza con total transparencia, brindándote la certeza jurídica y la tranquilidad que mereces.
+        </p>
+      </div>
+
+      <div class="fade-in text-center p-6 border border-gray-200">
+        <div class="w-12 h-12 bg-primary mx-auto mb-4 flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-sm font-bold text-dark mb-2">Cobertura Nacional</h3>
+        <p class="text-gray-400 text-xs leading-relaxed">
+          Operamos en San Miguel de Allende y la Ciudad de México, dos de los mercados con mayor plusvalía y calidad de vida del país.
+        </p>
+      </div>
+
+      <div class="fade-in text-center p-6 border border-gray-200">
+        <div class="w-12 h-12 bg-primary mx-auto mb-4 flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <h3 class="text-sm font-bold text-dark mb-2">Asesoría Integral</h3>
+        <p class="text-gray-400 text-xs leading-relaxed">
+          Te acompañamos en todo el proceso, desde la búsqueda hasta la firma, con un equipo de expertos en el sector inmobiliario.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12 items-center fade-in">
+      <div>
+        <img src={`${base}/images/san-miguel-church.jpg`} alt="San Miguel de Allende" class="w-full max-h-[450px] object-cover" loading="lazy" />
+      </div>
+      <div>
+        <p class="text-gold text-sm tracking-[0.2em] uppercase mb-3">Nuestra Experiencia</p>
+        <h3 class="text-2xl md:text-3xl font-bold text-dark mb-4">San Miguel de Allende y CDMX</h3>
         <div class="w-14 h-0.5 bg-gold mb-6"></div>
-        <p class="text-gray-500 leading-relaxed mb-4 text-sm">
-          En BADI 108 nos especializamos en el desarrollo y comercialización de propiedades residenciales de alta plusvalía en San Miguel de Allende, Guanajuato. Con un profundo respeto por la arquitectura colonial y las tradiciones locales, creamos espacios que combinan lujo, confort y autenticidad.
+        <p class="text-gray-500 text-sm leading-relaxed mb-4">
+          San Miguel de Allende, nombrada la mejor ciudad del mundo en 2021 por Travel+Leisure, es el corazón de nuestras operaciones. Patrimonio de la Humanidad, ofrece un estilo de vida incomparable.
         </p>
-        <p class="text-gray-500 leading-relaxed mb-6 text-sm">
-          Nuestro compromiso es ofrecerte no solo una propiedad, sino un hogar que refleje la magia de este destino patrimonial. Cada proyecto es cuidadosamente diseñado para integrarse armónicamente con el entorno, brindando una experiencia de vida única.
+        <p class="text-gray-500 text-sm leading-relaxed mb-6">
+          En la Ciudad de México, trabajamos con las mejores zonas residenciales, brindando opciones de inversión en uno de los mercados más dinámicos de Latinoamérica. Ya sea que busques una casa de descanso, una inversión o tu hogar permanente, tenemos la propiedad ideal para ti.
         </p>
-        <div class="grid grid-cols-3 gap-4">
-          <div class="text-center p-4 bg-light border border-gray-100">
+        <div class="flex flex-wrap gap-4">
+          <div class="text-center p-4 border border-gray-200 min-w-[100px]">
             <span class="text-2xl font-bold text-primary block">+5</span>
             <span class="text-xs text-gray-400">Años de Experiencia</span>
           </div>
-          <div class="text-center p-4 bg-light border border-gray-100">
-            <span class="text-2xl font-bold text-primary block">85%</span>
+          <div class="text-center p-4 border border-gray-200 min-w-[100px]">
+            <span class="text-2xl font-bold text-primary block">+50</span>
             <span class="text-xs text-gray-400">Propiedades Entregadas</span>
           </div>
-          <div class="text-center p-4 bg-light border border-gray-100">
-            <span class="text-2xl font-bold text-primary block">100%</span>
-            <span class="text-xs text-gray-400">Clientes Satisfechos</span>
+          <div class="text-center p-4 border border-gray-200 min-w-[100px]">
+            <span class="text-2xl font-bold text-primary block">2</span>
+            <span class="text-xs text-gray-400">Plazas</span>
           </div>
-        </div>
-      </div>
-      <div class="fade-in relative">
-        <img src={`${import.meta.env.BASE_URL}/images/san-miguel-church.jpg`} alt="Parroquia San Miguel" class="w-full max-h-[500px] object-cover" loading="lazy" />
-        <div class="absolute -bottom-4 -left-4 bg-primary text-white p-5">
-          <p class="text-[10px] tracking-widest font-light uppercase">Patrimonio de la</p>
-          <p class="text-base font-bold">Humanidad</p>
         </div>
       </div>
     </div>

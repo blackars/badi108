@@ -1,16 +1,19 @@
+---
+const base = import.meta.env.BASE_URL;
+---
 <footer class="bg-dark text-white py-14">
   <div class="max-w-7xl mx-auto px-6">
     <div class="grid md:grid-cols-4 gap-10 mb-10">
       <div class="md:col-span-2">
         <div class="flex items-center gap-3 mb-5">
-          <img src={`${import.meta.env.BASE_URL}/images/logo-badi108.png`} alt="BADI 108" class="h-12 w-auto" />
+          <img src={`${base}/images/logo-badi108.png`} alt="BADI 108" class="h-12 w-auto" />
           <div>
             <span class="text-[10px] tracking-widest block font-light text-white/50">Real Estate</span>
             <span class="text-lg font-bold tracking-wider">BADI 108</span>
           </div>
         </div>
         <p class="text-white/50 max-w-sm text-xs leading-relaxed mb-5">
-          Empresa dedicada al desarrollo y comercialización de propiedades residenciales de alta plusvalía en San Miguel de Allende, Guanajuato.
+          Empresa dedicada al desarrollo y comercialización de propiedades residenciales de alta plusvalía en San Miguel de Allende y la Ciudad de México.
         </p>
         <div class="flex gap-3">
           <a href="#" class="w-9 h-9 bg-white/10 hover:bg-gold flex items-center justify-center transition-colors">
@@ -28,11 +31,10 @@
       <div>
         <h4 class="text-sm font-bold mb-4">Navegación</h4>
         <ul class="space-y-2">
-          <li><a href="#inicio" class="text-white/50 hover:text-gold transition-colors text-xs">Inicio</a></li>
-          <li><a href="#proyecto" class="text-white/50 hover:text-gold transition-colors text-xs">Nosotros</a></li>
-          <li><a href="#propiedades" class="text-white/50 hover:text-gold transition-colors text-xs">Propiedades</a></li>
-          <li><a href="#amenidades" class="text-white/50 hover:text-gold transition-colors text-xs">Amenidades</a></li>
-          <li><a href="#contacto" class="text-white/50 hover:text-gold transition-colors text-xs">Contacto</a></li>
+          <li><a href={base + '/'} class="text-white/50 hover:text-gold transition-colors text-xs">Inicio</a></li>
+          <li><a href={base + '/nosotros'} class="text-white/50 hover:text-gold transition-colors text-xs">Nosotros</a></li>
+          <li><a href={base + '/propiedades'} class="text-white/50 hover:text-gold transition-colors text-xs">Propiedades</a></li>
+          <li><a href={base + '/#contacto'} class="text-white/50 hover:text-gold transition-colors text-xs">Contacto</a></li>
         </ul>
       </div>
 
@@ -64,7 +66,7 @@
 
     <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3">
       <p class="text-white/30 text-[11px]">© 2024 Real Estate BADI 108. Todos los derechos reservados.</p>
-      <p class="text-white/30 text-[11px]">San Miguel de Allende, Guanajuato</p>
+      <p class="text-white/30 text-[11px]">San Miguel de Allende · Ciudad de México</p>
     </div>
   </div>
 </footer>

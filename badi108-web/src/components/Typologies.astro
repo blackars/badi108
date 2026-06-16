@@ -1,18 +1,6 @@
 ---
-import PropertyGallery from './PropertyGallery.astro';
-import fs from 'fs';
-import path from 'path';
-
-const IMAGE_BASE = path.join(process.cwd(), 'public', 'images', 'propiedades');
 const URL_BASE = `${import.meta.env.BASE_URL}/images/propiedades`;
-
-function getImages(folder) {
-  const dir = path.join(IMAGE_BASE, folder);
-  if (!fs.existsSync(dir)) return [];
-  return fs.readdirSync(dir)
-    .filter(f => /\.(jpg|jpeg|png|webp)$/i.test(f))
-    .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
-}
+const PAGE_BASE = `${import.meta.env.BASE_URL}/propiedades/la-serena`;
 
 const properties = [
   {
@@ -61,15 +49,6 @@ const properties = [
     thumb: `${URL_BASE}/zacateros/IMAGEN 1.jpeg`,
   },
 ];
-
-const withImages = properties.map(p => ({
-  ...p,
-  images: getImages(p.id),
-}));
-
-const propertyImages = Object.fromEntries(
-  withImages.map(p => [p.id, p.images])
-);
 ---
 
 <section id="propiedades" class="py-20 bg-white">
@@ -84,9 +63,9 @@ const propertyImages = Object.fromEntries(
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {withImages.map((prop) => (
-        <div class="fade-in group cursor-pointer" data-property={prop.id}>
-          <div class="relative h-64 overflow-hidden border border-gray-200">
+      {properties.map((prop) => (
+        <div class="fade-in group">
+          <a href={`${PAGE_BASE}/${prop.id}`} class="block relative h-64 overflow-hidden border border-gray-200">
             <img
               src={prop.thumb}
               alt={prop.name}
@@ -101,7 +80,7 @@ const propertyImages = Object.fromEntries(
                 Ver Galería
               </span>
             </div>
-          </div>
+          </a>
           <div class="py-4 border-b border-gray-100">
             <div class="flex items-start justify-between mb-1">
               <h3 class="text-lg font-bold text-dark">{prop.name}</h3>
@@ -121,30 +100,3 @@ const propertyImages = Object.fromEntries(
 </section>
 
 
-{withImages.map((prop) => (
-  <PropertyGallery propertyId={prop.id} name={prop.name} location={prop.location} type={prop.type} price={prop.price} specs={prop.specs} />
-))}
-
-<script define:vars={{ propertyImages }}>
-  const galleries = {};
-
-  function initGallery(id, images) {
-    if (!galleries[id]) {
-      galleries[id] = new window.Gallery(id, images);
-    }
-  }
-
-  Object.entries(propertyImages).forEach(([id, images]) => {
-    if (images && images.length > 0) {
-      initGallery(id, images);
-    }
-  });
-
-  document.querySelectorAll('[data-property]').forEach(card => {
-    const id = card.dataset.property;
-    card.addEventListener('click', () => {
-      const gallery = galleries[id];
-      if (gallery) gallery.show(0);
-    });
-  });
-</script>

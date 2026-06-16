@@ -1,42 +1,77 @@
 ---
 export interface Props {
   propertyId: string;
+  name: string;
+  location: string;
+  type: string;
+  price: string;
+  specs: string[];
 }
 
-const { propertyId } = Astro.props;
-
+const { propertyId, name, location, type, price, specs } = Astro.props;
 const BASE = `${import.meta.env.BASE_URL}/images/propiedades/${propertyId}`;
 ---
 
-<div id={`gallery-${propertyId}`} class="gallery-modal fixed inset-0 z-[100] bg-black/95 hidden items-center justify-center">
-  <button class="gallery-close absolute top-4 right-4 z-10 w-10 h-10 bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors">
-    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-    </svg>
-  </button>
+<div id={`gallery-${propertyId}`} class="gallery-modal fixed inset-0 z-[100] bg-black/80 hidden items-center justify-center p-4">
+  <div class="relative bg-white w-full max-w-5xl max-h-[90vh] flex flex-col overflow-hidden animate-fade-in">
 
-  <button class="gallery-prev absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors">
-    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-    </svg>
-  </button>
+    <button class="gallery-close absolute top-3 right-3 z-20 w-8 h-8 bg-black/20 hover:bg-black/40 text-white flex items-center justify-center transition-colors rounded-full">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
 
-  <button class="gallery-next absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors">
-    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-    </svg>
-  </button>
+    <div class="relative flex-1 bg-black flex items-center justify-center min-h-0">
+      <button class="gallery-prev absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/10 hover:bg-white/25 text-white flex items-center justify-center transition-colors rounded-full">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+      </button>
 
-  <div class="gallery-counter absolute bottom-6 left-1/2 -translate-x-1/2 z-10 text-white/60 text-xs tracking-wider"></div>
+      <button class="gallery-next absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/10 hover:bg-white/25 text-white flex items-center justify-center transition-colors rounded-full">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
 
-  <div class="gallery-image-container w-full h-full flex items-center justify-center p-4">
-    <img class="gallery-image max-w-full max-h-full object-contain select-none" alt="" />
+      <div class="gallery-counter absolute top-3 left-3 z-10 bg-black/40 text-white text-xs px-2 py-1 rounded"></div>
+
+      <div class="w-full h-full flex items-center justify-center p-8">
+        <img class="gallery-image max-w-full max-h-full object-contain select-none" alt="" />
+      </div>
+    </div>
+
+    <div class="bg-white px-6 py-4 border-t border-gray-200">
+      <div class="flex items-start justify-between mb-1">
+        <div>
+          <span class="text-[10px] bg-gold text-white px-2 py-0.5 font-semibold uppercase tracking-wider mr-2">{type}</span>
+          <h3 class="inline text-lg font-bold text-dark">{name}</h3>
+        </div>
+        <span class="text-gold text-sm font-bold whitespace-nowrap ml-4">{price}</span>
+      </div>
+      <p class="text-gray-400 text-xs mb-2">{location}</p>
+      <div class="flex flex-wrap gap-2">
+        {specs.map((spec) => (
+          <span class="text-[10px] bg-gray-100 text-gray-500 px-2 py-0.5">{spec}</span>
+        ))}
+      </div>
+    </div>
   </div>
 </div>
 
+<style>
+  .animate-fade-in {
+    animation: fadeIn 0.2s ease-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+</style>
+
 <script>
   class Gallery {
-    constructor(propertyId, images) {
+    constructor(propertyId, images, options = {}) {
       this.id = propertyId;
       this.images = images;
       this.current = 0;

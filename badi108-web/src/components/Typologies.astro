@@ -122,7 +122,7 @@ const propertyImages = Object.fromEntries(
 
 
 {withImages.map((prop) => (
-  <PropertyGallery propertyId={prop.id} />
+  <PropertyGallery propertyId={prop.id} name={prop.name} location={prop.location} type={prop.type} price={prop.price} specs={prop.specs} />
 ))}
 
 <script define:vars={{ propertyImages }}>

@@ -1,0 +1,88 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Propiedades | BADI 108 Real Estate">
+  <Navbar />
+  <main>
+    <section class="relative h-[40vh] min-h-[300px] overflow-hidden">
+      <div class="absolute inset-0">
+        <img src={`${base}/images/hero-plaza.webp`} alt="Propiedades" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-b from-primary/80 to-primary/90"></div>
+      </div>
+      <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
+        <p class="text-gold text-xs tracking-[0.3em] uppercase mb-3 font-light">Nuestros Proyectos</p>
+        <h1 class="text-4xl md:text-6xl font-bold text-white">Propiedades</h1>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-14 fade-in">
+          <p class="text-gold text-sm tracking-[0.2em] uppercase mb-3">Oferta Inmobiliaria</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Proyectos Disponibles</h2>
+          <div class="w-14 h-0.5 bg-gold mx-auto mb-6"></div>
+          <p class="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">
+            Conoce nuestros proyectos residenciales en San Miguel de Allende. Cada desarrollo es cuidadosamente planeado para ofrecerte la mejor calidad de vida.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <a href={base + '/propiedades/la-serena'} class="fade-in group block border border-gray-200 hover:border-primary transition-colors">
+            <div class="relative h-64 overflow-hidden">
+              <img src={`${base}/images/prototipos.webp`} alt="La Serena Residencial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+              <div class="absolute top-3 left-3 bg-gold text-white text-[10px] px-3 py-1 font-semibold uppercase tracking-wider">
+                Disponible
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-dark/70 via-transparent to-transparent"></div>
+              <div class="absolute bottom-4 left-4">
+                <h3 class="text-xl font-bold text-white">La Serena Residencial</h3>
+                <p class="text-white/60 text-xs">San Miguel de Allende, Gto.</p>
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs text-gray-400">Departamentos · Casas · Penthouse</span>
+                <span class="text-primary text-xs font-bold tracking-wider">Ver Proyecto →</span>
+              </div>
+              <div class="flex gap-2">
+                <span class="text-[10px] bg-gray-100 text-gray-500 px-2 py-0.5">5 Tipologías</span>
+                <span class="text-[10px] bg-gray-100 text-gray-500 px-2 py-0.5">Amenidades</span>
+                <span class="text-[10px] bg-gray-100 text-gray-500 px-2 py-0.5">A 5 min Centro</span>
+              </div>
+            </div>
+          </a>
+
+          <a href={base + '/propiedades/la-condesa'} class="fade-in group block border border-gray-200 hover:border-primary transition-colors">
+            <div class="relative h-64 overflow-hidden">
+              <img src={`${base}/images/propiedades/la-condesa/hd/La-Condesa-Para-Disfrutar-imagen-1.webp`} alt="Privadas La Condesa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+              <div class="absolute top-3 left-3 bg-gold text-white text-[10px] px-3 py-1 font-semibold uppercase tracking-wider">
+                Disponible
+              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-dark/70 via-transparent to-transparent"></div>
+              <div class="absolute bottom-4 left-4">
+                <h3 class="text-xl font-bold text-white">Privadas La Condesa</h3>
+                <p class="text-white/60 text-xs">San Miguel de Allende, Gto.</p>
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs text-gray-400">Casas · Terrenos</span>
+                <span class="text-primary text-xs font-bold tracking-wider">Ver Proyecto →</span>
+              </div>
+              <div class="flex gap-2">
+                <span class="text-[10px] bg-gray-100 text-gray-500 px-2 py-0.5">8 Modelos</span>
+                <span class="text-[10px] bg-gray-100 text-gray-500 px-2 py-0.5">Amenidades</span>
+                <span class="text-[10px] bg-gray-100 text-gray-500 px-2 py-0.5">A 8 min Centro</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

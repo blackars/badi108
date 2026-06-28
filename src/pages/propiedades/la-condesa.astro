@@ -1,0 +1,89 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import TypologiesLaCondesa from '../../components/TypologiesLaCondesa.astro';
+import Footer from '../../components/Footer.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Privadas La Condesa | BADI 108 Real Estate" theme="la-condesa">
+  <Navbar />
+  <main>
+    <section class="relative h-[50vh] min-h-[350px] overflow-hidden">
+      <div class="absolute inset-0">
+        <img src={`${base}/images/propiedades/la-condesa/hd/La-Condesa-Para-Disfrutar-imagen-horizontal.webp`} alt="Privadas La Condesa" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-b from-primary/80 to-primary/90"></div>
+      </div>
+      <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
+        <p class="text-gold text-xs tracking-[0.3em] uppercase mb-3 font-light">San Miguel de Allende, Guanajuato</p>
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-3">Privadas La Condesa</h1>
+        <p class="text-white/70 text-sm max-w-lg">Exclusivas residencias en privada con amenidades de primer nivel, a un lado del Club de Golf Malanquín</p>
+      </div>
+    </section>
+
+    <section class="py-14 bg-white border-b border-gray-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="fade-in">
+            <p class="text-gold text-sm tracking-[0.2em] uppercase mb-3">Sobre el Proyecto</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4 leading-tight">
+              Vive en la Mejor<br/>Ciudad del Mundo
+            </h2>
+            <div class="w-14 h-0.5 bg-gold mb-6"></div>
+            <p class="text-gray-500 leading-relaxed mb-4 text-sm">
+              Privadas La Condesa te espera en San Miguel de Allende, nombrada por tercer año consecutivo como la mejor ciudad del mundo. Con una ubicación privilegiada a un lado del Club de Golf Malanquín, vistas espectaculares a la presa y a solo 8 minutos del centro de San Miguel.
+            </p>
+            <p class="text-gray-500 leading-relaxed mb-6 text-sm">
+              Casas de dos, tres y cuatro recámaras con espacios diseñados para que disfrutes: amplias terrazas exteriores a nivel del jardín, sala-comedor con doble altura, cocinas equipadas, Roof Gardens, fachadas con detalles en piedra natural y cantera, y cocheras techadas para 2 y 3 autos.
+            </p>
+            <div class="grid grid-cols-2 gap-4 max-w-sm">
+              <div class="text-center p-4 border border-gray-100">
+                <span class="text-2xl font-bold text-primary block">8</span>
+                <span class="text-xs text-gray-400">Minutos del Centro</span>
+              </div>
+              <div class="text-center p-4 border border-gray-100">
+                <span class="text-2xl font-bold text-primary block">3.2</span>
+                <span class="text-xs text-gray-400">Ha de Áreas Verdes</span>
+              </div>
+            </div>
+          </div>
+          <div class="fade-in">
+            <img src={`${base}/images/propiedades/la-condesa/hd/La-Condesa-Para-Disfrutar-imagen-1.webp`} alt="Privadas La Condesa" class="w-full max-h-[450px] object-cover" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <TypologiesLaCondesa />
+
+    <section class="py-14 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="fade-in order-2 md:order-1">
+            <div class="overflow-hidden">
+              <img src={`${base}/images/propiedades/la-condesa/parque-central/IMG_20250831_113753558_HDR.webp`} alt="Ubicación Privadas La Condesa" class="w-full h-[350px] object-cover" loading="lazy" />
+            </div>
+          </div>
+          <div class="fade-in order-1 md:order-2">
+            <p class="text-gold text-sm tracking-[0.2em] uppercase mb-3">Ubicación Privilegiada</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">A un lado del Club de Golf Malanquín</h2>
+            <div class="w-14 h-0.5 bg-gold mb-6"></div>
+            <p class="text-gray-500 text-sm mb-4">
+              Salida a Celaya a un costado del Club de Golf Malanquín, San Miguel de Allende, Gto.
+            </p>
+            <div class="space-y-2 text-sm text-gray-500 mb-6">
+              <p>• 1 minuto de La Comer y City Market</p>
+              <p>• 5 minutos del Instituto Allende</p>
+              <p>• 8 minutos del Centro de SMA</p>
+              <p>• 10 minutos de Plaza La Luciérnaga</p>
+            </div>
+            <a href="https://maps.google.com/?q=Privadas+La+Condesa+San+Miguel+de+Allende" target="_blank" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-5 py-2.5 text-xs tracking-wide transition-colors">
+              Ver en Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

@@ -1,6 +1,26 @@
-# OS
-.DS_Store
-Thumbs.db
+# build output
+dist/
+# generated types
+.astro/
 
-# Locked directory
-badi108-web/
+# dependencies
+node_modules/
+dist/
+.astro/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/

@@ -1,0 +1,237 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+import fs from 'fs';
+import path from 'path';
+
+const BASE = import.meta.env.BASE_URL;
+
+export async function getStaticPaths() {
+  const IMAGE_BASE = path.join(process.cwd(), 'public', 'images', 'propiedades', 'la-condesa');
+
+  function getImages(folder) {
+    const dir = path.join(IMAGE_BASE, folder);
+    if (!fs.existsSync(dir)) return [];
+    return fs.readdirSync(dir)
+      .filter(f => /\.(jpg|jpeg|png|webp)$/i.test(f))
+      .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+  }
+
+  const properties = [
+    { id: 'san-agustin', name: 'SAN AGUSTÍN', type: 'Casa', price: 'Desde $6,560,000', constM2: 280, terrenoM2: 180, recamaras: 4, banos: 4 },
+    { id: 'san-angel', name: 'SAN ÁNGEL', type: 'Casa', price: 'Desde $5,697,000', constM2: 159, terrenoM2: 175, recamaras: 2, banos: 2 },
+    { id: 'san-gabriel', name: 'SAN GABRIEL', type: 'Casa', price: 'Desde $6,380,000', constM2: 265, terrenoM2: 195, recamaras: 3, banos: 3 },
+    { id: 'san-leonel', name: 'SAN LEONEL', type: 'Casa', price: 'Desde $6,500,000', constM2: 255, terrenoM2: 185, recamaras: 3, banos: 3 },
+    { id: 'san-miguel', name: 'SAN MIGUEL', type: 'Casa', price: 'Desde $6,100,000', constM2: 233, terrenoM2: 179, recamaras: 3, banos: 3 },
+    { id: 'san-pablo', name: 'SAN PABLO', type: 'Casa', price: 'Desde $6,298,000', constM2: 197, terrenoM2: 175, recamaras: 3, banos: 3 },
+    { id: 'san-rafael', name: 'SAN RAFAEL', type: 'Casa', price: 'Desde $6,460,000', constM2: 252, terrenoM2: 184, recamaras: 3, banos: 3 },
+    { id: 'lotes-residenciales', name: 'LOTES RESIDENCIALES', type: 'Terreno', price: 'Desde $2,100,000', constM2: 0, terrenoM2: 180, recamaras: 0, banos: 0 },
+  ];
+
+  return properties.map(p => ({
+    params: { slug: p.id },
+    props: { ...p, images: getImages(p.id) }
+  }));
+}
+
+const { id, name, type, price, constM2, terrenoM2, recamaras, banos, images } = Astro.props;
+const imgUrl = (img) => `${BASE}/images/propiedades/la-condesa/${id}/${encodeURIComponent(img)}`;
+---
+
+<Layout title={`${name} | Privadas La Condesa | BADI 108`} theme="la-condesa">
+  <Navbar />
+  <main>
+    <div class="bg-black relative" style="height: 70vh; min-height: 400px;">
+      <div class="w-full h-full flex items-center justify-center p-4">
+        <img id="gallery-img" class="max-w-full max-h-full object-contain select-none" src={imgUrl(images[0])} alt={name} />
+      </div>
+
+      <button id="prev-btn" class="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/10 hover:bg-white/25 text-white flex items-center justify-center transition-colors rounded-full">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+      </button>
+      <button id="next-btn" class="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/10 hover:bg-white/25 text-white flex items-center justify-center transition-colors rounded-full">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </button>
+
+      <div id="counter" class="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 bg-black/50 text-white text-xs px-3 py-1 rounded">1 / {images.length}</div>
+    </div>
+
+    <section class="py-12 bg-white">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="mb-8">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-[10px] bg-gold text-white px-3 py-1 font-semibold uppercase tracking-wider">{type}</span>
+            <h1 class="text-2xl md:text-3xl font-bold text-dark">{name}</h1>
+          </div>
+          <p class="text-gray-400 text-sm">Privadas La Condesa · San Miguel de Allende, Gto.</p>
+          <p class="text-gold text-lg font-bold mt-2">{price}</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+          {constM2 > 0 && (
+            <div class="text-center p-4 border border-gray-100">
+              <span class="text-xl font-bold text-primary block">{constM2} m²</span>
+              <span class="text-xs text-gray-400">Construcción</span>
+            </div>
+          )}
+          {terrenoM2 > 0 && (
+            <div class="text-center p-4 border border-gray-100">
+              <span class="text-xl font-bold text-primary block">{terrenoM2} m²</span>
+              <span class="text-xs text-gray-400">Terreno</span>
+            </div>
+          )}
+          {recamaras > 0 && (
+            <div class="text-center p-4 border border-gray-100">
+              <span class="text-xl font-bold text-primary block">{recamaras}</span>
+              <span class="text-xs text-gray-400">Recámaras</span>
+            </div>
+          )}
+          {banos > 0 && (
+            <div class="text-center p-4 border border-gray-100">
+              <span class="text-xl font-bold text-primary block">{banos}</span>
+              <span class="text-xs text-gray-400">Baños</span>
+            </div>
+          )}
+        </div>
+
+        {id === 'san-agustin' && (
+          <div class="mb-10">
+            <h2 class="text-lg font-bold text-dark mb-3 border-b border-gray-100 pb-2">Descripción</h2>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Modelo San Agustín: casa de 3 niveles con planta baja, planta alta y roof garden. Cochera para 2 autos, patio de servicio, sala-comedor, cocina integral, recámara/estudio en planta baja. En planta alta: recámara principal con vestidor y baño completo, 2 recámaras con clóset y baño completo, hall de TV. Roof garden con terraza techada y ½ baño.
+            </p>
+          </div>
+        )}
+        {id === 'san-angel' && (
+          <div class="mb-10">
+            <h2 class="text-lg font-bold text-dark mb-3 border-b border-gray-100 pb-2">Descripción</h2>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Modelo San Ángel: casa de 1 nivel con diseño funcional y elegante. Cochera para 2 autos, recámara principal con baño completo y vestidor, estudio que puede funcionar como segunda recámara, patio de servicio, sala-comedor, cocina integral, 1 baño completo y terraza techada.
+            </p>
+          </div>
+        )}
+        {id === 'san-gabriel' && (
+          <div class="mb-10">
+            <h2 class="text-lg font-bold text-dark mb-3 border-b border-gray-100 pb-2">Descripción</h2>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Modelo San Gabriel: casa de 3 niveles con espacios amplios y modernos. Cochera para 2 autos, patio de servicio, sala-comedor, cocina integral, ½ baño en planta baja. En planta alta: hall de TV, 3 recámaras (principal con vestidor y baño completo, 2 con clóset), 1 baño completo. Roof garden con terraza techada y ½ baño.
+            </p>
+          </div>
+        )}
+        {id === 'san-leonel' && (
+          <div class="mb-10">
+            <h2 class="text-lg font-bold text-dark mb-3 border-b border-gray-100 pb-2">Descripción</h2>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Modelo San Leonel: casa de 2 niveles con sala-comedor de doble altura. Cochera para 2 autos, patio de servicio, cocina integral, recámara principal con clóset y baño completo, ½ baño en planta baja. En roof garden: 2 recámaras con clóset y baño completo, hall de TV, terraza techada, ½ baño y amplio roof garden con terraza techada.
+            </p>
+          </div>
+        )}
+        {id === 'san-miguel' && (
+          <div class="mb-10">
+            <h2 class="text-lg font-bold text-dark mb-3 border-b border-gray-100 pb-2">Descripción</h2>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Modelo San Miguel: casa de 3 niveles con diseño integral. Cochera para 2 autos, patio de servicio, sala-comedor, cocina integral, ½ baño en planta baja. En planta alta: hall de TV, 3 recámaras (principal con vestidor y baño completo, 2 con clóset y baño completo cada una). Roof garden con terraza techada y ½ baño.
+            </p>
+          </div>
+        )}
+        {id === 'san-pablo' && (
+          <div class="mb-10">
+            <h2 class="text-lg font-bold text-dark mb-3 border-b border-gray-100 pb-2">Descripción</h2>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Modelo San Pablo: casa de 2 niveles con espacios confortables. Cochera para 2 autos, patio de servicio, sala-comedor, cocina integral, recámara principal con clóset y baño completo, 2 recámaras con clóset y baño completo, ½ baño. Roof garden con terraza techada, ½ baño y almacén.
+            </p>
+          </div>
+        )}
+        {id === 'san-rafael' && (
+          <div class="mb-10">
+            <h2 class="text-lg font-bold text-dark mb-3 border-b border-gray-100 pb-2">Descripción</h2>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Modelo San Rafael: casa de 3 niveles con sala-comedor de doble altura. Cochera para 2 autos, patio de servicio, cocina integral, ½ baño en planta baja. En planta alta: 3 recámaras (principal con vestidor y baño completo, 2 con clóset y baño completo cada una). Roof garden con terraza techada y ½ baño.
+            </p>
+          </div>
+        )}
+        {id === 'lotes-residenciales' && (
+          <div class="mb-10">
+            <h2 class="text-lg font-bold text-dark mb-3 border-b border-gray-100 pb-2">Descripción</h2>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Lotes residenciales disponibles en Privadas La Condesa. Terrenos con servicios ocultos de telefonía, luz y datos. Baja densidad con solo 25 casas por hectárea. Acceso directo desde la carretera San Miguel - Celaya. Colindancia norte con el Club de Golf Malanquín. Jardines con sistema de riego automático.
+            </p>
+          </div>
+        )}
+
+        <div>
+          <h2 class="text-lg font-bold text-dark mb-4 border-b border-gray-100 pb-2">Amenidades del Desarrollo</h2>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-y-4 gap-x-3">
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M4 12c2-2 6-2 8 0s6 2 8 0M4 16c2-2 6-2 8 0s6 2 8 0"/></svg>
+              <span class="text-sm text-gray-600">Alberca</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M18 4c-4 4-4 12 0 16M6 4c4 4 4 12 0 16"/></svg>
+              <span class="text-sm text-gray-600">Cancha de Pádel</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="10" width="20" height="12" rx="1"/><line x1="6" y1="10" x2="6" y2="6"/><line x1="18" y1="10" x2="18" y2="6"/><line x1="14" y1="10" x2="14" y2="6"/><line x1="10" y1="10" x2="10" y2="6"/></svg>
+              <span class="text-sm text-gray-600">Gimnasio</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+              <span class="text-sm text-gray-600">Seguridad 24h</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 8 5 12 5 15a7 7 0 0014 0c0-3-3-7-7-13z"/></svg>
+              <span class="text-sm text-gray-600">Áreas Verdes</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+              <span class="text-sm text-gray-600">Casa Club</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h18v3a3 3 0 01-3 3H6a3 3 0 01-3-3v-3zM5 10V6a2 2 0 012-2h10a2 2 0 012 2v4"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/></svg>
+              <span class="text-sm text-gray-600">Terraza</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M10 22l2-7 3 3v6M7 12l3-2 2 4"/></svg>
+              <span class="text-sm text-gray-600">Andadores</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<script define:vars={{ images, slug: id, base: BASE }}>
+  const img = document.getElementById('gallery-img');
+  const counter = document.getElementById('counter');
+  let current = 0;
+
+  function render() {
+    const filename = encodeURIComponent(images[current]);
+    img.src = `${base}/images/propiedades/la-condesa/${slug}/${filename}`;
+    counter.textContent = `${current + 1} / ${images.length}`;
+  }
+
+  document.getElementById('prev-btn').addEventListener('click', () => {
+    current = (current - 1 + images.length) % images.length;
+    render();
+  });
+
+  document.getElementById('next-btn').addEventListener('click', () => {
+    current = (current + 1) % images.length;
+    render();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+      current = (current - 1 + images.length) % images.length;
+      render();
+    }
+    if (e.key === 'ArrowRight') {
+      current = (current + 1) % images.length;
+      render();
+    }
+  });
+</script>

@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import fs from 'fs';
+import path from 'path';
+
+const BASE = import.meta.env.BASE_URL;
+const PAGE_BASE = `${BASE}/rentas`;
+const IMAGE_BASE = `${BASE}/images/rentas`;
+
+const IMAGE_DIR = path.join(process.cwd(), 'public', 'images', 'rentas');
+
+function getFirstImage(folder) {
+  const dir = path.join(IMAGE_DIR, folder);
+  if (!fs.existsSync(dir)) return null;
+  const files = fs.readdirSync(dir)
+    .filter(f => /\.(jpg|jpeg|png|webp)$/i.test(f))
+    .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+  return files.length > 0 ? `${IMAGE_BASE}/${folder}/${encodeURIComponent(files[0])}` : null;
+}
+
+const rentals = [
+  { id: 'casa-pilar', name: 'Casa Pilar', location: 'San Miguel de Allende Centro', type: 'Casa', price: '$18,000/mes', specs: ['3 Recámaras', '2 Baños', 'Jardín', 'Estacionamiento'], project: 'La Serena' },
+  { id: 'depto-alameda', name: 'Depto Alameda', location: 'Colonia Alameda, SMA', type: 'Departamento', price: '$12,500/mes', specs: ['2 Recámaras', '1 Baño', 'Balcón', 'Estacionamiento'], project: 'La Serena' },
+  { id: 'casa-jardin', name: 'Casa Jardín', location: 'Fracc. Los Frailes, SMA', type: 'Casa', price: '$22,000/mes', specs: ['4 Recámaras', '3 Baños', 'Jardín', 'Pérgola', 'Alberca', 'Estacionamiento'], project: 'La Serena' },
+  { id: 'depto-vista', name: 'Depto Vista', location: 'Colonia Vista Hermosa, SMA', type: 'Departamento', price: '$9,800/mes', specs: ['1 Recámara', '1 Baño', 'Terraza', 'Roof Garden'], project: 'La Serena' },
+  { id: 'casa-colonial', name: 'Casa Colonial', location: 'San Miguel de Allende Centro', type: 'Casa', price: '$35,000/mes', specs: ['5 Recámaras', '4 Baños', 'Patio', 'Terraza', 'Estacionamiento', 'Cisterna'], project: 'La Serena' },
+  { id: 'depto-merced', name: 'Depto La Merced', location: 'Colonia La Merced, SMA', type: 'Departamento', price: '$14,500/mes', specs: ['3 Recámaras', '2 Baños', 'Balcón', 'Estacionamiento', 'Lavadero'], project: 'La Serena' },
+  { id: 'casa-real', name: 'Casa Real', location: 'Fracc. Real de los Frailes, SMA', type: 'Casa', price: '$28,000/mes', specs: ['4 Recámaras', '3 Baños', 'Jardín', 'Alberca', 'Estacionamiento', 'Roof Garden'], project: 'La Serena' },
+  { id: 'depto-sol', name: 'Depto Sol', location: 'Colonia San Antonio, SMA', type: 'Departamento', price: '$11,000/mes', specs: ['2 Recámaras', '1 Baño', 'Terraza', 'Estacionamiento'], project: 'La Serena' },
+];
+---
+
+<Layout title="Rentas | BADI 108 Real Estate">
+  <Navbar />
+  <main>
+    <section class="relative h-[40vh] min-h-[300px] overflow-hidden">
+      <div class="absolute inset-0">
+        <img src={`${BASE}/images/hero-plaza.webp`} alt="Rentas" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-b from-primary/80 to-primary/90"></div>
+      </div>
+      <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
+        <p class="text-gold text-xs tracking-[0.3em] uppercase mb-3 font-light">Propiedades en Renta</p>
+        <h1 class="text-4xl md:text-6xl font-bold text-white">Rentas</h1>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-14 fade-in">
+          <p class="text-gold text-sm tracking-[0.2em] uppercase mb-3">Oferta de Rentas</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Propiedades en Renta</h2>
+          <div class="w-14 h-0.5 bg-gold mx-auto mb-6"></div>
+          <p class="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">
+            Descubre nuestra selección de propiedades en renta en San Miguel de Allende. Contamos con casas y departamentos en las mejores ubicaciones.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {rentals.map((r) => {
+            const thumb = getFirstImage(r.id);
+            return (
+              <div class="fade-in group">
+                <a href={`${PAGE_BASE}/${r.id}`} class="block relative h-64 overflow-hidden border border-gray-200">
+                  {thumb ? (
+                    <img src={thumb} alt={r.name} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+                  ) : (
+                    <div class="w-full h-full bg-gray-100 flex items-center justify-center">
+                      <svg class="w-12 h-12 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    </div>
+                  )}
+                  <div class="absolute top-3 left-3 bg-gold text-white text-[10px] px-3 py-1 font-semibold uppercase tracking-wider">
+                    {r.type}
+                  </div>
+                  <div class="absolute inset-0 bg-gradient-to-t from-dark/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                    <span class="text-white text-xs tracking-widest uppercase border border-white/40 px-4 py-2">
+                      Ver Galería
+                    </span>
+                  </div>
+                </a>
+                <div class="py-4 border-b border-gray-100">
+                  <div class="flex items-start justify-between mb-1">
+                    <div>
+                      <h3 class="text-lg font-bold text-dark">{r.name}</h3>
+                      <p class="text-gray-400 text-xs">{r.project}</p>
+                    </div>
+                    <span class="text-gold text-sm font-bold">{r.price}</span>
+                  </div>
+                  <p class="text-gray-400 text-xs mb-3">{r.location}</p>
+                  <div class="flex flex-wrap gap-2">
+                    {r.specs.map((spec) => (
+                      <span class="text-[10px] bg-gray-100 text-gray-500 px-2 py-0.5">{spec}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

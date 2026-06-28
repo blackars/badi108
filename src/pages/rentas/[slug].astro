@@ -1,0 +1,242 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import fs from 'fs';
+import path from 'path';
+
+const BASE = import.meta.env.BASE_URL;
+
+export async function getStaticPaths() {
+  const IMAGE_DIR = path.join(process.cwd(), 'public', 'images', 'rentas');
+
+  function getImages(folder) {
+    const dir = path.join(IMAGE_DIR, folder);
+    if (!fs.existsSync(dir)) return [];
+    return fs.readdirSync(dir)
+      .filter(f => /\.(jpg|jpeg|png|webp)$/i.test(f))
+      .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+  }
+
+  const rentals = [
+    { id: 'casa-pilar', name: 'Casa Pilar', location: 'San Miguel de Allende Centro', type: 'Casa', price: '$18,000/mes', specs: ['3 Recámaras', '2 Baños', 'Jardín', 'Estacionamiento'], description: 'Hermosa casa en el corazón de San Miguel de Allende, con acabados de lujo y jardín privado. Ideal para familias que buscan vivir en el centro histórico con todas las comodidades.' },
+    { id: 'depto-alameda', name: 'Depto Alameda', location: 'Colonia Alameda, SMA', type: 'Departamento', price: '$12,500/mes', specs: ['2 Recámaras', '1 Baño', 'Balcón', 'Estacionamiento'], description: 'Departamento moderno cerca de la Alameda, con excelentes vistas y ubicación privilegiada. Perfecto para parejas o profesionales.' },
+    { id: 'casa-jardin', name: 'Casa Jardín', location: 'Fracc. Los Frailes, SMA', type: 'Casa', price: '$22,000/mes', specs: ['4 Recámaras', '3 Baños', 'Jardín', 'Pérgola', 'Alberca', 'Estacionamiento'], description: 'Amplia casa en fraccionamiento residencial con jardín, alberca y pérgola. Acabados de primera calidad y seguridad privada.' },
+    { id: 'depto-vista', name: 'Depto Vista', location: 'Colonia Vista Hermosa, SMA', type: 'Departamento', price: '$9,800/mes', specs: ['1 Recámara', '1 Baño', 'Terraza', 'Roof Garden'], description: 'Acogedor departamento con terraza y acceso a roof garden con vistas panorámicas. Perfecto para una persona o pareja.' },
+    { id: 'casa-colonial', name: 'Casa Colonial', location: 'San Miguel de Allende Centro', type: 'Casa', price: '$35,000/mes', specs: ['5 Recámaras', '4 Baños', 'Patio', 'Terraza', 'Estacionamiento', 'Cisterna'], description: 'Espectacular casa colonial restaurada en el centro histórico. Patio interior, terraza con vista a la parroquia y acabados de época.' },
+    { id: 'depto-merced', name: 'Depto La Merced', location: 'Colonia La Merced, SMA', type: 'Departamento', price: '$14,500/mes', specs: ['3 Recámaras', '2 Baños', 'Balcón', 'Estacionamiento', 'Lavadero'], description: 'Departamento familiar en zona tranquila con balcón y lavadero. Cerca de escuelas y centros comerciales.' },
+    { id: 'casa-real', name: 'Casa Real', location: 'Fracc. Real de los Frailes, SMA', type: 'Casa', price: '$28,000/mes', specs: ['4 Recámaras', '3 Baños', 'Jardín', 'Alberca', 'Estacionamiento', 'Roof Garden'], description: 'Casa residencial en exclusivo fraccionamiento con jardín, alberca y roof garden. Seguridad 24 horas y áreas comunes.' },
+    { id: 'depto-sol', name: 'Depto Sol', location: 'Colonia San Antonio, SMA', type: 'Departamento', price: '$11,000/mes', specs: ['2 Recámaras', '1 Baño', 'Terraza', 'Estacionamiento'], description: 'Departamento luminoso con terraza en colonia San Antonio. Cerca del centro y con fácil acceso a principales avenidas.' },
+  ];
+
+  return rentals.map(r => ({
+    params: { slug: r.id },
+    props: { ...r, images: getImages(r.id) }
+  }));
+}
+
+const { id, name, location, type, price, specs, description, images } = Astro.props;
+const imgUrl = (img) => `${BASE}/images/rentas/${id}/${encodeURIComponent(img)}`;
+---
+
+<Layout title={`${name} | Rentas | BADI 108`}>
+  <Navbar />
+  <main>
+    <div class="bg-black relative" style="height: 70vh; min-height: 400px;">
+      <div class="w-full h-full flex items-center justify-center p-4">
+        {images.length > 0 ? (
+          <img id="gallery-img" class="max-w-full max-h-full object-contain select-none" src={imgUrl(images[0])} alt={name} />
+        ) : (
+          <div class="text-center text-white/40">
+            <svg class="w-20 h-20 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            <p class="text-sm">Sin imágenes disponibles</p>
+          </div>
+        )}
+      </div>
+
+      {images.length > 1 && (
+        <>
+          <button id="prev-btn" class="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/10 hover:bg-white/25 text-white flex items-center justify-center transition-colors rounded-full">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <button id="next-btn" class="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/10 hover:bg-white/25 text-white flex items-center justify-center transition-colors rounded-full">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
+          <div id="counter" class="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 bg-black/50 text-white text-xs px-3 py-1 rounded">1 / {images.length}</div>
+        </>
+      )}
+    </div>
+
+    <section class="py-12 bg-white">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="mb-8">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-[10px] bg-gold text-white px-3 py-1 font-semibold uppercase tracking-wider">{type}</span>
+            <h1 class="text-2xl md:text-3xl font-bold text-dark">{name}</h1>
+          </div>
+          <p class="text-gray-400 text-sm">{location}</p>
+          <p class="text-gold text-lg font-bold mt-2">{price}</p>
+        </div>
+
+        <div class="mb-10">
+          <h2 class="text-lg font-bold text-dark mb-3 border-b border-gray-100 pb-2">Descripción</h2>
+          <p class="text-gray-500 text-sm leading-relaxed">{description}</p>
+        </div>
+
+        <div>
+          <h2 class="text-lg font-bold text-dark mb-4 border-b border-gray-100 pb-2">Amenidades</h2>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-y-4 gap-x-3">
+            {specs.includes('Baños') && (
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 8h16M4 8v6a2 2 0 002 2h12a2 2 0 002-2V8M4 8V6a2 2 0 012-2h12a2 2 0 012 2v2"/>
+                </svg>
+                <span class="text-sm text-gray-600">{specs.find(s => s.includes('Baños'))}</span>
+              </div>
+            )}
+            {specs.includes('Recámaras') && (
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="8" width="16" height="10" rx="1"/><line x1="4" y1="12" x2="20" y2="12"/><rect x="7" y="10" width="4" height="2" rx="0.5"/>
+                </svg>
+                <span class="text-sm text-gray-600">{specs.find(s => s.includes('Recámaras'))}</span>
+              </div>
+            )}
+            {specs.some(s => /estacionamiento|parqueo|garaje/i.test(s)) && (
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 17v2a1 1 0 001 1h2a1 1 0 001-1v-1h6v1a1 1 0 001 1h2a1 1 0 001-1v-2M5 17l2-7h10l2 7M5 17h14"/><circle cx="7" cy="15" r="1.5"/><circle cx="17" cy="15" r="1.5"/>
+                </svg>
+                <span class="text-sm text-gray-600">Estacionamiento</span>
+              </div>
+            )}
+            {specs.some(s => /terraza|patio/i.test(s)) && (
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+                </svg>
+                <span class="text-sm text-gray-600">{specs.find(s => /terraza|patio/i.test(s))}</span>
+              </div>
+            )}
+            {specs.some(s => /pérgola|pergola/i.test(s)) && (
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 12c0-5 4-10 9-10s9 5 9 10M12 2v18M8 22h8"/>
+                </svg>
+                <span class="text-sm text-gray-600">Pérgola</span>
+              </div>
+            )}
+            {specs.some(s => /balcón|balcon/i.test(s)) && (
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="10" width="20" height="12" rx="1"/><line x1="6" y1="10" x2="6" y2="6"/><line x1="18" y1="10" x2="18" y2="6"/><line x1="14" y1="10" x2="14" y2="6"/><line x1="10" y1="10" x2="10" y2="6"/>
+                </svg>
+                <span class="text-sm text-gray-600">Balcón</span>
+              </div>
+            )}
+            {specs.some(s => /cocina/i.test(s)) && (
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 14h18v3a3 3 0 01-3 3H6a3 3 0 01-3-3v-3zM5 10V6a2 2 0 012-2h10a2 2 0 012 2v4"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/>
+                </svg>
+                <span class="text-sm text-gray-600">{specs.find(s => /cocina/i.test(s))}</span>
+              </div>
+            )}
+            {specs.some(s => /sala|comedor/i.test(s)) && (
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 10V7a2 2 0 012-2h12a2 2 0 012 2v3M4 10h16M4 10v4M20 10v4M4 14h16v3a2 2 0 01-2 2H6a2 2 0 01-2-2v-3z"/>
+                </svg>
+                <span class="text-sm text-gray-600">{specs.find(s => /sala|comedor/i.test(s))}</span>
+              </div>
+            )}
+            {specs.some(s => /lavadero|lavado|área de lavado/i.test(s)) && (
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="2" width="16" height="20" rx="2"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="2"/><line x1="12" y1="2" x2="12" y2="4"/>
+                </svg>
+                <span class="text-sm text-gray-600">{specs.find(s => /lavadero|lavado|área de lavado/i.test(s))}</span>
+              </div>
+            )}
+            {specs.some(s => /roof garden/i.test(s)) && (
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22V12M12 12l-5 4M12 12l5 4M12 4L7 9M12 4l5 5"/><path d="M12 4a5 5 0 00-5 5h10a5 5 0 00-5-5z"/>
+                </svg>
+                <span class="text-sm text-gray-600">Roof Garden</span>
+              </div>
+            )}
+            {specs.some(s => /alberca|pool/i.test(s)) && (
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="6" width="20" height="12" rx="2"/><path d="M4 12c2-2 6-2 8 0s6 2 8 0M4 16c2-2 6-2 8 0s6 2 8 0"/>
+                </svg>
+                <span class="text-sm text-gray-600">Alberca</span>
+              </div>
+            )}
+            {specs.some(s => /jardín|jardin/i.test(s)) && (
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22V12M12 12l-5 4M12 12l5 4M12 4L7 9M12 4l5 5"/><path d="M12 4a5 5 0 00-5 5h10a5 5 0 00-5-5z"/>
+                </svg>
+                <span class="text-sm text-gray-600">{specs.find(s => /jardín|jardin/i.test(s))}</span>
+              </div>
+            )}
+            {specs.some(s => /cisterna/i.test(s)) && (
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2C8 8 5 12 5 15a7 7 0 0014 0c0-3-3-7-7-13z"/>
+                </svg>
+                <span class="text-sm text-gray-600">Cisterna</span>
+              </div>
+            )}
+            {!specs.some(s => /baños|recámaras|estacionamiento|terraza|pérgola|balcón|cocina|comedor|lavadero|roof garden|alberca|jardín|cisterna|patio|sala|lavado|pool|garaje|parqueo/i.test(s)) && specs.map(spec => (
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span class="text-sm text-gray-600">{spec}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<script define:vars={{ images, slug: id, base: BASE }}>
+  if (images.length > 1) {
+    const img = document.getElementById('gallery-img');
+    const counter = document.getElementById('counter');
+    let current = 0;
+
+    function render() {
+      const filename = encodeURIComponent(images[current]);
+      img.src = `${base}/images/rentas/${slug}/${filename}`;
+      counter.textContent = `${current + 1} / ${images.length}`;
+    }
+
+    document.getElementById('prev-btn').addEventListener('click', () => {
+      current = (current - 1 + images.length) % images.length;
+      render();
+    });
+
+    document.getElementById('next-btn').addEventListener('click', () => {
+      current = (current + 1) % images.length;
+      render();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        current = (current - 1 + images.length) % images.length;
+        render();
+      }
+      if (e.key === 'ArrowRight') {
+        current = (current + 1) % images.length;
+        render();
+      }
+    });
+  }
+</script>

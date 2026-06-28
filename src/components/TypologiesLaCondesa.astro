@@ -1,0 +1,135 @@
+﻿---
+const URL_BASE = `${import.meta.env.BASE_URL}/images/propiedades/la-condesa`;
+const PAGE_BASE = `${import.meta.env.BASE_URL}/propiedades/la-condesa`;
+
+const properties = [
+  {
+    id: 'san-agustin',
+    name: 'SAN AGUSTÍN',
+    location: 'Privadas La Condesa',
+    type: 'Casa',
+    price: 'Desde $6,560,000',
+    specs: ['4 Recámaras', '4 Baños', 'Cochera 2 Autos', 'Sala Comedor Doble Altura'],
+    thumb: `${URL_BASE}/san-agustin/La-Condesa-Modelos-Banner-San-Agustin.webp`,
+    constM2: 280,
+  },
+  {
+    id: 'san-angel',
+    name: 'SAN ÁNGEL',
+    location: 'Privadas La Condesa',
+    type: 'Casa',
+    price: 'Desde $5,697,000',
+    specs: ['2 Recámaras', '2 Baños', 'Cochera 2 Autos', 'Estudio'],
+    thumb: `${URL_BASE}/san-angel/La-Condesa-Modelos-Banner-San-Angel.webp`,
+    constM2: 159,
+  },
+  {
+    id: 'san-gabriel',
+    name: 'SAN GABRIEL',
+    location: 'Privadas La Condesa',
+    type: 'Casa',
+    price: 'Desde $6,380,000',
+    specs: ['3 Recámaras', '3 Baños', 'Cochera 2 Autos', 'Roof Garden'],
+    thumb: `${URL_BASE}/san-gabriel/La-Condesa-Modelos-Banner-San-Gabriel.webp`,
+    constM2: 265,
+  },
+  {
+    id: 'san-leonel',
+    name: 'SAN LEONEL',
+    location: 'Privadas La Condesa',
+    type: 'Casa',
+    price: 'Desde $6,500,000',
+    specs: ['3 Recámaras', '3 Baños', 'Cochera 2 Autos', 'Doble Altura'],
+    thumb: `${URL_BASE}/san-leonel/DSC06927.webp`,
+    constM2: 255,
+  },
+  {
+    id: 'san-miguel',
+    name: 'SAN MIGUEL',
+    location: 'Privadas La Condesa',
+    type: 'Casa',
+    price: 'Desde $6,100,000',
+    specs: ['3 Recámaras', '3 Baños', 'Cochera 2 Autos', 'Roof Garden'],
+    thumb: `${URL_BASE}/san-miguel/La-Condesa-Modelos-Banner-San-Miguel.webp`,
+    constM2: 233,
+  },
+  {
+    id: 'san-pablo',
+    name: 'SAN PABLO',
+    location: 'Privadas La Condesa',
+    type: 'Casa',
+    price: 'Desde $6,298,000',
+    specs: ['3 Recámaras', '3 Baños', 'Cochera 2 Autos', 'Roof Garden'],
+    thumb: `${URL_BASE}/san-pablo/La-Condesa-Modelos-Banner-San-Pablo.webp`,
+    constM2: 197,
+  },
+  {
+    id: 'san-rafael',
+    name: 'SAN RAFAEL',
+    location: 'Privadas La Condesa',
+    type: 'Casa',
+    price: 'Desde $6,460,000',
+    specs: ['3 Recámaras', '3 Baños', 'Cochera 2 Autos', 'Doble Altura'],
+    thumb: `${URL_BASE}/san-rafael/La-Condesa-Modelos-Banner-San-Rafael.webp`,
+    constM2: 252,
+  },
+  {
+    id: 'lotes-residenciales',
+    name: 'LOTES RESIDENCIALES',
+    location: 'Privadas La Condesa',
+    type: 'Terreno',
+    price: 'Desde $2,100,000',
+    specs: ['180 m² promedio', 'Escritura Inmediata', 'Servicios Ocultos', 'Baja Densidad'],
+    thumb: `${URL_BASE}/lotes-residenciales/IMG_20250727_125156104_MFNR.webp`,
+    constM2: 180,
+  },
+];
+---
+
+<section id="modelos" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-14 fade-in">
+      <p class="text-gold text-sm tracking-[0.2em] uppercase mb-3">Modelos Disponibles</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Casas en Privadas La Condesa</h2>
+      <div class="w-14 h-0.5 bg-gold mx-auto mb-6"></div>
+      <p class="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">
+        Descubre nuestra selección de modelos en San Miguel de Allende. Cada casa diseñada para ofrecerte el confort y la calidad que mereces.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {properties.map((prop) => (
+        <div class="fade-in group">
+          <a href={`${PAGE_BASE}/${prop.id}`} class="block relative h-64 overflow-hidden border border-gray-200">
+            <img
+              src={prop.thumb}
+              alt={prop.name}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            />
+            <div class="absolute top-3 left-3 bg-gold text-white text-[10px] px-3 py-1 font-semibold uppercase tracking-wider">
+              {prop.type}
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+              <span class="text-white text-xs tracking-widest uppercase border border-white/40 px-4 py-2">
+                Ver Galería
+              </span>
+            </div>
+          </a>
+          <div class="py-4 border-b border-gray-100">
+            <div class="flex items-start justify-between mb-1">
+              <h3 class="text-lg font-bold text-dark">{prop.name}</h3>
+              <span class="text-gold text-sm font-bold">{prop.price}</span>
+            </div>
+            <p class="text-gray-400 text-xs mb-3">{prop.location} · {prop.constM2} m²</p>
+            <div class="flex flex-wrap gap-2">
+              {prop.specs.map((spec) => (
+                <span class="text-[10px] bg-gray-100 text-gray-500 px-2 py-0.5">{spec}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -5,7 +5,7 @@
 ### La Serena Residencial
 - **Slug**: `la-serena`
 - **Estado**: Implementado
-- **Propiedades**: Aldama, Guadiana, Recreo, Santo Domingo, Zacateros
+- **Propiedades**: Aldama, Guadiana, Recreo, Umarán, Zacateros
 - **URLs**: `/propiedades/la-serena`, `/propiedades/la-serena/[slug]`
 
 ### Privadas La Condesa
@@ -74,3 +74,23 @@
 **Pendientes:**
 - [ ] Revisar datos extraídos de PDFs para confirmar precios y specs
 - [ ] Agregar modelo San Leonel Ampliado si aplica
+
+### 2026-06-28 - Actualización La Serena + Correcciones
+
+**Cambios en La Serena:**
+- Eliminada propiedad Santo Domingo (Insurgentes 6-D)
+- Agregada propiedad Umarán (placeholder, sin contenido real disponible)
+- Amenidades: agregadas 5 nuevas (Terraza Sunset Bar, Recepción 24/7, Restaurante Room Service, Anfiteatro, Salón de Usos Múltiples)
+- Sección de contacto La Serena al final de `la-serena.astro`
+- Bullets de ubicaciones cercanas debajo del botón Google Maps
+
+**Correcciones:**
+- Corregida imagen `serenacover.webp` (no existía) → `prototipos.webp` en la-serena.astro
+- Corregido thumb San Leonel: `DSC06927.JPG` → `DSC06927.webp`
+
+**Archivos modificados:**
+- `src/components/Typologies.astro` - Santo Domingo → Umarán
+- `src/pages/propiedades/la-serena/[slug].astro` - Santo Domingo → Umarán
+- `src/components/Amenities.astro` - +5 amenidades
+- `src/pages/propiedades/la-serena.astro` - Sección contacto + bullets ubicaciones
+- `public/images/propiedades/umaran/` - Imágenes placeholder (copiadas de Aldama)

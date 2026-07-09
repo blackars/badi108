@@ -1,0 +1,408 @@
+﻿---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Rancho Santa Anita de Jalpa | BADI 108 Real Estate" theme="santa-anita">
+  <Navbar />
+  <main>
+    <section class="relative h-[60vh] min-h-[400px] overflow-hidden">
+      <div class="absolute inset-0">
+        <img src={base + '/images/propiedades/santa-anita/cover.webp'} alt="Rancho Santa Anita de Jalpa" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-b from-primary/80 to-primary/90"></div>
+      </div>
+      <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
+        <p class="text-gold text-xs tracking-[0.3em] uppercase mb-3 font-light">San Miguel de Allende, Guanajuato</p>
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-3">Rancho Santa Anita de Jalpa</h1>
+        <p class="text-white/70 text-sm max-w-lg mb-4">Comunidad Campestre Sustentable</p>
+        <span class="bg-white/20 text-white text-[10px] px-4 py-1.5 font-semibold uppercase tracking-wider border border-white/30">
+          Proyecto 100% Vendido
+        </span>
+      </div>
+    </section>
+
+    <section class="py-14 bg-white border-b border-gray-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="fade-in">
+            <p class="text-gold text-sm tracking-[0.2em] uppercase mb-3">Sobre el Proyecto</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4 leading-tight">
+              Un Lugar Magico en<br/>Medio de la Naturaleza
+            </h2>
+            <div class="w-14 h-0.5 bg-gold mb-6"></div>
+            <p class="text-gray-500 leading-relaxed mb-4 text-sm">
+              Rancho Santa Anita de Jalpa es una comunidad exclusiva donde se fusionan naturaleza, tranquilidad y confort moderno. Un proyecto 100% sustentable disenado para familias que buscan una vida autosuficiente y en armonia con el medio ambiente.
+            </p>
+            <p class="text-gray-500 leading-relaxed mb-6 text-sm">
+              Con solo 10 lotes en 8.5 hectareas, este desarrollo ofrece privacidad, agua de manantial, energia solar y agricultura regenerativa. Un legado ambiental para las proximas generaciones.
+            </p>
+            <div class="grid grid-cols-2 gap-4 max-w-sm">
+              <div class="text-center p-4 border border-gray-100">
+                <span class="text-2xl font-bold text-primary block">8.5</span>
+                <span class="text-xs text-gray-400">Hectareas</span>
+              </div>
+              <div class="text-center p-4 border border-gray-100">
+                <span class="text-2xl font-bold text-primary block">10</span>
+                <span class="text-xs text-gray-400">Lotes Exclusivos</span>
+              </div>
+            </div>
+          </div>
+          <div class="fade-in">
+            <img src={base + '/images/propiedades/santa-anita/maincover.webp'} alt="Rancho Santa Anita de Jalpa" class="w-full max-h-[450px] object-cover" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-14 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-14 fade-in">
+          <p class="text-gold text-sm tracking-[0.2em] uppercase mb-3">Caracteristicas</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Infraestructura Sustentable</h2>
+          <div class="w-14 h-0.5 bg-gold mx-auto mb-6"></div>
+          <p class="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">
+            Cada lote disenado para ofrecer autonomia y confort con los mas altos estandares de sustentabilidad.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="fade-in bg-white p-6 border border-gray-100">
+            <div class="w-12 h-12 bg-primary/10 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2C8 8 5 12 5 15a7 7 0 0014 0c0-3-3-7-7-13z"/>
+              </svg>
+            </div>
+            <h3 class="font-bold text-dark mb-2">Agua de Manantial</h3>
+            <p class="text-gray-500 text-xs leading-relaxed">Dos tomas de agua por lote, una proveniente directamente del manantial natural.</p>
+          </div>
+
+          <div class="fade-in bg-white p-6 border border-gray-100">
+            <div class="w-12 h-12 bg-primary/10 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="5"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+              </svg>
+            </div>
+            <h3 class="font-bold text-dark mb-2">Energia Solar</h3>
+            <p class="text-gray-500 text-xs leading-relaxed">Aprovechamiento de energia renovable para consumo electrico sustentable.</p>
+          </div>
+
+          <div class="fade-in bg-white p-6 border border-gray-100">
+            <div class="w-12 h-12 bg-primary/10 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v3M20 7l-2 1m2-1l-2-1m2 1v3M9 4l-2 1M9 4L7 3M9 4l2 1M15 4l2-1M15 4l-2 1M9 20l-2-1m2 1l2-1m-2 1v-3M20 17l-2-1m2 1l-2 1m2-1v-3"/>
+              </svg>
+            </div>
+            <h3 class="font-bold text-dark mb-2">Molino Eolico</h3>
+            <p class="text-gray-500 text-xs leading-relaxed">Bombeo de agua mediante energia eolica para riego y uso domestico.</p>
+          </div>
+
+          <div class="fade-in bg-white p-6 border border-gray-100">
+            <div class="w-12 h-12 bg-primary/10 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/>
+              </svg>
+            </div>
+            <h3 class="font-bold text-dark mb-2">Agricultura Regenerativa</h3>
+            <p class="text-gray-500 text-xs leading-relaxed">Areas destinadas a cultivos organicos, acuaponia y produccion sustentable.</p>
+          </div>
+
+          <div class="fade-in bg-white p-6 border border-gray-100">
+            <div class="w-12 h-12 bg-primary/10 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3 class="font-bold text-dark mb-2">Cerco Perimetral</h3>
+            <p class="text-gray-500 text-xs leading-relaxed">Barrera natural compuesta por piedra local, maya de alambre, huizaches y magueyes.</p>
+          </div>
+
+          <div class="fade-in bg-white p-6 border border-gray-100">
+            <div class="w-12 h-12 bg-primary/10 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+              </svg>
+            </div>
+            <h3 class="font-bold text-dark mb-2">Caminos de Piedra</h3>
+            <p class="text-gray-500 text-xs leading-relaxed">Vialidades internas construidas con tepetate y piedra de la region.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-14 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-14 fade-in">
+          <p class="text-gold text-sm tracking-[0.2em] uppercase mb-3">Los Lotes</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">10 Lotes Exclusivos</h2>
+          <div class="w-14 h-0.5 bg-gold mx-auto mb-6"></div>
+          <p class="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">
+            Cada lote de 5,000 m2 con area plana desmontada de 300 m2 lista para construir.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mb-10">
+          <div class="fade-in text-center p-4 border border-gray-200 bg-gray-50">
+            <span class="text-lg font-bold text-primary block">5,000</span>
+            <span class="text-xs text-gray-400">m2 por Lote</span>
+          </div>
+          <div class="fade-in text-center p-4 border border-gray-200 bg-gray-50">
+            <span class="text-lg font-bold text-primary block">300</span>
+            <span class="text-xs text-gray-400">m2 Desmontados</span>
+          </div>
+          <div class="fade-in text-center p-4 border border-gray-200 bg-gray-50">
+            <span class="text-lg font-bold text-primary block">2</span>
+            <span class="text-xs text-gray-400">Tomas de Agua</span>
+          </div>
+          <div class="fade-in text-center p-4 border border-gray-200 bg-gray-50">
+            <span class="text-lg font-bold text-primary block">10</span>
+            <span class="text-xs text-gray-400">Lotes (A-J)</span>
+          </div>
+          <div class="fade-in text-center p-4 border border-gray-200 bg-gray-50">
+            <span class="text-lg font-bold text-primary block">12</span>
+            <span class="text-xs text-gray-400">Familias</span>
+          </div>
+        </div>
+
+        <div class="fade-in overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-gray-200">
+                <th class="text-left py-3 px-4 font-semibold text-dark">Lote</th>
+                <th class="text-left py-3 px-4 font-semibold text-dark">Superficie</th>
+                <th class="text-left py-3 px-4 font-semibold text-dark">Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-gray-100"><td class="py-2.5 px-4 text-gray-600">A</td><td class="py-2.5 px-4 text-gray-600">5,000 m2</td><td class="py-2.5 px-4"><span class="text-[10px] bg-gray-200 text-gray-600 px-2 py-0.5 font-medium">Vendido</span></td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2.5 px-4 text-gray-600">B</td><td class="py-2.5 px-4 text-gray-600">5,000 m2</td><td class="py-2.5 px-4"><span class="text-[10px] bg-gray-200 text-gray-600 px-2 py-0.5 font-medium">Vendido</span></td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2.5 px-4 text-gray-600">C</td><td class="py-2.5 px-4 text-gray-600">5,000 m2</td><td class="py-2.5 px-4"><span class="text-[10px] bg-gray-200 text-gray-600 px-2 py-0.5 font-medium">Vendido</span></td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2.5 px-4 text-gray-600">D</td><td class="py-2.5 px-4 text-gray-600">5,000 m2</td><td class="py-2.5 px-4"><span class="text-[10px] bg-gray-200 text-gray-600 px-2 py-0.5 font-medium">Vendido</span></td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2.5 px-4 text-gray-600">E</td><td class="py-2.5 px-4 text-gray-600">5,000 m2</td><td class="py-2.5 px-4"><span class="text-[10px] bg-gray-200 text-gray-600 px-2 py-0.5 font-medium">Vendido</span></td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2.5 px-4 text-gray-600">F</td><td class="py-2.5 px-4 text-gray-600">5,000 m2</td><td class="py-2.5 px-4"><span class="text-[10px] bg-gray-200 text-gray-600 px-2 py-0.5 font-medium">Vendido</span></td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2.5 px-4 text-gray-600">G</td><td class="py-2.5 px-4 text-gray-600">5,000 m2</td><td class="py-2.5 px-4"><span class="text-[10px] bg-gray-200 text-gray-600 px-2 py-0.5 font-medium">Vendido</span></td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2.5 px-4 text-gray-600">H</td><td class="py-2.5 px-4 text-gray-600">5,000 m2</td><td class="py-2.5 px-4"><span class="text-[10px] bg-gray-200 text-gray-600 px-2 py-0.5 font-medium">Vendido</span></td></tr>
+              <tr class="border-b border-gray-100"><td class="py-2.5 px-4 text-gray-600">I</td><td class="py-2.5 px-4 text-gray-600">~5,000 m2</td><td class="py-2.5 px-4"><span class="text-[10px] bg-gray-200 text-gray-600 px-2 py-0.5 font-medium">Vendido</span></td></tr>
+              <tr><td class="py-2.5 px-4 text-gray-600">J</td><td class="py-2.5 px-4 text-gray-600">~5,000 m2</td><td class="py-2.5 px-4"><span class="text-[10px] bg-gray-200 text-gray-600 px-2 py-0.5 font-medium">Vendido</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-14 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="fade-in">
+            <p class="text-gold text-sm tracking-[0.2em] uppercase mb-3">Amenidades</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Vive la Naturaleza</h2>
+            <div class="w-14 h-0.5 bg-gold mb-6"></div>
+            <p class="text-gray-500 text-sm mb-6">
+              Actividades disenadas para aprovechar al maximo el entorno natural del rancho.
+            </p>
+            <div class="grid grid-cols-2 gap-y-3 gap-x-4">
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-sm text-gray-600">Senderismo</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-sm text-gray-600">Cabalgatas</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-sm text-gray-600">Canotaje</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-sm text-gray-600">Montanismo</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-sm text-gray-600">Agricultura Organica</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-sm text-gray-600">Talleres Agricolas</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-sm text-gray-600">Acuacultura</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-sm text-gray-600">Recreacion en Tinajas</span>
+              </div>
+            </div>
+          </div>
+          <div class="fade-in">
+            <img src={base + '/images/propiedades/santa-anita/campo-agaves.webp'} alt="Amenidades Santa Anita" class="w-full h-[350px] object-cover" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-14 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="fade-in order-2 md:order-1">
+            <img src={base + '/images/propiedades/santa-anita/puerta-entrada.webp'} alt="Entrada Santa Anita" class="w-full h-[350px] object-cover" loading="lazy" />
+          </div>
+          <div class="fade-in order-1 md:order-2">
+            <p class="text-gold text-sm tracking-[0.2em] uppercase mb-3">Ubicacion Privilegiada</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">La Purisima de Jalpa</h2>
+            <div class="w-14 h-0.5 bg-gold mb-6"></div>
+            <p class="text-gray-500 text-sm mb-4">
+              San Miguel de Allende, Guanajuato. A solo 23.5 km del centro de la ciudad.
+            </p>
+            <div class="space-y-2 text-sm text-gray-500 mb-6">
+              <p>5 minutos de la Presa de Jalpa</p>
+              <p>5 minutos de Hacienda La Purisima</p>
+              <p>10 minutos de Via Organica</p>
+              <p>25 minutos de Liverpool SMA</p>
+              <p>30 minutos de ANTEA</p>
+              <p>30 minutos de HEB Juriquilla</p>
+            </div>
+            <div class="grid grid-cols-2 gap-4 max-w-sm">
+              <div class="text-center p-4 border border-gray-100">
+                <span class="text-2xl font-bold text-primary block">23.5</span>
+                <span class="text-xs text-gray-400">km de SMA</span>
+              </div>
+              <div class="text-center p-4 border border-gray-100">
+                <span class="text-2xl font-bold text-primary block">25</span>
+                <span class="text-xs text-gray-400">Min del Centro</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-14 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-10 fade-in">
+          <p class="text-gold text-sm tracking-[0.2em] uppercase mb-3">Galeria</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Conoce el Rancho</h2>
+          <div class="w-14 h-0.5 bg-gold mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div class="fade-in overflow-hidden">
+            <img src={base + '/images/propiedades/santa-anita/panoramica-valle.webp'} alt="Vista panoramica" class="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-700" loading="lazy" />
+          </div>
+          <div class="fade-in overflow-hidden">
+            <img src={base + '/images/propiedades/santa-anita/porton-piedra.webp'} alt="Porton de piedra" class="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-700" loading="lazy" />
+          </div>
+          <div class="fade-in overflow-hidden">
+            <img src={base + '/images/propiedades/santa-anita/camino-tierra.webp'} alt="Caminos del rancho" class="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-700" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="mt-8 fade-in">
+          <video class="w-full max-h-[500px] object-cover" controls preload="metadata" poster={base + '/images/propiedades/santa-anita/cover.webp'}>
+            <source src={base + '/videos/santa-anita/intro.webm'} type="video/webm" />
+            Tu navegador no soporta video.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto-santa-anita" class="py-20 overlay-primary section-bg" style={`background-image: url('${base}/images/propiedades/santa-anita/campo-agaves.webp')`}>
+      <div class="relative z-10 max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12">
+          <div class="fade-in">
+            <p class="text-gold text-sm tracking-[0.2em] uppercase mb-3">Rancho Santa Anita de Jalpa</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Proyecto Referente</h2>
+            <div class="w-14 h-0.5 bg-gold mb-6"></div>
+            <p class="text-white/70 mb-8 text-sm leading-relaxed">
+              Aunque este proyecto se encuentra 100% vendido, representa un referente de confianza y calidad de BADI 108 Real Estate. Si buscas un desarrollo similar, contactanos.
+            </p>
+
+            <div class="space-y-5">
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-white/10 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-white/50 text-xs">Telefono</p>
+                  <p class="text-white text-sm font-medium">55 2748 6478 / 56 2418 3152</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-white/10 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-white/50 text-xs">Direccion</p>
+                  <p class="text-white text-sm font-medium">La Purisima de Jalpa, San Miguel de Allende</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-white/10 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-white/50 text-xs">Email</p>
+                  <p class="text-white text-sm font-medium">laura@badi108realestate.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="fade-in">
+            <form class="bg-white p-7">
+              <div class="mb-4">
+                <label class="block text-xs font-medium text-dark mb-1.5">Nombre Completo</label>
+                <input type="text" class="w-full px-3 py-2.5 border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm" placeholder="Tu nombre" />
+              </div>
+              <div class="mb-4">
+                <label class="block text-xs font-medium text-dark mb-1.5">Email</label>
+                <input type="email" class="w-full px-3 py-2.5 border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm" placeholder="tu@email.com" />
+              </div>
+              <div class="mb-4">
+                <label class="block text-xs font-medium text-dark mb-1.5">Telefono</label>
+                <input type="tel" class="w-full px-3 py-2.5 border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm" placeholder="Tu telefono" />
+              </div>
+              <div class="mb-5">
+                <label class="block text-xs font-medium text-dark mb-1.5">Que te interesa?</label>
+                <select class="w-full px-3 py-2.5 border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm">
+                  <option>Mas informacion</option>
+                  <option>Proyectos similares</option>
+                  <option>Agendar visita</option>
+                </select>
+              </div>
+              <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white py-3 font-medium tracking-wide transition-all text-sm">
+                Enviar Mensaje
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-14 bg-white">
+      <div class="max-w-7xl mx-auto px-6 text-center fade-in">
+        <p class="text-gold text-sm tracking-[0.2em] uppercase mb-3">BADI 108</p>
+        <h3 class="text-xl font-bold text-dark mb-3">Real Estate</h3>
+        <p class="text-gray-500 text-sm max-w-lg mx-auto leading-relaxed">
+          Creando comunidades sustentables y de alta plusvalia en San Miguel de Allende.
+        </p>
+        <p class="text-gray-500 text-sm max-w-lg mx-auto mt-2 leading-relaxed">
+          Rancho Santa Anita de Jalpa, un proyecto que demuestra nuestro compromiso con la naturaleza y la calidad de vida.
+        </p>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 @theme {
   --color-primary: #000000;
@@ -20,6 +20,15 @@
   --color-gold-dark: #b8922e;
   --overlay-from: rgba(107,58,125,0.85);
   --overlay-to: rgba(74,37,88,0.75);
+}
+
+.theme-santa-anita {
+  --color-primary: #2D5016;
+  --color-primary-dark: #1E3A0F;
+  --color-gold: #8FB339;
+  --color-gold-dark: #6E8C2D;
+  --overlay-from: rgba(45,80,22,0.85);
+  --overlay-to: rgba(30,58,15,0.75);
 }
 
 html {

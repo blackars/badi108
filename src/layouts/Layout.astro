@@ -1,10 +1,10 @@
----
+﻿---
 import '../styles/global.css';
 
 interface Props {
   title: string;
   description?: string;
-  theme?: 'la-serena';
+  theme?: 'la-serena' | 'santa-anita';
 }
 
 const { title, description = 'BADI 108 Real Estate - San Miguel de Allende, Guanajuato', theme } = Astro.props;
@@ -19,7 +19,7 @@ const { title, description = 'BADI 108 Real Estate - San Miguel de Allende, Guan
   <title>{title}</title>
 </head>
 <body class="bg-white text-dark antialiased">
-  <div class:list={{ 'theme-la-serena': theme === 'la-serena' }}>
+  <div class:list={{ 'theme-la-serena': theme === 'la-serena', 'theme-santa-anita': theme === 'santa-anita' }}>
     <slot />
   </div>
   <script>

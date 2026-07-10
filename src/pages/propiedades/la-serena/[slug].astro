@@ -5,7 +5,7 @@ import Footer from '../../../components/Footer.astro';
 import fs from 'fs';
 import path from 'path';
 
-const BASE = import.meta.env.BASE_URL;
+const BASE = import.meta.env.BASE_URL.replace(/\/+$/, '');
 
 export async function getStaticPaths() {
   const IMAGE_BASE = path.join(process.cwd(), 'public', 'images', 'propiedades');

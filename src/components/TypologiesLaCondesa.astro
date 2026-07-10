@@ -1,6 +1,7 @@
 ﻿---
-const URL_BASE = `${import.meta.env.BASE_URL}/images/propiedades/la-condesa`;
-const PAGE_BASE = `${import.meta.env.BASE_URL}/propiedades/la-condesa`;
+const _base = import.meta.env.BASE_URL.replace(/\/+$/, '');
+const URL_BASE = `${_base}/images/propiedades/la-condesa`;
+const PAGE_BASE = `${_base}/propiedades/la-condesa`;
 
 const properties = [
   {

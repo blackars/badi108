@@ -1,10 +1,11 @@
 ---
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/+$/, '');
+const p = (path: string) => `${base}${path}`;
 ---
 
 <section id="inicio" class="relative h-screen min-h-[600px] max-h-[900px] overflow-hidden">
   <div class="absolute inset-0">
-    <img src={`${base}/images/hero-plaza.webp`} alt="San Miguel de Allende" class="w-full h-full object-cover" />
+    <img src={p('/images/hero-plaza.webp')} alt="San Miguel de Allende" class="w-full h-full object-cover" />
     <div class="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/50 to-primary/80"></div>
   </div>
 
@@ -23,10 +24,10 @@ const base = import.meta.env.BASE_URL;
       </p>
     </div>
     <div class="fade-in flex flex-col sm:flex-row gap-3">
-      <a href={base + '/propiedades'} class="bg-gold hover:bg-gold-dark text-white px-8 py-3 text-xs tracking-widest uppercase transition-all">
+      <a href={p('/propiedades')} class="bg-gold hover:bg-gold-dark text-white px-8 py-3 text-xs tracking-widest uppercase transition-all">
         Ver Propiedades
       </a>
-      <a href={base + '/nosotros'} class="border border-white/40 hover:border-gold text-white hover:text-gold px-8 py-3 text-xs tracking-widest uppercase transition-all">
+      <a href={p('/nosotros')} class="border border-white/40 hover:border-gold text-white hover:text-gold px-8 py-3 text-xs tracking-widest uppercase transition-all">
         Conócenos
       </a>
     </div>

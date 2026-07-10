@@ -1,12 +1,13 @@
 ---
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/+$/, '');
+const p = (path: string) => `${base}${path}`;
 ---
 <footer class="bg-dark text-white py-14">
   <div class="max-w-7xl mx-auto px-6">
     <div class="grid md:grid-cols-4 gap-10 mb-10">
       <div class="md:col-span-2">
         <div class="flex items-center gap-3 mb-5">
-          <img src={`${base}/images/logo-badi108.webp`} alt="BADI 108" class="h-12 w-auto" />
+          <img src={p('/images/logo-badi108.webp')} alt="BADI 108" class="h-12 w-auto" />
           <div>
             <span class="text-[10px] tracking-widest block font-light text-white/50">Real Estate</span>
             <span class="text-lg font-bold tracking-wider">BADI 108</span>
@@ -25,10 +26,10 @@ const base = import.meta.env.BASE_URL;
       <div>
         <h4 class="text-sm font-bold mb-4">Navegación</h4>
         <ul class="space-y-2">
-          <li><a href={base + '/'} class="text-white/50 hover:text-gold transition-colors text-xs">Inicio</a></li>
-          <li><a href={base + '/nosotros'} class="text-white/50 hover:text-gold transition-colors text-xs">Nosotros</a></li>
-          <li><a href={base + '/propiedades'} class="text-white/50 hover:text-gold transition-colors text-xs">Propiedades</a></li>
-          <li><a href={base + '/#contacto'} class="text-white/50 hover:text-gold transition-colors text-xs">Contacto</a></li>
+          <li><a href={p('/')} class="text-white/50 hover:text-gold transition-colors text-xs">Inicio</a></li>
+          <li><a href={p('/nosotros')} class="text-white/50 hover:text-gold transition-colors text-xs">Nosotros</a></li>
+          <li><a href={p('/propiedades')} class="text-white/50 hover:text-gold transition-colors text-xs">Propiedades</a></li>
+          <li><a href={p('/#contacto')} class="text-white/50 hover:text-gold transition-colors text-xs">Contacto</a></li>
         </ul>
       </div>
 

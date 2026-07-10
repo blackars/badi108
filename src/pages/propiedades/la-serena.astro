@@ -4,7 +4,7 @@ import Navbar from '../../components/Navbar.astro';
 import Typologies from '../../components/Typologies.astro';
 import Amenities from '../../components/Amenities.astro';
 import Footer from '../../components/Footer.astro';
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/+$/, '');
 ---
 
 <Layout title="La Serena Residencial | BADI 108 Real Estate" theme="la-serena">

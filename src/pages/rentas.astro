@@ -5,7 +5,7 @@ import Footer from '../components/Footer.astro';
 import fs from 'fs';
 import path from 'path';
 
-const BASE = import.meta.env.BASE_URL;
+const BASE = import.meta.env.BASE_URL.replace(/\/+$/, '');
 const PAGE_BASE = `${BASE}/rentas`;
 const IMAGE_BASE = `${BASE}/images/rentas`;
 

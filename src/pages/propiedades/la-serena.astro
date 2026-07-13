@@ -58,6 +58,23 @@ const base = import.meta.env.BASE_URL.replace(/\/+$/, '');
       </div>
     </section>
 
+    <section class="relative w-full" style="height: 70vh; min-height: 400px;">
+      <video id="promo-video" class="w-full h-full object-cover" autoplay muted loop playsinline>
+        <source src={`${base}/videos/la-serena-promo.mp4`} type="video/mp4" />
+      </video>
+      <button id="unmute-btn" class="absolute bottom-6 right-6 z-10 w-12 h-12 bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors rounded-full backdrop-blur-sm" title="Activar sonido">
+        <svg id="icon-muted" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+          <line x1="23" y1="9" x2="17" y2="15"/>
+          <line x1="17" y1="9" x2="23" y2="15"/>
+        </svg>
+        <svg id="icon-unmuted" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+          <path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"/>
+        </svg>
+      </button>
+    </section>
+
     <Typologies />
     <Amenities />
 
@@ -192,3 +209,18 @@ const base = import.meta.env.BASE_URL.replace(/\/+$/, '');
   </main>
   <Footer />
 </Layout>
+
+<script>
+  const video = document.getElementById('promo-video');
+  const btn = document.getElementById('unmute-btn');
+  const iconMuted = document.getElementById('icon-muted');
+  const iconUnmuted = document.getElementById('icon-unmuted');
+
+  if (video && btn) {
+    btn.addEventListener('click', () => {
+      video.muted = !video.muted;
+      iconMuted.classList.toggle('hidden');
+      iconUnmuted.classList.toggle('hidden');
+    });
+  }
+</script>

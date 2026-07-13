@@ -33,12 +33,13 @@ export async function getStaticPaths() {
 
   return rentals.map(r => ({
     params: { slug: r.id },
-    props: { ...r, images: getImages(r.id) }
+    props: { ...r, media: getMedia(r.id) }
   }));
 }
 
-const { id, name, location, type, price, specs, description, images } = Astro.props;
-const imgUrl = (img) => `${BASE}/images/rentas/${id}/${encodeURIComponent(img)}`;
+const { id, name, location, type, price, specs, description, media } = Astro.props;
+const mediaUrl = (file) => `${BASE}/images/rentas/${id}/${encodeURIComponent(file)}`;
+const isVideo = (file) => /\.webm$/i.test(file);
 ---
 
 <Layout title={`${name} | Rentas | BADI 108`}>
@@ -46,17 +47,21 @@ const imgUrl = (img) => `${BASE}/images/rentas/${id}/${encodeURIComponent(img)}`
   <main>
     <div class="bg-black relative" style="height: 70vh; min-height: 400px;">
       <div class="w-full h-full flex items-center justify-center p-4">
-        {images.length > 0 ? (
-          <img id="gallery-img" class="max-w-full max-h-full object-contain select-none" src={imgUrl(images[0])} alt={name} />
+        {media.length > 0 ? (
+          isVideo(media[0]) ? (
+            <video id="gallery-video" class="max-w-full max-h-full object-contain select-none" src={mediaUrl(media[0])} autoplay muted loop playsinline></video>
+          ) : (
+            <img id="gallery-img" class="max-w-full max-h-full object-contain select-none" src={mediaUrl(media[0])} alt={name} />
+          )
         ) : (
           <div class="text-center text-white/40">
             <svg class="w-20 h-20 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-            <p class="text-sm">Sin imágenes disponibles</p>
+            <p class="text-sm">Sin medios disponibles</p>
           </div>
         )}
       </div>
 
-      {images.length > 1 && (
+      {media.length > 1 && (
         <>
           <button id="prev-btn" class="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/10 hover:bg-white/25 text-white flex items-center justify-center transition-colors rounded-full">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
@@ -64,7 +69,7 @@ const imgUrl = (img) => `${BASE}/images/rentas/${id}/${encodeURIComponent(img)}`
           <button id="next-btn" class="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/10 hover:bg-white/25 text-white flex items-center justify-center transition-colors rounded-full">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
           </button>
-          <div id="counter" class="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 bg-black/50 text-white text-xs px-3 py-1 rounded">1 / {images.length}</div>
+          <div id="counter" class="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 bg-black/50 text-white text-xs px-3 py-1 rounded">1 / {media.length}</div>
         </>
       )}
     </div>
@@ -208,35 +213,67 @@ const imgUrl = (img) => `${BASE}/images/rentas/${id}/${encodeURIComponent(img)}`
   <Footer />
 </Layout>
 
-<script define:vars={{ images, slug: id, base: BASE }}>
-  if (images.length > 1) {
-    const img = document.getElementById('gallery-img');
+<script define:vars={{ media, slug: id, base: BASE }}>
+  if (media.length > 1) {
+    const container = document.querySelector('.bg-black .flex.items-center.justify-center');
     const counter = document.getElementById('counter');
     let current = 0;
 
+    function isVideo(f) { return /\.webm$/i.test(f); }
+
     function render() {
-      const filename = encodeURIComponent(images[current]);
-      img.src = `${base}/images/rentas/${slug}/${filename}`;
-      counter.textContent = `${current + 1} / ${images.length}`;
+      const filename = encodeURIComponent(media[current]);
+      const url = `${base}/images/rentas/${slug}/${filename}`;
+      const existingImg = document.getElementById('gallery-img');
+      const existingVid = document.getElementById('gallery-video');
+
+      if (isVideo(media[current])) {
+        if (existingImg) existingImg.remove();
+        let vid = existingVid;
+        if (!vid) {
+          vid = document.createElement('video');
+          vid.id = 'gallery-video';
+          vid.className = 'max-w-full max-h-full object-contain select-none';
+          vid.autoplay = true;
+          vid.muted = true;
+          vid.loop = true;
+          vid.playsInline = true;
+          container.prepend(vid);
+        }
+        vid.src = url;
+        vid.play().catch(() => {});
+      } else {
+        if (existingVid) existingVid.remove();
+        let img = existingImg;
+        if (!img) {
+          img = document.createElement('img');
+          img.id = 'gallery-img';
+          img.className = 'max-w-full max-h-full object-contain select-none';
+          img.alt = slug;
+          container.prepend(img);
+        }
+        img.src = url;
+      }
+      counter.textContent = `${current + 1} / ${media.length}`;
     }
 
     document.getElementById('prev-btn').addEventListener('click', () => {
-      current = (current - 1 + images.length) % images.length;
+      current = (current - 1 + media.length) % media.length;
       render();
     });
 
     document.getElementById('next-btn').addEventListener('click', () => {
-      current = (current + 1) % images.length;
+      current = (current + 1) % media.length;
       render();
     });
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowLeft') {
-        current = (current - 1 + images.length) % images.length;
+        current = (current - 1 + media.length) % media.length;
         render();
       }
       if (e.key === 'ArrowRight') {
-        current = (current + 1) % images.length;
+        current = (current + 1) % media.length;
         render();
       }
     });

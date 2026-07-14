@@ -94,3 +94,110 @@
 - `src/components/Amenities.astro` - +5 amenidades
 - `src/pages/propiedades/la-serena.astro` - Sección contacto + bullets ubicaciones
 - `public/images/propiedades/umaran/` - Imágenes placeholder (copiadas de Aldama)
+
+### 2026-07-10 - Sección de Rentas: 10 Propiedades Reales
+
+**Contexto:**
+Se reemplazaron las 8 propiedades placeholder de la sección Rentas con las 10 propiedades reales del inventario (`inventario_de_renta.txt`), incluyendo contenido multimedia (fotos y videos) de la carpeta `inventario renta`.
+
+**Archivos modificados:**
+- `src/pages/rentas.astro` - Array de propiedades actualizado (8 placeholders → 10 propiedades reales)
+- `src/pages/rentas/[slug].astro` - Propiedades reales con descripciones completas, soporte para video (getMedia en lugar de getImages), galería con soporte image/video
+
+**Assets creados en `public/images/rentas/`:**
+| Carpeta | Imágenes WebP | Videos WebM |
+|---------|---------------|-------------|
+| relox-08b | 9 | 1 |
+| relox-07c-aldama | 13 | 2 |
+| relox-07a-aldama-pj | 27 | 1 |
+| relox-10a-recreo | 24 | 1 |
+| insurgentes-10d | 14 | 1 |
+| relox-17c-aldama | 42 | 1 |
+| hidalgo-08a-recreo-pj | 39 | 1 |
+| hidalgo-02c | 53 | 0 |
+| relox-28d-recreo | 15 | 0 |
+| relox-02c-recreo | 49 | 0 |
+
+**Conversión de medios:**
+- Imágenes: jpeg/png/jpg → WebP (calidad 80)
+- Videos: mp4 → WebM (VP8, CRF 30, sin audio)
+- Eliminadas 8 carpetas placeholder anteriores (casa-pilar, depto-alameda, etc.)
+
+**Decisiones:**
+- Slugs basados en nombre de carpeta del inventario (ej: `relox-08b`, `insurgentes-10d`)
+- Precios establecidos como "Consultar" (no especificados en inventario)
+- Descripciones textuales completas extraídas directamente del `.txt`
+- Galería actualizada para soportar tanto imágenes como videos (.webm)
+
+### 2026-07-10 - Corrección GitHub Actions Workflow
+
+**Problema:**
+Error en build de GitHub Actions: "Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24"
+
+**Archivos modificados:**
+- `.github/workflows/deploy.yml` - Actions actualizadas a versiones compatibles con Node.js 24
+
+**Cambios en actions:**
+| Action | Versión anterior | Nueva versión |
+|--------|-----------------|---------------|
+| actions/checkout | v4 | v5 |
+| actions/setup-node | v4 | v5 |
+| actions/upload-pages-artifact | v3 | v4 |
+| actions/deploy-pages | v4 | v5 |
+
+### 2026-07-10 - Barra de Detalles en Páginas de Rentas
+
+**Contexto:**
+Se agregó una barra de especificaciones con formato `86 m² | 2 Recámaras | 2 Baños | Terraza | Jardín Privado | Frente a Casa Club` a cada página de detalle de propiedad en renta.
+
+**Archivos modificados:**
+- `src/pages/rentas/[slug].astro` - Nuevo campo `detailBar` en cada propiedad + barra visual en template
+
+**Detail bars por propiedad:**
+| Propiedad | Detail Bar |
+|-----------|------------|
+| Relox 08-B | 86 m² \| 2 Recámaras \| 2 Baños \| Terraza \| Jardín \| Planta Jardín |
+| Relox 07-C Aldama | 105 m² \| 2 Recámaras \| 2 Baños \| Terraza \| Cocina Equipada \| Planta Intermedia |
+| Relox 07-A Aldama P-J | 105 m² \| 2 Recámaras \| 2 Baños \| Terraza \| Jardín Privado \| Planta Jardín |
+| Relox 10-A Recreo | 86 m² \| 2 Recámaras \| 2 Baños \| Terraza \| Jardín Privado \| Frente a Casa Club |
+| Insurgentes 10-D | 86 m² \| 2 Recámaras \| 2 Baños \| Terraza \| Vista a Canchas de Tenis y Pádel |
+| Relox 17-C Aldama | 105 m² \| 2 Recámaras \| 2 Baños \| Terraza \| Cocina Integral \| Departamento Nuevo y Recién Remodelado |
+| Hidalgo 08-A Recreo P-J | 86 m² \| 2 Recámaras \| 2 Baños \| Terraza \| Jardín Privado \| Amueblado y Equipado |
+| Hidalgo 02-C | 86 m² \| 2 Recámaras \| 2 Baños \| Terraza \| Amueblado y Equipado |
+| Relox 28-D Recreo | 86 m² \| 2 Recámaras \| 2 Baños \| Terraza \| Amueblado y Equipado |
+| Relox 02-C Recreo | 86 m² \| 2 Recámaras \| 2 Baños \| Terraza \| Amueblado y Equipado |
+
+**Estilo:**
+- Fondo `bg-gray-50` con borde `border-gray-200`
+- Separadores dorados (`text-gold`) entre ítems
+- Ubicación: debajo del precio, arriba de la descripción
+
+### 2026-07-10 - Video Promocional La Serena Residencial
+
+**Contexto:**
+Se agregó una sección de video full-width a la página de La Serena Residencial, justo arriba de la sección de Prototipos. El video se reproduce automáticamente y tiene botón para activar/desactivar sonido.
+
+**Archivos modificados:**
+- `src/pages/propiedades/la-serena.astro` - Nueva sección de video + script de mute/unmute
+
+**Assets creados:**
+- `public/videos/la-serena-promo.mp4` - Video comprimido (4.81 MB, H.264 + AAC, 60s)
+- `public/videos/la-serena-promo.webm` - Versión WebM sin audio (6.9 MB)
+
+**Conversión de video:**
+- Original: WhatsApp Video 2026-07-10 (7.5 MB, 640x362, 60s)
+- mp4: libx264 CRF 28 + AAC 128k → 4.81 MB (36% reducción)
+- webm: libvpx CRF 30, sin audio → 6.9 MB
+
+**Características de la sección:**
+- Full-width, altura `75vh` con `min-height: 300px`
+- Fondo negro (`bg-black`) para letterbox invisible
+- Video con `object-contain` (nunca se recorta)
+- Botón de sonido con iconos muted/unmuted (alternancia)
+- Auto-reproducción en loop, muteado por defecto (restricción de navegadores)
+
+**Responsive:**
+- `object-contain` asegura que el video se vea completo en todos los tamaños
+- `max-height: 75vh` previene que exceda el viewport
+- Flexbox centrado vertical y horizontalmente
+- En mobile: barras negras arriba/abajo si es necesario, video siempre visible completo

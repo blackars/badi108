@@ -4,7 +4,9 @@ import Navbar from '../../components/Navbar.astro';
 import Typologies from '../../components/Typologies.astro';
 import Amenities from '../../components/Amenities.astro';
 import Footer from '../../components/Footer.astro';
+import catalogo from '../../tabla_la_serena.json';
 const base = import.meta.env.BASE_URL.replace(/\/+$/, '');
+const catalogoData = catalogo.catalogoResidencias;
 ---
 
 <Layout title="La Serena Residencial | BADI 108 Real Estate" theme="la-serena">
@@ -73,6 +75,67 @@ const base = import.meta.env.BASE_URL.replace(/\/+$/, '');
           <path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"/>
         </svg>
       </button>
+    </section>
+
+    <section class="py-14 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-10 fade-in">
+          <p class="text-gold text-sm tracking-[0.2em] uppercase mb-3">Catálogo de Prototipos</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Elige tu Modelo Ideal</h2>
+          <div class="w-14 h-0.5 bg-gold mx-auto mb-6"></div>
+          <p class="text-gray-500 text-sm max-w-lg mx-auto">Cada prototipo ofrece diferentes variantes según el nivel. Explora las opciones disponibles.</p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-3 mb-8 fade-in" id="filters">
+          <button class="filter-btn active px-4 py-2 text-xs font-medium border border-primary text-primary hover:bg-primary hover:text-white transition-colors" data-filter="all">Todos</button>
+          <button class="filter-btn px-4 py-2 text-xs font-medium border border-gray-300 text-gray-500 hover:border-primary hover:text-primary transition-colors" data-filter="2">2 Recámaras</button>
+          <button class="filter-btn px-4 py-2 text-xs font-medium border border-gray-300 text-gray-500 hover:border-primary hover:text-primary transition-colors" data-filter="3">3 Recámaras</button>
+          <button class="filter-btn px-4 py-2 text-xs font-medium border border-gray-300 text-gray-500 hover:border-primary hover:text-primary transition-colors" data-filter="4">4 Recámaras</button>
+        </div>
+
+        <div class="overflow-x-auto fade-in">
+          <table class="w-full text-left border-collapse" id="catalogo-table">
+            <thead>
+              <tr class="border-b-2 border-primary">
+                <th class="py-3 px-4 text-xs font-bold text-dark uppercase tracking-wider">Prototipo</th>
+                <th class="py-3 px-4 text-xs font-bold text-dark uppercase tracking-wider">Nivel</th>
+                <th class="py-3 px-4 text-xs font-bold text-dark uppercase tracking-wider text-center">Recámaras</th>
+                <th class="py-3 px-4 text-xs font-bold text-dark uppercase tracking-wider text-center">Baños</th>
+                <th class="py-3 px-4 text-xs font-bold text-dark uppercase tracking-wider text-center">m² Interiores</th>
+                <th class="py-3 px-4 text-xs font-bold text-dark uppercase tracking-wider text-center">Terraza</th>
+                <th class="py-3 px-4 text-xs font-bold text-dark uppercase tracking-wider text-center">Roof Garden</th>
+                <th class="py-3 px-4 text-xs font-bold text-dark uppercase tracking-wider text-center">m² Total</th>
+                <th class="py-3 px-4 text-xs font-bold text-dark uppercase tracking-wider text-right">Precio</th>
+                <th class="py-3 px-4 text-xs font-bold text-dark uppercase tracking-wider text-right">Mantenimiento</th>
+              </tr>
+            </thead>
+            <tbody id="catalogo-body">
+              {catalogoData.map((item) => (
+                <tr class="border-b border-gray-200 hover:bg-primary/5 transition-colors catalogo-row" data-recamaras={item.recamaras}>
+                  <td class="py-3 px-4 text-sm font-semibold text-dark">{item.prototipo}</td>
+                  <td class="py-3 px-4">
+                    <span class={`inline-block px-2 py-0.5 text-[10px] font-medium rounded-full ${
+                      item.nivel === 'Roof Garden' ? 'bg-gold/20 text-gold' :
+                      item.nivel === 'Planta Jardín' ? 'bg-green-100 text-green-700' :
+                      'bg-blue-100 text-blue-700'
+                    }`}>{item.nivel}</span>
+                  </td>
+                  <td class="py-3 px-4 text-sm text-gray-600 text-center">{item.recamaras}</td>
+                  <td class="py-3 px-4 text-sm text-gray-600 text-center">{item.banos}{item.medioBano > 0 ? ` + ${item.medioBano}` : ''}</td>
+                  <td class="py-3 px-4 text-sm text-gray-600 text-center">{item.m2Interiores} m²</td>
+                  <td class="py-3 px-4 text-sm text-gray-600 text-center">{item.terraza > 0 ? `${item.terraza} m²` : '—'}</td>
+                  <td class="py-3 px-4 text-sm text-gray-600 text-center">{item.roofGarden > 0 ? `${item.roofGarden} m²` : '—'}</td>
+                  <td class="py-3 px-4 text-sm font-medium text-dark text-center">{item.m2Total} m²</td>
+                  <td class="py-3 px-4 text-sm font-bold text-primary text-right">${item.precioLista.toLocaleString('es-MX')}</td>
+                  <td class="py-3 px-4 text-sm text-gray-500 text-right">${item.costoMtto.toLocaleString('es-MX')}/mes</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-center text-gray-400 text-xs mt-6">Precios en pesos mexicanos. sujetos a cambio sin previo aviso.</p>
+      </div>
     </section>
 
     <Typologies />
@@ -236,4 +299,27 @@ const base = import.meta.env.BASE_URL.replace(/\/+$/, '');
       iconUnmuted.classList.toggle('hidden');
     });
   }
+
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const rows = document.querySelectorAll('.catalogo-row');
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach((b) => {
+        b.classList.remove('active', 'bg-primary', 'text-white');
+        b.classList.add('border-gray-300', 'text-gray-500');
+      });
+      btn.classList.add('active', 'bg-primary', 'text-white');
+      btn.classList.remove('border-gray-300', 'text-gray-500');
+
+      const filter = btn.getAttribute('data-filter');
+      rows.forEach((row) => {
+        if (filter === 'all' || row.getAttribute('data-recamaras') === filter) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    });
+  });
 </script>

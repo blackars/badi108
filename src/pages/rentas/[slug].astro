@@ -38,11 +38,12 @@ export async function getStaticPaths() {
 }
 
 const { id, name, location, type, price, detailBar, specs, description, media } = Astro.props;
+const propertyName = typeof name === 'string' && name.trim() ? name : id;
 const mediaUrl = (file) => `${BASE}/images/rentas/${id}/${encodeURIComponent(file)}`;
 const isVideo = (file) => /\.webm$/i.test(file);
 ---
 
-<Layout title={`${name} | Rentas | BADI 108`}>
+<Layout title={`${propertyName} | Rentas | BADI 108`}>
   <Navbar />
   <main>
     <div class="bg-black relative" style="height: 70vh; min-height: 400px;">
@@ -79,7 +80,7 @@ const isVideo = (file) => /\.webm$/i.test(file);
         <div class="mb-8">
           <div class="flex items-center gap-2 mb-3">
             <span class="text-[10px] bg-gold text-white px-3 py-1 font-semibold uppercase tracking-wider">{type}</span>
-            <h1 class="text-2xl md:text-3xl font-bold text-dark">{name}</h1>
+            <h1 class="text-2xl md:text-3xl font-bold text-dark">{propertyName}</h1>
           </div>
           <p class="text-gray-400 text-sm">{location}</p>
           <p class="text-gold text-lg font-bold mt-2">{price}</p>

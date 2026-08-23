@@ -130,20 +130,31 @@ Explora nuestros proyectos y encuentra el espacio ideal para escribir tu próxim
             </div>
           </a>
 
-          {tokkoVenta.map((p) => (
-            <PropertyCard
-              id={p.id}
-              title={p.title}
-              location={p.locationShort}
-              price={p.priceFormatted}
-              typeName={p.typeName}
-              operationLabel={p.operationLabel}
-              cover={p.cover}
-              specs={p.specs}
-              href={p.href}
-            />
-          ))}
         </div>
+
+        {tokkoVenta.length > 0 && (
+          <div class="max-w-6xl mx-auto mt-16 pt-10 border-t border-gray-200">
+            <div class="text-center mb-10 fade-in">
+              <h3 class="text-2xl md:text-3xl font-bold text-dark">Excelentes Oportunidades</h3>
+              <div class="w-14 h-0.5 bg-gold mx-auto mt-4"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {tokkoVenta.map((p) => (
+                <PropertyCard
+                  id={p.id}
+                  title={p.title}
+                  location={p.locationShort}
+                  price={p.priceFormatted}
+                  typeName={p.typeName}
+                  operationLabel={p.operationLabel}
+                  cover={p.cover}
+                  specs={p.specs}
+                  href={p.href}
+                />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   </main>

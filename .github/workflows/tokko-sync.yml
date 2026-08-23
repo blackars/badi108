@@ -1,0 +1,49 @@
+name: Sync Tokko Broker
+
+on:
+  schedule:
+    - cron: '0 10 * * *' # 10:00 UTC = 04:00 Mexico (ajusta si quieres 12:00 UTC)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync Tokko
+        env:
+          TOKKO_API_KEY: ${{ secrets.TOKKO_API_KEY }}
+          TOKKO_LANG: es_ar
+        run: |
+          if [ -z "$TOKKO_API_KEY" ]; then
+            echo "❌ TOKKO_API_KEY no configurada en Secrets - abortando"
+            exit 1
+          fi
+          node scripts/sync-tokko.mjs
+
+      - name: Commit & Push if changed
+        run: |
+          git config user.name "tokko-bot"
+          git config user.email "bot@badi108.com"
+          git add src/data/tokko-cache.json src/data/tokko-venta.json src/data/tokko-renta.json
+          if git diff --cached --quiet; then
+            echo "Sin cambios en Tokko"
+            exit 0
+          fi
+          git commit -m "chore(tokko): sync automatico $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push
+

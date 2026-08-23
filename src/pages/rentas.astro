@@ -2,12 +2,34 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
+import PropertyCard from '../components/tokko/PropertyCard.astro';
+import { normalizeTokkoProperty, getSpecs } from '../lib/tokko';
 import fs from 'fs';
 import path from 'path';
 
 const BASE = import.meta.env.BASE_URL.replace(/\/+$/, '');
 const PAGE_BASE = `${BASE}/rentas`;
 const IMAGE_BASE = `${BASE}/images/rentas`;
+
+// Tokko rentas (alquiler)
+let tokkoRenta: any[] = [];
+try {
+  const rentaPath = path.join(process.cwd(), 'src', 'data', 'tokko-renta.json');
+  if (fs.existsSync(rentaPath)) {
+    const raw = JSON.parse(fs.readFileSync(rentaPath, 'utf-8'));
+    const objects = raw.objects ?? raw;
+    tokkoRenta = objects.map((o: any) => {
+      const n = normalizeTokkoProperty(o);
+      return {
+        ...n,
+        specs: getSpecs(n),
+        href: `${BASE}/rentas/tokko/${n.slug}`,
+      };
+    });
+  }
+} catch (e) {
+  console.warn('No se pudo cargar tokko-renta.json', e);
+}
 
 const IMAGE_DIR = path.join(process.cwd(), 'public', 'images', 'rentas');
 
@@ -99,6 +121,34 @@ En BADI 108 Real Estate te acompañamos a encontrar la opción que mejor se adap
             );
           })}
         </div>
+
+        {tokkoRenta.length > 0 && (
+          <div class="mt-16">
+            <div class="text-center mb-10 fade-in">
+              <p class="text-gold text-sm tracking-[0.2em] uppercase mb-3">Tokko Broker · Actualizado</p>
+              <h3 class="text-2xl md:text-3xl font-bold text-dark mb-4">Rentas desde Tokko</h3>
+              <div class="w-14 h-0.5 bg-gold mx-auto mb-6"></div>
+              <p class="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">
+                Propiedades en renta sincronizadas automáticamente desde Tokko. Mismos precios y disponibilidad que tu cuenta.
+              </p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {tokkoRenta.map((p) => (
+                <PropertyCard
+                  id={p.id}
+                  title={p.title}
+                  location={p.locationShort}
+                  price={p.priceFormatted}
+                  typeName={p.typeName}
+                  operationLabel={p.operationLabel}
+                  cover={p.cover}
+                  specs={p.specs}
+                  href={p.href}
+                />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   </main>

@@ -2,7 +2,31 @@
 import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
+import PropertyCard from '../../components/tokko/PropertyCard.astro';
+import { normalizeTokkoProperty, getSpecs } from '../../lib/tokko';
+import fs from 'fs';
+import path from 'path';
 const base = import.meta.env.BASE_URL.replace(/\/+$/, '');
+
+// Cargar propiedades Tokko en Venta (build-time, desde cache)
+let tokkoVenta: any[] = [];
+try {
+  const ventaPath = path.join(process.cwd(), 'src', 'data', 'tokko-venta.json');
+  if (fs.existsSync(ventaPath)) {
+    const raw = JSON.parse(fs.readFileSync(ventaPath, 'utf-8'));
+    const objects = raw.objects ?? raw;
+    tokkoVenta = objects.map((o: any) => {
+      const n = normalizeTokkoProperty(o);
+      return {
+        ...n,
+        specs: getSpecs(n),
+        href: `${base}/propiedades/tokko/${n.slug}`,
+      };
+    });
+  }
+} catch (e) {
+  console.warn('No se pudo cargar tokko-venta.json', e);
+}
 ---
 
 <Layout title="Propiedades | BADI 108 Real Estate">
@@ -106,6 +130,34 @@ Explora nuestros proyectos y encuentra el espacio ideal para escribir tu próxim
             </div>
           </a>
         </div>
+
+        {tokkoVenta.length > 0 && (
+          <div class="mt-20 max-w-6xl mx-auto">
+            <div class="text-center mb-10 fade-in">
+              <p class="text-gold text-sm tracking-[0.2em] uppercase mb-3">Tokko Broker · Actualizado</p>
+              <h3 class="text-2xl md:text-3xl font-bold text-dark mb-4">Propiedades en Venta</h3>
+              <div class="w-14 h-0.5 bg-gold mx-auto mb-6"></div>
+              <p class="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">
+                Propiedades sincronizadas automáticamente desde Tokko Broker. Mismo diseño, fotos y precios oficiales.
+              </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {tokkoVenta.map((p) => (
+                <PropertyCard
+                  id={p.id}
+                  title={p.title}
+                  location={p.locationShort}
+                  price={p.priceFormatted}
+                  typeName={p.typeName}
+                  operationLabel={p.operationLabel}
+                  cover={p.cover}
+                  specs={p.specs}
+                  href={p.href}
+                />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   </main>

@@ -30,6 +30,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Sync Tokko Broker (si hay TOKKO_API_KEY, actualiza cache; si no, usa cache commiteado)
+        env:
+          TOKKO_API_KEY: ${{ secrets.TOKKO_API_KEY }}
+          TOKKO_LANG: es_ar
+        run: |
+          if [ -n "$TOKKO_API_KEY" ]; then
+            echo "→ TOKKO_API_KEY detectada, sincronizando..."
+            node scripts/sync-tokko.mjs || echo "⚠ sync falló, se usará cache existente"
+          else
+            echo "ℹ TOKKO_API_KEY no configurada, usando src/data/tokko-*.json commiteado"
+          fi
+
       - name: Build with Astro
         run: npm run build
 

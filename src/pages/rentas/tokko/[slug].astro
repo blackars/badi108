@@ -1,0 +1,174 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+import { normalizeTokkoProperty, getSpecs } from '../../../lib/tokko';
+import fs from 'fs';
+import path from 'path';
+
+const BASE = import.meta.env.BASE_URL.replace(/\/+$/, '');
+
+export async function getStaticPaths() {
+  const rentaPath = path.join(process.cwd(), 'src', 'data', 'tokko-renta.json');
+  let objects: any[] = [];
+  if (fs.existsSync(rentaPath)) {
+    const raw = JSON.parse(fs.readFileSync(rentaPath, 'utf-8'));
+    objects = raw.objects ?? raw;
+  }
+  return objects.map((o: any) => {
+    const n = normalizeTokkoProperty(o);
+    return {
+      params: { slug: n.slug },
+      props: { raw: o, normalized: n },
+    };
+  });
+}
+
+const { raw, normalized: p } = Astro.props;
+const specs = getSpecs(p);
+const detailBar = [
+  p.surface ? `${p.surface} m²` : null,
+  p.bedrooms ? `${p.bedrooms} Recámaras` : null,
+  p.bathrooms ? `${p.bathrooms} Baños` : null,
+  p.typeName ? p.typeName : null,
+  p.parking ? `${p.parking} Estacionamiento` : null,
+].filter(Boolean).join(' | ');
+
+const photos: string[] = p.photos || [];
+const videos = p.videos || [];
+---
+
+<Layout title={`${p.title} | Rentas | BADI 108`}>
+  <Navbar />
+  <main>
+    <div class="bg-black relative" style="height: 70vh; min-height: 400px;">
+      <div class="w-full h-full flex items-center justify-center p-4" id="gallery-container">
+        {photos.length > 0 ? (
+          <img id="gallery-img" class="max-w-full max-h-full object-contain select-none" src={photos[0]} alt={p.title} />
+        ) : (
+          <div class="text-center text-white/40">
+            <svg class="w-20 h-20 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            <p class="text-sm">Sin imágenes disponibles</p>
+          </div>
+        )}
+      </div>
+
+      {photos.length > 1 && (
+        <>
+          <button id="prev-btn" class="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/10 hover:bg-white/25 text-white flex items-center justify-center transition-colors rounded-full">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <button id="next-btn" class="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/10 hover:bg-white/25 text-white flex items-center justify-center transition-colors rounded-full">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
+          <div id="counter" class="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 bg-black/50 text-white text-xs px-3 py-1 rounded">1 / {photos.length}</div>
+        </>
+      )}
+    </div>
+
+    <section class="py-12 bg-white">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="mb-8">
+          <div class="flex items-center gap-2 mb-3 flex-wrap">
+            <span class="text-[10px] bg-gold text-white px-3 py-1 font-semibold uppercase tracking-wider">{p.operationLabel}</span>
+            <span class="text-[10px] bg-gray-100 text-gray-600 px-3 py-1 font-medium uppercase tracking-wider">{p.typeName}</span>
+            <span class="text-[10px] bg-primary text-white px-3 py-1 font-medium">Tokko ID {p.id}</span>
+          </div>
+          <h1 class="text-2xl md:text-3xl font-bold text-dark">{p.title}</h1>
+          <p class="text-gray-400 text-sm mt-1">{p.address} · {p.locationShort}</p>
+          <p class="text-gold text-xl font-bold mt-3">{p.priceFormatted} {p.currency !== 'MXN' ? p.currency : ''}<span class="text-sm font-normal text-gray-400"> / mes</span></p>
+          {p.expenses ? <p class="text-gray-400 text-xs mt-1">Mantenimiento: ${p.expenses.toLocaleString('es-MX')}/mes</p> : null}
+        </div>
+
+        {detailBar && (
+          <div class="mb-8 bg-gray-50 border border-gray-200 px-5 py-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-gray-600">
+            {detailBar.split('|').map((item) => (
+              <span>{item.trim()}</span>
+            )).reduce((prev: any, curr: any, i: number) => i === 0 ? [curr] : [prev, <span class="text-gold">|</span>, curr], [])}
+          </div>
+        )}
+
+        <div class="mb-10">
+          <h2 class="text-lg font-bold text-dark mb-3 border-b border-gray-100 pb-2">Descripción</h2>
+          <p class="text-gray-500 text-sm leading-relaxed whitespace-pre-line">{p.description || 'Sin descripción disponible.'}</p>
+        </div>
+
+        {videos.length > 0 && (
+          <div class="mb-10">
+            <h2 class="text-lg font-bold text-dark mb-3 border-b border-gray-100 pb-2">Videos</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+              {videos.map((v) => (
+                <div class="aspect-video bg-black">
+                  <iframe src={v.player_url} title={v.title} class="w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div class="mb-10">
+          <h2 class="text-lg font-bold text-dark mb-4 border-b border-gray-100 pb-2">Características</h2>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-y-4 gap-x-3">
+            {specs.map((spec) => (
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span class="text-sm text-gray-600">{spec}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {photos.length > 0 && (
+          <div class="mb-10">
+            <h2 class="text-lg font-bold text-dark mb-3 border-b border-gray-100 pb-2">Galería</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+              {photos.slice(0,6).map((url) => (
+                <img src={url} alt={p.title} class="w-full h-32 object-cover border border-gray-200" loading="lazy" />
+              ))}
+            </div>
+            {photos.length > 6 && <p class="text-xs text-gray-400 mt-2">+{photos.length - 6} fotos más en el carrusel superior</p>}
+          </div>
+        )}
+
+        <div class="bg-gray-50 border border-gray-200 p-6 text-center">
+          <p class="text-sm text-gray-500 mb-4">¿Te interesa rentar esta propiedad?</p>
+          <a href={`${BASE}/#contacto`} class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-3 text-sm font-medium tracking-wide transition-colors">
+            Consultar disponibilidad
+          </a>
+          <p class="text-xs text-gray-400 mt-3">Tokko ID: {p.id} · Sincronizado desde Tokko Broker</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<script define:vars={{ photos }}>
+  if (photos.length > 1) {
+    const img = document.getElementById('gallery-img');
+    const counter = document.getElementById('counter');
+    let current = 0;
+    function render() {
+      if (img) img.src = photos[current];
+      if (counter) counter.textContent = `${current + 1} / ${photos.length}`;
+    }
+    document.getElementById('prev-btn')?.addEventListener('click', () => {
+      current = (current - 1 + photos.length) % photos.length;
+      render();
+    });
+    document.getElementById('next-btn')?.addEventListener('click', () => {
+      current = (current + 1) % photos.length;
+      render();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        current = (current - 1 + photos.length) % photos.length;
+        render();
+      }
+      if (e.key === 'ArrowRight') {
+        current = (current + 1) % photos.length;
+        render();
+      }
+    });
+  }
+</script>

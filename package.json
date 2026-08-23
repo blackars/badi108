@@ -9,7 +9,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "tokko:sync": "node scripts/sync-tokko.mjs",
+    "tokko:build": "npm run tokko:sync && astro build"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.0",

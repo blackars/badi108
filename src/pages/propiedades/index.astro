@@ -129,35 +129,21 @@ Explora nuestros proyectos y encuentra el espacio ideal para escribir tu próxim
               </div>
             </div>
           </a>
-        </div>
 
-        {tokkoVenta.length > 0 && (
-          <div class="mt-20 max-w-6xl mx-auto">
-            <div class="text-center mb-10 fade-in">
-              <p class="text-gold text-sm tracking-[0.2em] uppercase mb-3">Tokko Broker · Actualizado</p>
-              <h3 class="text-2xl md:text-3xl font-bold text-dark mb-4">Propiedades en Venta</h3>
-              <div class="w-14 h-0.5 bg-gold mx-auto mb-6"></div>
-              <p class="text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">
-                Propiedades sincronizadas automáticamente desde Tokko Broker. Mismo diseño, fotos y precios oficiales.
-              </p>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {tokkoVenta.map((p) => (
-                <PropertyCard
-                  id={p.id}
-                  title={p.title}
-                  location={p.locationShort}
-                  price={p.priceFormatted}
-                  typeName={p.typeName}
-                  operationLabel={p.operationLabel}
-                  cover={p.cover}
-                  specs={p.specs}
-                  href={p.href}
-                />
-              ))}
-            </div>
-          </div>
-        )}
+          {tokkoVenta.map((p) => (
+            <PropertyCard
+              id={p.id}
+              title={p.title}
+              location={p.locationShort}
+              price={p.priceFormatted}
+              typeName={p.typeName}
+              operationLabel={p.operationLabel}
+              cover={p.cover}
+              specs={p.specs}
+              href={p.href}
+            />
+          ))}
+        </div>
       </div>
     </section>
   </main>

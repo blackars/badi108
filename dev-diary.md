@@ -201,3 +201,119 @@ Se agregó una sección de video full-width a la página de La Serena Residencia
 - `max-height: 75vh` previene que exceda el viewport
 - Flexbox centrado vertical y horizontalmente
 - En mobile: barras negras arriba/abajo si es necesario, video siempre visible completo
+
+### 2026-08-23 - Integración Tokko Broker: Capa Base + Sincronización
+
+**Contexto:**
+La inmobiliaria comenzó a usar Tokko Broker para cargar propiedades. Riesgo de perder cliente si el sitio no refleja el inventario Tokko. Se propuso integración automática que mantuviera 100% la estética/diseño actual e incorporara propiedades creadas en Tokko a `/propiedades` (ventas) y `/rentas` (alquileres). Se obtuvo API Key `5818a01f6d8f04c920aa2ffe6e628788e7775753` con checks "mostrar info interna" y "mostrar propiedades no disponibles" activos.
+
+**Investigación API:**
+- Endpoints probados: `GET /api/v1/property/?key=...&format=json&lang=es_ar&limit=50` y `GET /api/v1/property/{id}/`, `development`, `property_type`.
+- Resultado: `total_count: 15` (5 Venta `operation_id=1`, 10 Alquiler `operation_id=2`, 0 temporal), `development: 0` (no usa emprendimientos Tokko, categorización solo por operación), `type: AP Departamento / HO Casa / LA Terreno`, `photos: 23-65` por prop, `videos: youtube player_url` en rentas.
+- Desarrollo con `display_name: BADI 108 Real Estate & property manager`, branch `78063`.
+
+**Archivos creados:**
+- `src/lib/tokko.ts` - Types `TokkoRawProperty`, `NormalizedProperty`, `normalizeTokkoProperty()`, `getSpecs()`, `categorize()`, `formatPrice()` (MXN/USD, `suite_amount`→recámaras, `bathroom_amount`, `surface/roofed_surface`, `photos` ordenadas por `is_front_cover`+`order`)
+- `scripts/sync-tokko.mjs` - Fetch paginado `limit=50` + detalle por ID para `videos`, throttle 300ms, guarda `src/data/tokko-cache.json` (655k, 15 props), `tokko-venta.json` (5), `tokko-renta.json` (10) con `synced_at`, fallback a cache si API falla (no rompe build)
+- `src/components/tokko/PropertyCard.astro` - Replica exacta `src/pages/rentas.astro:66` y `src/pages/propiedades/index.astro:34` (`h-64 overflow-hidden border-gray-200 hover:border-primary`, `group-hover:scale-105`, badge `bg-gold` + `typeName`, `line-clamp`, `specs` pills `bg-gray-100`)
+- `src/data/tokko-cache.json`, `tokko-venta.json`, `tokko-renta.json` - Cache commiteado
+- `.env` (no commiteado, en `.gitignore:19`) + `.env.example` - `TOKKO_API_KEY`
+- `src/data/` directorios, `scripts/` directorios
+
+**Archivos modificados:**
+- `package.json:8` - Scripts `tokko:sync` y `tokko:build`
+
+**Decisiones:**
+- Build-time static (`astro.config.mjs:11 output:'static'`) para compatibilidad GitHub Pages, no expone API_KEY al cliente, usa cache commiteado.
+- Mantener 3 proyectos fijos (La Serena, La Condesa, Santa Anita) + agregar Tokko debajo (híbrido), no reemplazo total para preservar SEO/contenido artesanal.
+- Hotlink CDN Tokko `https://static.tokkobroker.com/pictures/...` sin copia local.
+- `deleted_at` ignorado (cliente habilitó "mostrar no disponibles", todos los 15 tienen `deleted_at 2026-08-21` pero se muestran igual).
+
+**Commit:** `873bb5b` `feat(tokko): capa base + cache inicial (5 ventas / 10 rentas) - sync script y normalizer`
+
+### 2026-08-23 - Integración Tokko en /propiedades y /rentas (Cards + Detalle)
+
+**Archivos creados:**
+- `src/pages/propiedades/tokko/[slug].astro` - `getStaticPaths()` desde `tokko-venta.json` → `normalizeTokkoProperty`, galería 70vh `bg-black` con `prev/next` + `counter`, `detailBar` `bg-gray-50 border-gray-200`, `description whitespace-pre-line`, `videos` iframe youtube, `specs` grid, CTA `Consultor por esta propiedad` (reusa `src/pages/rentas/[slug].astro:43` layout)
+- `src/pages/rentas/tokko/[slug].astro` - Idem para rentas, `priceFormatted + / mes`, galería thumbs + `+N fotos` indicador
+
+**Archivos modificados:**
+- `src/pages/propiedades/index.astro:1-30` - Import `PropertyCard`, `normalizeTokkoProperty`, `fs/path`, carga `tokko-venta.json` build-time, mapea `specs` + `href:/propiedades/tokko/{slug}`; template agregó sección `Tokko Broker · Actualizado / Propiedades en Venta` con `grid md:grid-cols-2 lg:grid-cols-3 gap-8` (inicialmente separada con `mt-20`)
+- `src/pages/rentas.astro:1-32` - Import Tokko, carga `tokko-renta.json` → `tokkoRenta` con `href:/rentas/tokko/{slug}`; template agregó sección `Rentas desde Tokko` `mt-16` + grid
+- `package.json` ya modificado
+
+**Resultado:**
+- `npm run build` → 43 páginas (vs 28 previas): `propiedades/tokko/6528692,6530975,6554051,7184667,7275193` (5) y `rentas/tokko/6528712,6765543,7310184,7669630,7670669,7793319,7830234,8688398,8692692,8692757` (10)
+- IDs Venta: `6528692 ($5.5M Casa), 6530975 ($6.3M Depto), 6554051 ($2.4M Terreno SOLD OUT), 7184667 ($3.6M), 7275193 ($21M)`; Alquiler: `6528712 ($20k), 6765543 ($16.5k sin muebles), 7310184 ($19k), 7669630 ($22k sin muebles), 7670669 ($23k), 7793319 ($20k), 7830234 ($18k), 8688398 ($20k), 8692692 ($17.5k), 8692757 ($3.8k/$220 USD)`
+
+**Commit:** `f61c4d4` `feat(tokko): integra /propiedades y /rentas con Tokko - cards + detalle (15 props) sin romper estética`
+
+### 2026-08-23 - Workflows GitHub Actions + Documentación
+
+**Archivos creados:**
+- `.github/workflows/tokko-sync.yml` - `on: schedule 0 10 * * *` + `workflow_dispatch`, `permissions: contents: write`, checkout, setup-node 22, `npm ci`, `node scripts/sync-tokko.mjs` con `secrets.TOKKO_API_KEY`, `git add src/data/*.json`, commit `chore(tokko): sync automatico $(date)` + `git push` si hay cambios (dispara deploy)
+- `README_TOKKO.md` - Resumen integración, uso local `tokko:sync/build`, config Secret `TOKKO_API_KEY`, IDs, archivos clave
+
+**Archivos modificados:**
+- `.github/workflows/deploy.yml:30` - Nuevo step `Sync Tokko Broker` antes de `Build with Astro`, `env: TOKKO_API_KEY: ${{ secrets.TOKKO_API_KEY }}`, `if [ -n "$TOKKO_API_KEY" ] then node scripts/sync-tokko.mjs || echo fallback` else `usando cache commiteado`
+
+**Decisiones:**
+- Secret en repo `blackars/badi108` → Settings → Secrets → `TOKKO_API_KEY`; sin secret deploy usa cache commiteado (no se rompe).
+- Sync diario 10:00 UTC (04:00 MX) + manual dispatch para inmediato.
+
+**Commit:** `c413415` `feat(tokko): workflow sync diario + docs TOKKO_API_KEY secret`
+
+### 2026-08-23 - Unificación de Grillas (Quitar Títulos Tokko)
+
+**Contexto:**
+Pedido: quitar en ambas páginas título/subtítulo/texto "Tokko Broker" y dejar todas juntas de seguido en misma sección.
+
+**Archivos modificados:**
+- `src/pages/propiedades/index.astro:133-160` - Eliminado `div mt-20` con `Tokko Broker · Actualizado / Propiedades en Venta` + párrafo `sincronizadas...`; fusionado a grilla única `grid md:grid-cols-2 lg:grid-cols-3` con 3 proyectos fijos + `tokkoVenta.map()` continuos
+- `src/pages/rentas.astro:124-151` - Eliminado `div mt-16` con `Tokko Broker · Actualizado / Rentas desde Tokko`; fusionado a grilla única `grid sm:grid-cols-2 lg:grid-cols-3` con 8 rentals locales + `tokkoRenta.map()`
+
+**Resultado:**
+- `dist/propiedades/index.html` y `dist/rentas/index.html` `Tokko count 0`, `Propiedades en Venta 0` verificado con `python -c count`
+- Build 43 páginas ok
+
+**Commit:** `4fff7bb` `feat: integra Tokko sin separadores - grilla unificada en /propiedades y /rentas`
+
+### 2026-08-23 - Favicon enlazado en Layout
+
+**Archivos modificados:**
+- `src/layouts/Layout.astro:18` - Agregado `<link rel="icon" type="image/svg+xml" href="/favicon.svg">` + `<link rel="icon" type="image/x-icon" href="/favicon.ico">` + `<link rel="shortcut icon">` apuntando a `public/favicon.*` (verificado `dist/favicon.svg` 758b, `dist/favicon.ico` 655b)
+
+**Commit:** `1f99dfa` `feat: favicon .svg + .ico enlazados en Layout (public/favicon.*)`
+
+### 2026-08-23 - Separador Excelentes Oportunidades en /propiedades
+
+**Pedido:**
+En sección propiedades usar separación de los 3 proyectos y poner propiedades individuales bajo línea delgada con título centrado `Excelentes Oportunidades`.
+
+**Archivos modificados:**
+- `src/pages/propiedades/index.astro:146-168` - Re-introducida separación: `div max-w-6xl mx-auto mt-16 pt-10 border-t border-gray-200` con `h3 text-2xl md:text-3xl font-bold text-dark Excelentes Oportunidades` centrado + `div w-14 h-0.5 bg-gold mx-auto mt-4` + grilla `tokkoVenta` debajo. Mantiene rentas unificadas sin separador.
+
+**Resultado:**
+- `propiedades/index.html` muestra 3 cards fijos + línea `border-t` + título centrado + 5 cards Tokko
+
+**Commit:** `e92d242` `feat(propiedades): separa 3 proyectos + sección 'Excelentes Oportunidades' con línea delgada para Tokko`
+
+### 2026-08-23 - Cambio Favicon a favicon-badi108.ico
+
+**Contexto:**
+Nuevo favicon entregado como `public/favicon-badi108.ico` (78k).
+
+**Archivos modificados:**
+- `src/layouts/Layout.astro:18-20` - Cambiado de `favicon.svg`+`favicon.ico` a solo `favicon-badi108.ico` (`<link rel="icon" type="image/x-icon" href="/favicon-badi108.ico">` + `<link rel="shortcut icon">`)
+- `public/favicon.svg` (9 líneas, svg negro/blanco dark-mode) → eliminado
+- `public/favicon.ico` (655b) → eliminado
+- `public/favicon-badi108.ico` (78100b) → agregado
+
+**Resultado:**
+- `npm run build` → `dist/favicon-badi108.ico` único, `dist/index.html` contiene `href="/favicon-badi108.ico"` verificado con `python re.finditer`
+- Push `e92d242..8f1b054`
+
+**Commit:** `8f1b054` `fix(favicon): cambia referencia a favicon-badi108.ico (public/favicon-badi108.ico)`
+
+**Estado final:**
+- `git log --oneline` `8f1b054..873bb5b` 7 commits encima de `98efdc0`, `git push origin master` verificado `43 page(s) built`, `dist/propiedades/tokko/*` + `dist/rentas/tokko/*` ok, workflows listos para sync diario con `TOKKO_API_KEY` secret.

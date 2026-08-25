@@ -1,7 +1,7 @@
 {
   "meta": {
     "count": 5,
-    "synced_at": "2026-08-23T19:31:56.787Z"
+    "synced_at": "2026-08-25T00:20:13.782Z"
   },
   "objects": [
     {
@@ -772,7 +772,7 @@
       "credit_eligible": "No especificado",
       "custom1": "0.00",
       "custom_tags": [],
-      "deleted_at": "2026-08-21T22:23:51",
+      "deleted_at": "2026-08-24T20:17:00",
       "depth_measure": "0.00",
       "description": "\nDescripción modelo recreo, planta baja.\n\n\n\n\n\n\n\nVive en La Serena Residencial: Estilo Colonial con Interiores Modernos en San Miguel de Allende\n\n\n\nDepartamento en Venta: $6,300,000 MXN\n\n\n\nDisfruta del equilibrio perfecto entre el encanto colonial y un diseño interior moderno en este exclusivo departamento en planta baja, ubicado en el prestigiado desarrollo La Serena Residencial. Cada detalle ha sido pensado para brindarte comodidad y estilo en el corazón de San Miguel de Allende.\n\n\n\n\n\n\n\nCaracterísticas Principales:\n\n\n\n •\tSala y Comedor: Espacios abiertos y modernos, ideales para convivir y relajarse.\n\n •\tCocina Integral: Equipada y con instalación para campana extractora, diseñada para quienes buscan funcionalidad y estilo.\n\n •\tÁrea de Lavado: Espacio independiente para tus tareas diarias.\n\n\n\n\n\n\n\nDistribución:\n\n\n\n •\tRecámara Principal: Con clóset amplio y baño privado.\n\n •\tSegunda Recámara: Con Baño completo privado \n\n• Tercera Recámara: Con Clóset y baño completo que comparte con visita.\n\n\n\n •\tRoof y Terraza Privados: Espacios únicos, perfectos para disfrutar de la tranquilidad.\n\n\n\nCon su arquitectura colonial y acabados interiores contemporáneos, este departamento en La Serena Residencial es una oportunidad para vivir con lujo y comodidad.\n\n\n\n\n\n\n\n ¡Agenda una visita y descubre tu nuevo hogar en San Miguel de Allende!\n\n\n\n",
       "development": null,
@@ -860,7 +860,7 @@
               "currency": "MXN",
               "is_promotional": false,
               "period": 0,
-              "price": 6300000
+              "price": 7600000
             }
           ]
         }

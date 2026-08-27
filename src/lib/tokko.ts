@@ -205,3 +205,112 @@ export function getSpecs(p: NormalizedProperty): string[] {
   if (p.typeName) specs.push(p.typeName);
   return specs;
 }
+
+// --- Live fetch con cache TTL para SSR (Cloud Run costo mínimo) ---
+const TOKKO_TTL_MS = parseInt(import.meta.env.TOKKA_TTL_MS || process.env.TOKKA_TTL_MS || "90000", 10); // 90s default, configurable 90-120s
+const TOKKO_API_BASE = "https://www.tokkobroker.com/api/v1";
+
+type CacheEntry = { data: TokkoRawProperty[]; expires: number };
+const cache = new Map<string, CacheEntry>();
+
+function getApiKey(): string | null {
+  // Astro SSR: import.meta.env es el preferido, fallback process.env para Node/Docker
+  const k = (import.meta as any).env?.TOKKO_API_KEY || (typeof process !== "undefined" ? (process as any).env?.TOKKO_API_KEY : null);
+  return k || null;
+}
+
+function getLang(): string {
+  return (import.meta as any).env?.TOKKO_LANG || (typeof process !== "undefined" ? (process as any).env?.TOKKO_LANG : null) || "es_ar";
+}
+
+async function fetchJson(url: string): Promise<any> {
+  const res = await fetch(url, { headers: { Accept: "application/json" } });
+  if (!res.ok) throw new Error(`Tokko HTTP ${res.status} ${await res.text().then((t) => t.slice(0, 300))}`);
+  return res.json();
+}
+
+async function fetchAllLive(): Promise<TokkoRawProperty[]> {
+  const key = getApiKey();
+  const lang = getLang();
+  if (!key) throw new Error("TOKKO_API_KEY no configurada");
+  const limit = 50;
+  let offset = 0;
+  let all: TokkoRawProperty[] = [];
+  let total: number | null = null;
+  do {
+    const data = await fetchJson(`${TOKKO_API_BASE}/property/?key=${key}&format=json&lang=${lang}&limit=${limit}&offset=${offset}`);
+    const objs: TokkoRawProperty[] = data.objects || [];
+    if (total === null) total = data.meta?.total_count ?? objs.length;
+    all = all.concat(objs);
+    if (objs.length < limit) break;
+    offset += limit;
+  } while (all.length < (total ?? Infinity));
+
+  // detalle para videos (list no trae videos completos)
+  const detailed: TokkoRawProperty[] = [];
+  for (let i = 0; i < all.length; i++) {
+    try {
+      const d = await fetchJson(`${TOKKO_API_BASE}/property/${all[i].id}/?key=${key}&format=json&lang=${lang}`);
+      detailed.push(d);
+    } catch {
+      detailed.push(all[i]);
+    }
+    if (i % 10 === 9) await new Promise((r) => setTimeout(r, 200));
+  }
+  return detailed;
+}
+
+export async function getTokkoLive(): Promise<TokkoRawProperty[]> {
+  const cacheKey = "all";
+  const now = Date.now();
+  const hit = cache.get(cacheKey);
+  if (hit && now < hit.expires) return hit.data;
+
+  // stale-while-revalidate: si hay hit expirado, devolverlo y refrescar en background
+  if (hit) {
+    // refresco background sin bloquear (fire-and-forget)
+    fetchAllLive()
+      .then((data) => cache.set(cacheKey, { data, expires: Date.now() + TOKKO_TTL_MS }))
+      .catch(() => {});
+    return hit.data;
+  }
+
+  // miss: fetch bloqueante
+  try {
+    const data = await fetchAllLive();
+    cache.set(cacheKey, { data, expires: now + TOKKO_TTL_MS });
+    return data;
+  } catch (e) {
+    // fallback a cache disco (src/data) si live falla y existe
+    try {
+      const fs = await import("fs");
+      const path = await import("path");
+      const cachePath = path.join(process.cwd(), "src", "data", "tokko-cache.json");
+      if (fs.existsSync(cachePath)) {
+        const raw = JSON.parse(fs.readFileSync(cachePath, "utf-8"));
+        return raw.objects ?? raw;
+      }
+    } catch {}
+    throw e;
+  }
+}
+
+export async function getTokkoVentaLive(): Promise<NormalizedProperty[]> {
+  const all = await getTokkoLive();
+  return all
+    .filter((p) => p.operations?.some((op) => op.operation_id === 1))
+    .map((p) => normalizeTokkoProperty(p));
+}
+
+export async function getTokkoRentaLive(): Promise<NormalizedProperty[]> {
+  const all = await getTokkoLive();
+  return all
+    .filter((p) => p.operations?.some((op) => op.operation_id === 2 || op.operation_id === 3))
+    .map((p) => normalizeTokkoProperty(p));
+}
+
+export async function getTokkoByIdLive(id: string | number): Promise<NormalizedProperty | null> {
+  const all = await getTokkoLive();
+  const found = all.find((p) => String(p.id) === String(id));
+  return found ? normalizeTokkoProperty(found) : null;
+}

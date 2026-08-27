@@ -1,32 +1,24 @@
 ---
+export const prerender = false;
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import PropertyCard from '../components/tokko/PropertyCard.astro';
-import { normalizeTokkoProperty, getSpecs } from '../lib/tokko';
-import fs from 'fs';
-import path from 'path';
+import { getTokkoRentaLive, getSpecs } from '../lib/tokko';
 
 const BASE = import.meta.env.BASE_URL.replace(/\/+$/, '');
 
-// Tokko rentas (alquiler) - única fuente ahora
+// Tokko live dinámico TTL 90-120s (Cloud Run minInstances 0, costo mínimo)
 let tokkoRenta: any[] = [];
 try {
-  const rentaPath = path.join(process.cwd(), 'src', 'data', 'tokko-renta.json');
-  if (fs.existsSync(rentaPath)) {
-    const raw = JSON.parse(fs.readFileSync(rentaPath, 'utf-8'));
-    const objects = raw.objects ?? raw;
-    tokkoRenta = objects.map((o: any) => {
-      const n = normalizeTokkoProperty(o);
-      return {
-        ...n,
-        specs: getSpecs(n),
-        href: `${BASE}/rentas/tokko/${n.slug}`,
-      };
-    });
-  }
+  const live = await getTokkoRentaLive();
+  tokkoRenta = live.map((n) => ({
+    ...n,
+    specs: getSpecs(n),
+    href: `${BASE}/rentas/tokko/${n.slug}`,
+  }));
 } catch (e) {
-  console.warn('No se pudo cargar tokko-renta.json', e);
+  console.warn('Tokko live fetch falló, rentas:', e);
 }
 ---
 

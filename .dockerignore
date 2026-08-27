@@ -1,0 +1,20 @@
+node_modules
+dist
+.astro
+.git
+.github
+images
+.gitignore
+README.md
+dev-diary.md
+dev-plan.md
+.env
+.env.production
+npm-debug.log*
+.DS_Store
+.idea
+# residuos ya borrados pero por si acaso
+inventario_de_renta.txt
+temp_publicidad.txt
+ranchos-santa-anita-de-jalpa.md
+public/images/rentas

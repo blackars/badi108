@@ -1,31 +1,23 @@
 ---
+export const prerender = false;
 import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import PropertyCard from '../../components/tokko/PropertyCard.astro';
-import { normalizeTokkoProperty, getSpecs } from '../../lib/tokko';
-import fs from 'fs';
-import path from 'path';
+import { getTokkoVentaLive, getSpecs } from '../../lib/tokko';
 const base = import.meta.env.BASE_URL.replace(/\/+$/, '');
 
-// Cargar propiedades Tokko en Venta (build-time, desde cache)
+// Carga dinámica Tokko live con cache TTL 90-120s (Cloud Run costo mínimo, minInstances 0)
 let tokkoVenta: any[] = [];
 try {
-  const ventaPath = path.join(process.cwd(), 'src', 'data', 'tokko-venta.json');
-  if (fs.existsSync(ventaPath)) {
-    const raw = JSON.parse(fs.readFileSync(ventaPath, 'utf-8'));
-    const objects = raw.objects ?? raw;
-    tokkoVenta = objects.map((o: any) => {
-      const n = normalizeTokkoProperty(o);
-      return {
-        ...n,
-        specs: getSpecs(n),
-        href: `${base}/propiedades/tokko/${n.slug}`,
-      };
-    });
-  }
+  const live = await getTokkoVentaLive();
+  tokkoVenta = live.map((n) => ({
+    ...n,
+    specs: getSpecs(n),
+    href: `${base}/propiedades/tokko/${n.slug}`,
+  }));
 } catch (e) {
-  console.warn('No se pudo cargar tokko-venta.json', e);
+  console.warn('Tokko live fetch falló, propiedades/index:', e);
 }
 ---
 
@@ -52,7 +44,9 @@ try {
           <p class="text-gray-500 max-w-xl mx-auto text-md leading-relaxed">
 Creemos que la mejor inversión es aquella que se adapta a tus objetivos. Por eso, ponemos a tu alcance una selección de desarrollos en San Miguel de Allende con propuestas únicas para quienes buscan invertir, vivir sustentable libre del sistema o disfrutar su retiro con tranquilidad.          </p>
           <p class="text-gray-500 font-bold max-w-xl mx-auto text-md leading-relaxed">
-Explora nuestros proyectos y encuentra el espacio ideal para escribir tu próxima historia.        </div>
+            Explora nuestros proyectos y encuentra el espacio ideal para escribir tu próxima historia.
+          </p>
+        </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <a href={base + '/propiedades/la-serena'} class="fade-in group block border border-gray-200 hover:border-primary transition-colors">

@@ -1,6 +1,7 @@
 ---
 const base = import.meta.env.BASE_URL.replace(/\/+$/, '');
 const p = (path: string) => `${base}${path}`;
+const recaptchaSiteKey = import.meta.env.PUBLIC_RECAPTCHA_SITE_KEY || import.meta.env.RECAPTCHA_SITE_KEY || "";
 ---
 <section id="contacto" class="py-20 overlay-primary section-bg" style={`background-image: url('${p('/images/background1.webp')}'`}>
   <div class="relative z-10 max-w-7xl mx-auto px-6">
@@ -67,39 +68,40 @@ const p = (path: string) => `${base}${path}`;
       </div>
 
       <div class="fade-in">
-        <form class="bg-white p-7">
+        <form id="contact-form" class="bg-white p-7" novalidate>
+          <div id="contact-feedback" class="hidden mb-4 px-3 py-2.5 text-sm border"></div>
           <div class="mb-4">
             <label class="block text-xs font-medium text-dark mb-1.5">Nombre Completo</label>
-            <input type="text" class="w-full px-3 py-2.5 border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm" placeholder="Tu nombre" />
+            <input name="nombre" required type="text" class="w-full px-3 py-2.5 border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm" placeholder="Tu nombre" />
           </div>
           <div class="mb-4">
             <label class="block text-xs font-medium text-dark mb-1.5">Email</label>
-            <input type="email" class="w-full px-3 py-2.5 border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm" placeholder="tu@email.com" />
+            <input name="email" required type="email" class="w-full px-3 py-2.5 border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm" placeholder="tu@email.com" />
           </div>
           <div class="mb-4">
             <label class="block text-xs font-medium text-dark mb-1.5">Teléfono</label>
-            <input type="tel" class="w-full px-3 py-2.5 border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm" placeholder="Tu teléfono" />
+            <input name="telefono" required type="tel" class="w-full px-3 py-2.5 border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm" placeholder="Tu teléfono" />
           </div>
           <div class="mb-4">
             <label class="block text-xs font-medium text-dark mb-1.5">¿Cuál es tu objetivo?</label>
-            <select class="w-full px-3 py-2.5 border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm">
-              <option>Invertir</option>
-              <option>Generar ingresos por rentas</option>
-              <option>Comprar para vivir</option>
-              <option>Comprar para retiro</option>
-              <option>Rentar una propiedad</option>
-              <option>Administración de propiedades</option>
-              <option>Recibir asesoría personalizada</option>
-              
+            <select name="objetivo" class="w-full px-3 py-2.5 border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-sm">
+              <option value="Invertir">Invertir</option>
+              <option value="Generar ingresos por rentas">Generar ingresos por rentas</option>
+              <option value="Comprar para vivir">Comprar para vivir</option>
+              <option value="Comprar para retiro">Comprar para retiro</option>
+              <option value="Rentar una propiedad">Rentar una propiedad</option>
+              <option value="Administración de propiedades">Administración de propiedades</option>
+              <option value="Recibir asesoría personalizada">Recibir asesoría personalizada</option>
             </select>
           </div>
           <div class="mb-5">
             <label class="block text-xs font-medium text-dark mb-1.5">Mensaje</label>
-            <textarea rows="3" class="w-full px-3 py-2.5 border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none text-sm" placeholder="Cuéntanos cuáles son tus objetivos o el tipo de propiedad que estás buscando..."></textarea>
+            <textarea name="mensaje" required rows="3" class="w-full px-3 py-2.5 border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none text-sm" placeholder="Cuéntanos cuáles son tus objetivos o el tipo de propiedad que estás buscando..."></textarea>
           </div>
-          <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white py-3 font-medium tracking-wide transition-all text-sm">
+          <button id="contact-submit" type="submit" class="w-full bg-primary hover:bg-primary-dark text-white py-3 font-medium tracking-wide transition-all text-sm disabled:opacity-60 disabled:cursor-not-allowed">
             Quiero recibir asesoría
           </button>
+          <p class="text-[11px] text-gray-400 text-center mt-2">Protegido por reCAPTCHA v3 — se envía a laura@badi108realestate.com vía Brevo.</p>
           <div class="mt-4 text-center">
             <p class="text-gray-600 text-sm leading-relaxed">
               Te responderemos a la brevedad para brindarte una atención personalizada y resolver todas tus dudas.
@@ -113,3 +115,52 @@ const p = (path: string) => `${base}${path}`;
     </div>
   </div>
 </section>
+
+{recaptchaSiteKey && (
+  <script is:inline src={`https://www.google.com/recaptcha/api.js?render=${recaptchaSiteKey}`}></script>
+)}
+<script define:vars={{ recaptchaSiteKey }}>
+  const form = document.getElementById('contact-form');
+  const btn = document.getElementById('contact-submit');
+  const feedback = document.getElementById('contact-feedback');
+  function showMsg(msg, ok) {
+    if (!feedback) return;
+    feedback.textContent = msg;
+    feedback.className = ok ? 'mb-4 px-3 py-2.5 text-sm border border-green-200 bg-green-50 text-green-700' : 'mb-4 px-3 py-2.5 text-sm border border-red-200 bg-red-50 text-red-700';
+    feedback.classList.remove('hidden');
+  }
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!form) return;
+    const fd = new FormData(form);
+    const nombre = String(fd.get('nombre')||'').trim();
+    const email = String(fd.get('email')||'').trim();
+    const telefono = String(fd.get('telefono')||'').trim();
+    const mensaje = String(fd.get('mensaje')||'').trim();
+    if (!nombre || !email || !telefono || !mensaje) { showMsg('Completa nombre, email, teléfono y mensaje.', false); return; }
+    if (btn) { btn.disabled = true; btn.textContent = 'Enviando...'; }
+    try {
+      let token = '';
+      if (recaptchaSiteKey && window.grecaptcha) {
+        token = await new Promise((resolve, reject) => {
+          window.grecaptcha.ready(() => {
+            window.grecaptcha.execute(recaptchaSiteKey, {action: 'contact'}).then(resolve).catch(reject);
+          });
+        });
+      }
+      fd.set('recaptchaToken', token);
+      const res = await fetch('/api/contact', { method: 'POST', body: fd });
+      const data = await res.json().catch(()=>({}));
+      if (res.ok && data.ok) {
+        showMsg('¡Gracias! Mensaje enviado a laura@badi108realestate.com — te responderemos pronto.', true);
+        form.reset();
+      } else {
+        showMsg(data.error || 'No se pudo enviar. Intenta de nuevo o escribe a laura@badi108realestate.com', false);
+      }
+    } catch (err) {
+      showMsg('Error de red. Intenta de nuevo.', false);
+    } finally {
+      if (btn) { btn.disabled = false; btn.textContent = 'Quiero recibir asesoría'; }
+    }
+  });
+</script>

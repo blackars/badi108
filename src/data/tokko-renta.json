@@ -1,7 +1,7 @@
 {
   "meta": {
     "count": 7,
-    "synced_at": "2026-09-06T21:02:08.615Z"
+    "synced_at": "2026-09-06T23:28:19.599Z"
   },
   "objects": [
     {
@@ -1721,16 +1721,6 @@
           "original": "https://static.tokkobroker.com/original_pictures/7669630_1004493973342614076947923393676038008048622878746967060454459228360917.jpg",
           "social_media_url": "https://static.tokkobroker.com/sm_pics/7669630_100449397334261407694792339367603800804862287874696706045445922836091737875105_og.jpg",
           "thumb": "https://static.tokkobroker.com/thumbs/7669630_100449397334261407694792339367603800804862287874696706045445922836091737875105_th.jpg"
-        },
-        {
-          "description": null,
-          "image": "https://static.tokkobroker.com/pictures/7669630_45333324851841213412400684029179128808158580748808435593121850592440855198860.jpg",
-          "is_blueprint": false,
-          "is_front_cover": false,
-          "order": 17,
-          "original": "https://static.tokkobroker.com/",
-          "social_media_url": null,
-          "thumb": "https://static.tokkobroker.com/thumbs/7669630_45333324851841213412400684029179128808158580748808435593121850592440855198860_thu.jpg"
         }
       ],
       "portal_footer": "",

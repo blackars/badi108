@@ -1,7 +1,7 @@
 {
   "meta": {
     "count": 6,
-    "synced_at": "2026-09-24T21:57:31.532Z"
+    "synced_at": "2026-09-25T00:21:29.691Z"
   },
   "objects": [
     {
@@ -3184,7 +3184,7 @@
           "is_front_cover": true,
           "order": 3,
           "original": "https://static.tokkobroker.com/original_pictures/10490744_938611447644515284766137409511446777478037916286582613231746711821803.jpg",
-          "social_media_url": null,
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/168361776_og.jpg",
           "thumb": "https://static.tokkobroker.com/thumbs/10490744_9386114476445152847661374095114467774780379162865826132317467118218031040872_thu.jpg"
         },
         {

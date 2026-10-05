@@ -1,7 +1,7 @@
 {
   "meta": {
     "count": 10,
-    "synced_at": "2026-10-04T22:43:47.460Z"
+    "synced_at": "2026-10-05T01:35:37.026Z"
   },
   "objects": [
     {
@@ -47,7 +47,7 @@
       "credit_eligible": "No especificado",
       "custom1": "0.00",
       "custom_tags": [],
-      "deleted_at": "2026-09-23T03:42:33",
+      "deleted_at": "2026-10-05T00:14:24",
       "depth_measure": "0.00",
       "description": "\n Departamento Amueblado en Renta | La Serena Residencial, San Miguel de Allende\n\n\nVive todos los días como si estuvieras de vacaciones.\n\n\nDescubre este elegante departamento completamente amueblado ubicado en La Serena Residencial, uno de los desarrollos más exclusivos de San Miguel de Allende.\n\n\nCon una excelente distribución, este hogar ofrece:\n\n\n2 recámaras, la principal con walking closet y balcón.\n\n2 baños completos con acabados modernos.\n\nCocina integral con cubierta de granito totalmente equipada.\n\nSala y comedor con mobiliario de excelente calidad y diseño contemporáneo.\n\nÁrea de lavado independiente.\n\nAmplia terraza privada con una espectacular vista al jardín principal y a la presa.\n\n* Planta intermedia, con excelente iluminación natural y acceso cómodo. (se requiere subir 8 escalones para entrar al departamento).\n\nAdemás de un departamento listo para habitar, disfrutarás de un estilo de vida único con más de 21 amenidades tipo resort:\n\n\n\n\n3 albercas climatizadas.\n\nJacuzzi.\n\nSpa.\n\nGimnasio.\n\nSunset Bar.\n\nRestaurante Hacienda El Mortero.\n\nCasa Club.\n\nCanchas de tenis y pádel.\n\nSenderos y amplias áreas verdes.\n\nSeguridad y acceso controlado las 24 horas.\n\n\nComo valor agregado, el desarrollo cuenta con administración hotelera por Krystal Grand, ofreciendo servicios como room service y atención personalizada para brindar una experiencia de primer nivel.\n\n\nUbicado en Villa de los Frailes a solo 8 minutos del Centro Histórico de San Miguel de Allende.\n\n\nRenta mensual: $20,000 MXN : La renta incluye mantenimiento.\n\nSe acepta una mascota pequeña.\n\nContrato mínimo de 1 año.\n\nRequisito: Póliza jurídica (50% propietario y 50% arrendatario).\n\n\nAgenda tu visita y conoce uno de los departamentos con mejor estilo de vida en San Miguel de Allende.\n\n\n\n\n            \n",
       "development": null,
@@ -155,7 +155,7 @@
               "currency": "MXN",
               "is_promotional": false,
               "period": 0,
-              "price": 20000
+              "price": 19000
             }
           ]
         }

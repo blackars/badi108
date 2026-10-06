@@ -1,7 +1,7 @@
 {
   "meta": {
     "total_count": 17,
-    "synced_at": "2026-10-06T17:55:40.294Z",
+    "synced_at": "2026-10-06T22:21:37.514Z",
     "lang": "es_ar"
   },
   "objects": [
@@ -7591,9 +7591,9 @@
       "credit_eligible": "No especificado",
       "custom1": "0.00",
       "custom_tags": [],
-      "deleted_at": "2026-09-24T19:25:56",
+      "deleted_at": "2026-10-06T20:11:44",
       "depth_measure": "0.00",
-      "description": "Departamento en Renta | La Serena Residencial – San Miguel de Allende ?????\n\n\nVive la experiencia de un residencial con estilo resort, donde cada día se siente como vacaciones.\n\n\nEste hermoso departamento completamente amueblado (La Tarifa ya incluye Mantenimiento del residencial equivalente a $2,250.00) ofrece:\n\n\n• 100m² de construcción total\n\n• 2 recámaras:\n\n- 1 habitación con cama King Size\n\n- 1 habitación cuádruple\n\n  • 2 baños completos\n\n  • Sala y comedor con excelente iluminación\n\n  • Cocina totalmente equipada\n\n  • Cuarto de lavado, ventilador de extracción\n\n  • 2 Autos Estacionamiento\n\n\nAdemás, disfrutarás de más de 20 amenidades exclusivas, entre ellas: albercas, jacuzzi, spa, gimnasio, restaurante, Sunset Bar, canchas de tenis y pádel, amplias áreas verdes, salón de eventos y seguridad 24/7.\n\n\nUbicado a solo unos minutos del Centro Histórico de San Miguel de Allende, en un entorno tranquilo, seguro y con una excelente calidad de vida.\n\n\n???? Contáctanos para conocer disponibilidad, precio y agenda tu visita.\n\n\nBADI108 Real Estate &amp; Property Management\n",
+      "description": "                Departamento en Renta | La Serena Residencial – San Miguel de Allende \n\n\nVive la experiencia de un residencial con estilo resort, donde cada día se siente como vacaciones.\n\nEste hermoso departamento completamente amueblado (La Tarifa ya incluye Mantenimiento del residencial equivalente a $2,250.00) ofrece:\n\n\n\n• 105m² de construcción total\n\n• 2 recámaras:\n\n- 1 habitación con cama King Size\n\n- 1 habitación cuádruple\n\n  • 2 baños completos\n\n  • Sala y comedor con excelente iluminación\n\n  • Cocina totalmente equipada\n\n  • Cuarto de lavado, ventilador de extracción\n\n  • Estacionamiento\n\n\nAdemás, disfrutarás de más de 20 amenidades exclusivas, entre ellas: albercas, jacuzzi, spa, gimnasio, restaurante, Sunset Bar, canchas de tenis y pádel, amplias áreas verdes, salón de eventos y seguridad 24/7.\nUbicado a solo unos minutos del Centro Histórico de San Miguel de Allende, en un entorno tranquilo, seguro y con una excelente calidad de vida.\nContáctanos para conocer disponibilidad y agenda tu visita.\n\nBADI108 Real Estate &amp; Property Management\n\r\n\r\n            ",
       "development": null,
       "development_excel_extra_data": "[]",
       "dining_room": 0,
@@ -7684,13 +7684,13 @@
       "photos": [
         {
           "description": null,
-          "image": "https://static.tokkobroker.com/pictures/10490113_90960470540445814784335619501384213973273608262768527981995048931485475121489.jpg",
+          "image": "https://static.tokkobroker.com/pictures/10490113_101165440872837206668665559015066400961093354129962965420598642010875195457218.jpg",
           "is_blueprint": false,
           "is_front_cover": true,
-          "order": 6,
-          "original": "https://static.tokkobroker.com/original_pictures/10490113_909604705404458147843356195013842139732736082627685279819950489314854.jpg",
-          "social_media_url": "https://static.tokkobroker.com/sm_pics/168344736_og.jpg",
-          "thumb": "https://static.tokkobroker.com/thumbs/10490113_90960470540445814784335619501384213973273608262768527981995048931485475121489_th.jpg"
+          "order": 5,
+          "original": "https://static.tokkobroker.com/original_pictures/10490113_101165440872837206668665559015066400961093354129962965420598642010875.jpg",
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/168344734_og.jpg",
+          "thumb": "https://static.tokkobroker.com/thumbs/10490113_101165440872837206668665559015066400961093354129962965420598642010875195457218_t.jpg"
         },
         {
           "description": null,
@@ -7719,7 +7719,7 @@
           "is_front_cover": false,
           "order": 2,
           "original": "https://static.tokkobroker.com/original_pictures/10490113_501737464847735499336876690237668592156103674052979345748982566065957.jpg",
-          "social_media_url": null,
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/168344731_og.jpg",
           "thumb": "https://static.tokkobroker.com/thumbs/10490113_5017374648477354993368766902376685921561036740529793457489825660659570156255_thu.jpg"
         },
         {
@@ -7744,13 +7744,13 @@
         },
         {
           "description": null,
-          "image": "https://static.tokkobroker.com/pictures/10490113_101165440872837206668665559015066400961093354129962965420598642010875195457218.jpg",
+          "image": "https://static.tokkobroker.com/pictures/10490113_90960470540445814784335619501384213973273608262768527981995048931485475121489.jpg",
           "is_blueprint": false,
           "is_front_cover": false,
-          "order": 5,
-          "original": "https://static.tokkobroker.com/original_pictures/10490113_101165440872837206668665559015066400961093354129962965420598642010875.jpg",
-          "social_media_url": null,
-          "thumb": "https://static.tokkobroker.com/thumbs/10490113_101165440872837206668665559015066400961093354129962965420598642010875195457218_t.jpg"
+          "order": 6,
+          "original": "https://static.tokkobroker.com/original_pictures/10490113_909604705404458147843356195013842139732736082627685279819950489314854.jpg",
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/168344736_og.jpg",
+          "thumb": "https://static.tokkobroker.com/thumbs/10490113_90960470540445814784335619501384213973273608262768527981995048931485475121489_th.jpg"
         },
         {
           "description": null,
@@ -7809,7 +7809,7 @@
           "is_front_cover": false,
           "order": 12,
           "original": "https://static.tokkobroker.com/original_pictures/10490113_114049129621385548935602342994104069832559884097985363652637184716927.jpg",
-          "social_media_url": null,
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/168344738_og.jpg",
           "thumb": "https://static.tokkobroker.com/thumbs/10490113_114049129621385548935602342994104069832559884097985363652637184716927948448026_t.jpg"
         },
         {
@@ -8120,7 +8120,7 @@
       "quality_level": null,
       "real_address": "Renta Departamento Amueblado en la Serena",
       "reference_code": "BAP10490113",
-      "rich_description": "<p>Departamento en Renta | La Serena Residencial – San Miguel de Allende ?????</p>\n<br />\n<p>Vive la experiencia de un residencial con estilo resort, donde cada día se siente como vacaciones.</p>\n<br />\n<p>Este hermoso departamento completamente amueblado (La Tarifa ya incluye Mantenimiento del residencial equivalente a $2,250.00) ofrece:</p>\n<br />\n<p>• 100m² de construcción total</p>\n<p>• 2 recámaras:</p>\n<p>- 1 habitación con cama King Size</p>\n<p>- 1 habitación cuádruple</p>\n<p>  • 2 baños completos</p>\n<p>  • Sala y comedor con excelente iluminación</p>\n<p>  • Cocina totalmente equipada</p>\n<p>  • Cuarto de lavado, ventilador de extracción</p>\n<p>  • 2 Autos Estacionamiento</p>\n<br />\n<p>Además, disfrutarás de más de 20 amenidades exclusivas, entre ellas: albercas, jacuzzi, spa, gimnasio, restaurante, Sunset Bar, canchas de tenis y pádel, amplias áreas verdes, salón de eventos y seguridad 24/7.</p>\n<br />\n<p>Ubicado a solo unos minutos del Centro Histórico de San Miguel de Allende, en un entorno tranquilo, seguro y con una excelente calidad de vida.</p>\n<br />\n<p>???? Contáctanos para conocer disponibilidad, precio y agenda tu visita.</p>\n<br />\n<p>BADI108 Real Estate &amp; Property Management</p>",
+      "rich_description": "                <p>Departamento en Renta | La Serena Residencial – San Miguel de Allende&nbsp;</p><br><br><p>Vive la experiencia de un residencial con estilo resort, donde cada día se siente como vacaciones.</p><br><p>Este hermoso departamento completamente amueblado (La Tarifa ya incluye Mantenimiento del residencial equivalente a $2,250.00) ofrece:</p><br><br><br><p>• 105m² de construcción total</p><br><p>• 2 recámaras:</p><br><p>- 1 habitación con cama King Size</p><br><p>- 1 habitación cuádruple</p><br><p>  • 2 baños completos</p><br><p>  • Sala y comedor con excelente iluminación</p><br><p>  • Cocina totalmente equipada</p><br><p>  • Cuarto de lavado, ventilador de extracción</p><br><p>  • Estacionamiento</p><br><br><p>Además, disfrutarás de más de 20 amenidades exclusivas, entre ellas: albercas, jacuzzi, spa, gimnasio, restaurante, Sunset Bar, canchas de tenis y pádel, amplias áreas verdes, salón de eventos y seguridad 24/7.</p><p>Ubicado a solo unos minutos del Centro Histórico de San Miguel de Allende, en un entorno tranquilo, seguro y con una excelente calidad de vida.</p><p>Contáctanos para conocer disponibilidad y agenda tu visita.</p><br><p>BADI108 Real Estate &amp; Property Management</p>\r\n\r\n            ",
       "roofed_surface": "88.00",
       "room_amount": 6,
       "semiroofed_surface": "0.00",

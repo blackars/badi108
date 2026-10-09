@@ -1,7 +1,7 @@
 {
   "meta": {
     "total_count": 17,
-    "synced_at": "2026-10-09T17:18:36.085Z",
+    "synced_at": "2026-10-09T22:15:17.202Z",
     "lang": "es_ar"
   },
   "objects": [
@@ -133,6 +133,7 @@
         "parent_division": "/api/v1/location/130980/",
         "short_location": "Guanajuato | San Miguel de Allende | Villa de los Frailes",
         "state": null,
+        "type": "Barrio",
         "weight": 64,
         "zip_code": "37790"
       },
@@ -855,6 +856,7 @@
         "parent_division": "/api/v1/location/130980/",
         "short_location": "Guanajuato | San Miguel de Allende | Villa de los Frailes",
         "state": null,
+        "type": "Barrio",
         "weight": 64,
         "zip_code": "37790"
       },
@@ -1574,6 +1576,7 @@
         "parent_division": "/api/v1/location/130980/",
         "short_location": "Guanajuato | San Miguel de Allende | Villa de los Frailes",
         "state": null,
+        "type": "Barrio",
         "weight": 64,
         "zip_code": "37790"
       },
@@ -2374,6 +2377,7 @@
         "parent_division": "/api/v1/location/130980/",
         "short_location": "Guanajuato | San Miguel de Allende | Hacienda Jalpa",
         "state": null,
+        "type": "Barrio",
         "weight": 27,
         "zip_code": "37887"
       },
@@ -2843,6 +2847,7 @@
         "parent_division": "/api/v1/location/130980/",
         "short_location": "Guanajuato | San Miguel de Allende | Estación del Ferrocarril",
         "state": null,
+        "type": "Barrio",
         "weight": 6,
         "zip_code": "37759"
       },
@@ -3399,6 +3404,7 @@
         "parent_division": "/api/v1/location/130980/",
         "short_location": "Guanajuato | San Miguel de Allende | La Lejona",
         "state": null,
+        "type": "Barrio",
         "weight": 48,
         "zip_code": "37765"
       },
@@ -3879,6 +3885,7 @@
         "parent_division": "/api/v1/location/130980/",
         "short_location": "Guanajuato | San Miguel de Allende | Villa de los Frailes",
         "state": null,
+        "type": "Barrio",
         "weight": 64,
         "zip_code": "37790"
       },
@@ -4555,6 +4562,7 @@
         "parent_division": "/api/v1/location/130980/",
         "short_location": "Guanajuato | San Miguel de Allende | Villa de los Frailes",
         "state": null,
+        "type": "Barrio",
         "weight": 64,
         "zip_code": "37790"
       },
@@ -5065,6 +5073,7 @@
         "parent_division": "/api/v1/location/130980/",
         "short_location": "Guanajuato | San Miguel de Allende | Villa de los Frailes",
         "state": null,
+        "type": "Barrio",
         "weight": 64,
         "zip_code": "37790"
       },
@@ -5575,6 +5584,7 @@
         "parent_division": "/api/v1/location/130980/",
         "short_location": "Guanajuato | San Miguel de Allende | Villa de los Frailes",
         "state": null,
+        "type": "Barrio",
         "weight": 64,
         "zip_code": "37790"
       },
@@ -6044,6 +6054,7 @@
         "parent_division": "/api/v1/location/130980/",
         "short_location": "Guanajuato | San Miguel de Allende | Villa de los Frailes",
         "state": null,
+        "type": "Barrio",
         "weight": 64,
         "zip_code": "37790"
       },
@@ -6463,6 +6474,7 @@
         "parent_division": "/api/v1/location/130980/",
         "short_location": "Guanajuato | San Miguel de Allende | Villa de los Frailes",
         "state": null,
+        "type": "Barrio",
         "weight": 64,
         "zip_code": "37790"
       },
@@ -7092,6 +7104,7 @@
         "parent_division": "/api/v1/location/130980/",
         "short_location": "Guanajuato | San Miguel de Allende | La Lejona",
         "state": null,
+        "type": "Barrio",
         "weight": 48,
         "zip_code": "37765"
       },
@@ -7657,6 +7670,7 @@
         "parent_division": "/api/v1/location/130980/",
         "short_location": "Guanajuato | San Miguel de Allende | Villa de los Frailes",
         "state": null,
+        "type": "Barrio",
         "weight": 64,
         "zip_code": "37790"
       },
@@ -8260,6 +8274,7 @@
         "parent_division": "/api/v1/location/130980/",
         "short_location": "Guanajuato | San Miguel de Allende | Fraccionamiento Tierradentro",
         "state": null,
+        "type": "Barrio",
         "weight": 0,
         "zip_code": "37713"
       },
@@ -8819,6 +8834,7 @@
         "parent_division": "/api/v1/location/130980/",
         "short_location": "Guanajuato | San Miguel de Allende | Fraccionamiento Tierradentro",
         "state": null,
+        "type": "Barrio",
         "weight": 0,
         "zip_code": "37713"
       },
@@ -9218,6 +9234,7 @@
         "parent_division": "/api/v1/location/130980/",
         "short_location": "Guanajuato | San Miguel de Allende | Villa de los Frailes",
         "state": null,
+        "type": "Barrio",
         "weight": 64,
         "zip_code": "37790"
       },

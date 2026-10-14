@@ -1,7 +1,7 @@
 {
   "meta": {
     "total_count": 17,
-    "synced_at": "2026-10-14T16:32:22.640Z",
+    "synced_at": "2026-10-14T20:27:04.857Z",
     "lang": "es_ar"
   },
   "objects": [
@@ -6408,7 +6408,7 @@
       "credit_eligible": "No especificado",
       "custom1": "0.00",
       "custom_tags": [],
-      "deleted_at": "2026-09-23T03:23:20",
+      "deleted_at": "2026-10-14T20:07:09",
       "depth_measure": "0.00",
       "description": "RENTA DEPARTAMENTO CONTRATO 1 AÑO\n $20,000.00/$1,200.00 Dólares \nA 2 a 4 personas\nLa Serena Residencial – San Miguel de Allende\nVive la experiencia de un residencial con estilo resort, donde cada día se siente como vacaciones. Este hermoso departamento completamente amueblado ofrece:\n• 87 m² de construcción total\n• 2 recámaras:\n•Amueblada\n- 1 habitación con cama King Size\n- 1 habitación cuádruple\n  • 2 baños completos\n  • 1 medio baño en el Roof Garden\n  • Sala y comedor con excelente iluminación\n  • Cocina totalmente equipada\n  • Cuarto de lavado, ventilador de extracción\n• Terraza privado, con asador ideal para disfrutar de reuniones, atardeceres y momentos de descanso\n  • Estacionamiento\nAdemás, disfrutarás de más de 20 amenidades exclusivas, entre ellas: albercas, jacuzzi, spa, gimnasio, restaurante, Sunset Bar, canchas de tenis y pádel, amplias áreas verdes, salón de eventos y seguridad 24/7.\nUbicado a solo unos minutos del Centro Histórico de San Miguel de Allende, en un entorno tranquilo, seguro y con una excelente calidad de vida.\nContáctanos para conocer disponibilidad y agenda tu visita.\nBADI108 Real Estate &amp; Property Management\n",
       "development": null,
@@ -6496,7 +6496,7 @@
               "currency": "USD",
               "is_promotional": false,
               "period": 0,
-              "price": 1200
+              "price": 1100
             }
           ]
         }

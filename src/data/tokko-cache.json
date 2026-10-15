@@ -1,7 +1,7 @@
 {
   "meta": {
     "total_count": 17,
-    "synced_at": "2026-10-15T13:56:39.315Z",
+    "synced_at": "2026-10-15T18:04:03.546Z",
     "lang": "es_ar"
   },
   "objects": [
@@ -845,6 +845,15 @@
       "is_booking_active": true,
       "is_denounced": false,
       "is_starred_on_web": true,
+      "lead_receiver_user": {
+        "cellphone": "4151457780",
+        "email": "d.allendebienesraices@gmail.com",
+        "id": 120672,
+        "name": "Laura Aguirre",
+        "phone": "",
+        "picture": "https://static.tokkobroker.com/userprofile/pictures/118295_68455601783879772659063633856394428373791916115826513584528837582221.jpg",
+        "position": ""
+      },
       "legally_checked": "Desconocido",
       "livable_area": "0.00",
       "living_amount": 1,
@@ -1565,6 +1574,15 @@
       "is_booking_active": true,
       "is_denounced": false,
       "is_starred_on_web": true,
+      "lead_receiver_user": {
+        "cellphone": "4151457780",
+        "email": "d.allendebienesraices@gmail.com",
+        "id": 120672,
+        "name": "Laura Aguirre",
+        "phone": "",
+        "picture": "https://static.tokkobroker.com/userprofile/pictures/118295_68455601783879772659063633856394428373791916115826513584528837582221.jpg",
+        "position": ""
+      },
       "legally_checked": "Desconocido",
       "livable_area": "0.00",
       "living_amount": 1,
@@ -2366,6 +2384,15 @@
       "iptu_type": "No informado",
       "is_denounced": false,
       "is_starred_on_web": true,
+      "lead_receiver_user": {
+        "cellphone": "4151457780",
+        "email": "d.allendebienesraices@gmail.com",
+        "id": 120672,
+        "name": "Laura Aguirre",
+        "phone": "",
+        "picture": "https://static.tokkobroker.com/userprofile/pictures/118295_68455601783879772659063633856394428373791916115826513584528837582221.jpg",
+        "position": ""
+      },
       "legally_checked": "Desconocido",
       "livable_area": "0.00",
       "living_amount": 0,
@@ -3874,6 +3901,15 @@
       "is_booking_active": true,
       "is_denounced": false,
       "is_starred_on_web": true,
+      "lead_receiver_user": {
+        "cellphone": "4151457780",
+        "email": "d.allendebienesraices@gmail.com",
+        "id": 120672,
+        "name": "Laura Aguirre",
+        "phone": "",
+        "picture": "https://static.tokkobroker.com/userprofile/pictures/118295_68455601783879772659063633856394428373791916115826513584528837582221.jpg",
+        "position": ""
+      },
       "legally_checked": "Desconocido",
       "livable_area": "0.00",
       "living_amount": 0,
@@ -4551,6 +4587,15 @@
       "is_booking_active": true,
       "is_denounced": false,
       "is_starred_on_web": true,
+      "lead_receiver_user": {
+        "cellphone": "4151457780",
+        "email": "d.allendebienesraices@gmail.com",
+        "id": 120672,
+        "name": "Laura Aguirre",
+        "phone": "",
+        "picture": "https://static.tokkobroker.com/userprofile/pictures/118295_68455601783879772659063633856394428373791916115826513584528837582221.jpg",
+        "position": ""
+      },
       "legally_checked": "Desconocido",
       "livable_area": "0.00",
       "living_amount": 1,
@@ -5062,6 +5107,15 @@
       "is_booking_active": true,
       "is_denounced": false,
       "is_starred_on_web": false,
+      "lead_receiver_user": {
+        "cellphone": "4151457780",
+        "email": "d.allendebienesraices@gmail.com",
+        "id": 120672,
+        "name": "Laura Aguirre",
+        "phone": "",
+        "picture": "https://static.tokkobroker.com/userprofile/pictures/118295_68455601783879772659063633856394428373791916115826513584528837582221.jpg",
+        "position": ""
+      },
       "legally_checked": "Desconocido",
       "livable_area": "0.00",
       "living_amount": 0,
@@ -5573,6 +5627,15 @@
       "is_booking_active": true,
       "is_denounced": false,
       "is_starred_on_web": true,
+      "lead_receiver_user": {
+        "cellphone": "4151457780",
+        "email": "d.allendebienesraices@gmail.com",
+        "id": 120672,
+        "name": "Laura Aguirre",
+        "phone": "",
+        "picture": "https://static.tokkobroker.com/userprofile/pictures/118295_68455601783879772659063633856394428373791916115826513584528837582221.jpg",
+        "position": ""
+      },
       "legally_checked": "Desconocido",
       "livable_area": "0.00",
       "living_amount": 0,
@@ -6043,6 +6106,15 @@
       "is_booking_active": true,
       "is_denounced": false,
       "is_starred_on_web": true,
+      "lead_receiver_user": {
+        "cellphone": "4151457780",
+        "email": "d.allendebienesraices@gmail.com",
+        "id": 120672,
+        "name": "Laura Aguirre",
+        "phone": "",
+        "picture": "https://static.tokkobroker.com/userprofile/pictures/118295_68455601783879772659063633856394428373791916115826513584528837582221.jpg",
+        "position": ""
+      },
       "legally_checked": "Desconocido",
       "livable_area": "0.00",
       "living_amount": 0,
@@ -6463,6 +6535,15 @@
       "is_booking_active": true,
       "is_denounced": false,
       "is_starred_on_web": false,
+      "lead_receiver_user": {
+        "cellphone": "4151457780",
+        "email": "d.allendebienesraices@gmail.com",
+        "id": 120672,
+        "name": "Laura Aguirre",
+        "phone": "",
+        "picture": "https://static.tokkobroker.com/userprofile/pictures/118295_68455601783879772659063633856394428373791916115826513584528837582221.jpg",
+        "position": ""
+      },
       "legally_checked": "Desconocido",
       "livable_area": "0.00",
       "living_amount": 0,
@@ -7093,6 +7174,15 @@
       "is_booking_active": true,
       "is_denounced": false,
       "is_starred_on_web": false,
+      "lead_receiver_user": {
+        "cellphone": "4151457780",
+        "email": "d.allendebienesraices@gmail.com",
+        "id": 120672,
+        "name": "Laura Aguirre",
+        "phone": "",
+        "picture": "https://static.tokkobroker.com/userprofile/pictures/118295_68455601783879772659063633856394428373791916115826513584528837582221.jpg",
+        "position": ""
+      },
       "legally_checked": "Desconocido",
       "livable_area": "0.00",
       "living_amount": 0,
@@ -7659,6 +7749,15 @@
       "is_booking_active": true,
       "is_denounced": false,
       "is_starred_on_web": false,
+      "lead_receiver_user": {
+        "cellphone": "4151457780",
+        "email": "d.allendebienesraices@gmail.com",
+        "id": 120672,
+        "name": "Laura Aguirre",
+        "phone": "",
+        "picture": "https://static.tokkobroker.com/userprofile/pictures/118295_68455601783879772659063633856394428373791916115826513584528837582221.jpg",
+        "position": ""
+      },
       "legally_checked": "Desconocido",
       "livable_area": "0.00",
       "living_amount": 0,
@@ -8263,6 +8362,15 @@
       "is_booking_active": true,
       "is_denounced": false,
       "is_starred_on_web": false,
+      "lead_receiver_user": {
+        "cellphone": "4151457780",
+        "email": "d.allendebienesraices@gmail.com",
+        "id": 120672,
+        "name": "Laura Aguirre",
+        "phone": "",
+        "picture": "https://static.tokkobroker.com/userprofile/pictures/118295_68455601783879772659063633856394428373791916115826513584528837582221.jpg",
+        "position": ""
+      },
       "legally_checked": "Desconocido",
       "livable_area": "0.00",
       "living_amount": 0,
@@ -9223,6 +9331,15 @@
       "is_booking_active": true,
       "is_denounced": false,
       "is_starred_on_web": false,
+      "lead_receiver_user": {
+        "cellphone": "4151457780",
+        "email": "d.allendebienesraices@gmail.com",
+        "id": 120672,
+        "name": "Laura Aguirre",
+        "phone": "",
+        "picture": "https://static.tokkobroker.com/userprofile/pictures/118295_68455601783879772659063633856394428373791916115826513584528837582221.jpg",
+        "position": ""
+      },
       "legally_checked": "Desconocido",
       "livable_area": "0.00",
       "living_amount": 0,

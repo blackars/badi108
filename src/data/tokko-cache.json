@@ -1,7 +1,7 @@
 {
   "meta": {
     "total_count": 16,
-    "synced_at": "2026-10-26T16:29:13.746Z",
+    "synced_at": "2026-10-26T21:20:42.973Z",
     "lang": "es_ar"
   },
   "objects": [
@@ -5565,7 +5565,7 @@
       "credit_eligible": "No especificado",
       "custom1": "0.00",
       "custom_tags": [],
-      "deleted_at": "2026-09-23T03:24:19",
+      "deleted_at": "2026-10-26T18:42:56",
       "depth_measure": "0.00",
       "description": "DEPARTAMENTO EN RENTA CONTRATO POR 1 AÑO\nPRECIO POR MES\n$25,000.00, INCLUYE MANTENIMIENTO Y ACCESO A MAS DE 20 AMENIDADES ESTILO RESORT\nOcupación máxima 6 personas\nLa Serena Residencial – San Miguel de Allende\nVive la experiencia de un residencial con estilo resort, donde cada día se siente como vacaciones.\nEste hermoso departamento completamente amueblado ofrece:\n• 144 m² de construcción total\n3 recámaras:\n- 1 habitación con cama King Size\n- 1 habitación cuádruple\n-1 habitación cuádruple\n  • 2 baños completos\n  • Sala y comedor con excelente iluminación\n  • Cocina equipada con doble barra de granito desayunador \n  •Terraza\n  • Cuarto de lavado, ventilador de extracción\n• Terraza Garden privado, con acceso directo a              jardines centrales.\n  • 2 Estacionamiento\nRecuerda que disfrutarás de más de 20 amenidades exclusivas, entre ellas: albercas, jacuzzi, spa, gimnasio, restaurante, Sunset Bar, canchas de tenis y pádel, amplias áreas verdes, salón de eventos y seguridad 24/7.\nUbicado a solo unos minutos del Centro Histórico de San Miguel de Allende, en un entorno tranquilo, seguro y con una excelente calidad de vida.\nContáctanos para conocer disponibilidad y agenda tu visita.\nBADI108 Real Estate &amp; Property Management\n",
       "development": null,
@@ -8353,7 +8353,7 @@
       "age": 0,
       "apartment_door": "",
       "appartments_per_floor": 0,
-      "bathroom_amount": 0,
+      "bathroom_amount": 2,
       "block_number": "",
       "booking_url": "https://ficha.info/calendar/10490807",
       "branch": {
@@ -8390,7 +8390,7 @@
       "credit_eligible": "No especificado",
       "custom1": "0.00",
       "custom_tags": [],
-      "deleted_at": "2026-10-04T23:30:48",
+      "deleted_at": "2026-10-26T18:41:40",
       "depth_measure": "0.00",
       "description": "                Espectacular casa en venta en Tierra Dentro, San Miguel de Allende\n\n\n\n\n\n2  Recamas \n\n1 baños completo\n1 baño con tina\nSala Comedor\nCocina\nÁrea de Lavado\nTerraza\n\nTe presentamos una excelente oportunidad de inversión y de calidad de vida en Tierra Dentro, un desarrollo completamente terminado que destaca por sus amplias áreas verdes, excelente ubicación y la calidad de sus viviendas.\n\nLa propiedad se encuentra dentro de uno de los primeros clústeres del residencial, a un costado de la caseta principal, lo que brinda mayor comodidad y fácil acceso. El clúster cuenta con un hermoso kiosco, jardín central y espacios ideales para caminar en familia o disfrutar de un paseo con tu mascota.\n\nAdemás, disfrutarás de exclusivas amenidades como:\n\nCasa club.\nAlberca.\nTerraza.\nÁrea de snacks.\nÁreas verdes.\nCanchas de pádel y tenis.\nUno de los mayores atractivos de Tierra Dentro es su ubicación estratégica. A tan solo unos minutos del Centro Histórico de San Miguel de Allende, encontrarás una gran variedad de atractivos turísticos como Senderos, La Playita, glampings y otros espacios recreativos, ideales para disfrutar de la naturaleza, la gastronomía y actividades al aire libre sin recorrer largas distancias.\n\nEste entorno convierte a Tierra Dentro en una excelente opción tanto para vivir como para invertir, ya que ofrece la combinación perfecta entre tranquilidad, comodidad y cercanía a los principales puntos de interés de la ciudad.\n\nSi buscas una casa de excelente tamaño, dentro de un desarrollo consolidado, con amenidades de primer nivel y rodeada de experiencias únicas, Tierra Dentro es el lugar ideal para ti.\n\r\n\r\n            ",
       "development": null,
@@ -8733,12 +8733,12 @@
       "seo_keywords": "",
       "situation": "---",
       "status": 2,
-      "suite_amount": 0,
+      "suite_amount": 3,
       "suites_with_closets": 0,
       "surface": "120.00",
       "surface_measurement": "M2",
       "tags": [],
-      "toilet_amount": 0,
+      "toilet_amount": 1,
       "total_area": "0.00",
       "total_suites": 0,
       "total_surface": "120.00",

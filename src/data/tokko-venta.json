@@ -1,7 +1,7 @@
 {
   "meta": {
     "count": 7,
-    "synced_at": "2026-10-26T16:29:13.746Z"
+    "synced_at": "2026-10-26T21:20:42.973Z"
   },
   "objects": [
     {
@@ -3662,7 +3662,7 @@
       "age": 0,
       "apartment_door": "",
       "appartments_per_floor": 0,
-      "bathroom_amount": 0,
+      "bathroom_amount": 2,
       "block_number": "",
       "booking_url": "https://ficha.info/calendar/10490807",
       "branch": {
@@ -3699,7 +3699,7 @@
       "credit_eligible": "No especificado",
       "custom1": "0.00",
       "custom_tags": [],
-      "deleted_at": "2026-10-04T23:30:48",
+      "deleted_at": "2026-10-26T18:41:40",
       "depth_measure": "0.00",
       "description": "                Espectacular casa en venta en Tierra Dentro, San Miguel de Allende\n\n\n\n\n\n2  Recamas \n\n1 baños completo\n1 baño con tina\nSala Comedor\nCocina\nÁrea de Lavado\nTerraza\n\nTe presentamos una excelente oportunidad de inversión y de calidad de vida en Tierra Dentro, un desarrollo completamente terminado que destaca por sus amplias áreas verdes, excelente ubicación y la calidad de sus viviendas.\n\nLa propiedad se encuentra dentro de uno de los primeros clústeres del residencial, a un costado de la caseta principal, lo que brinda mayor comodidad y fácil acceso. El clúster cuenta con un hermoso kiosco, jardín central y espacios ideales para caminar en familia o disfrutar de un paseo con tu mascota.\n\nAdemás, disfrutarás de exclusivas amenidades como:\n\nCasa club.\nAlberca.\nTerraza.\nÁrea de snacks.\nÁreas verdes.\nCanchas de pádel y tenis.\nUno de los mayores atractivos de Tierra Dentro es su ubicación estratégica. A tan solo unos minutos del Centro Histórico de San Miguel de Allende, encontrarás una gran variedad de atractivos turísticos como Senderos, La Playita, glampings y otros espacios recreativos, ideales para disfrutar de la naturaleza, la gastronomía y actividades al aire libre sin recorrer largas distancias.\n\nEste entorno convierte a Tierra Dentro en una excelente opción tanto para vivir como para invertir, ya que ofrece la combinación perfecta entre tranquilidad, comodidad y cercanía a los principales puntos de interés de la ciudad.\n\nSi buscas una casa de excelente tamaño, dentro de un desarrollo consolidado, con amenidades de primer nivel y rodeada de experiencias únicas, Tierra Dentro es el lugar ideal para ti.\n\r\n\r\n            ",
       "development": null,
@@ -4042,12 +4042,12 @@
       "seo_keywords": "",
       "situation": "---",
       "status": 2,
-      "suite_amount": 0,
+      "suite_amount": 3,
       "suites_with_closets": 0,
       "surface": "120.00",
       "surface_measurement": "M2",
       "tags": [],
-      "toilet_amount": 0,
+      "toilet_amount": 1,
       "total_area": "0.00",
       "total_suites": 0,
       "total_surface": "120.00",

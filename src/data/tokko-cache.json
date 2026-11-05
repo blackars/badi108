@@ -1,7 +1,7 @@
 {
   "meta": {
     "total_count": 17,
-    "synced_at": "2026-11-05T16:08:10.811Z",
+    "synced_at": "2026-11-05T22:32:09.907Z",
     "lang": "es_ar"
   },
   "objects": [
@@ -8400,7 +8400,7 @@
       "credit_eligible": "No especificado",
       "custom1": "0.00",
       "custom_tags": [],
-      "deleted_at": "2026-10-26T18:41:40",
+      "deleted_at": "2026-11-05T20:26:18",
       "depth_measure": "0.00",
       "description": "                Espectacular casa en venta en Tierra Dentro, San Miguel de Allende\n\n\n\n\n\n2  Recamas \n\n1 baños completo\n1 baño con tina\nSala Comedor\nCocina\nÁrea de Lavado\nTerraza\n\nTe presentamos una excelente oportunidad de inversión y de calidad de vida en Tierra Dentro, un desarrollo completamente terminado que destaca por sus amplias áreas verdes, excelente ubicación y la calidad de sus viviendas.\n\nLa propiedad se encuentra dentro de uno de los primeros clústeres del residencial, a un costado de la caseta principal, lo que brinda mayor comodidad y fácil acceso. El clúster cuenta con un hermoso kiosco, jardín central y espacios ideales para caminar en familia o disfrutar de un paseo con tu mascota.\n\nAdemás, disfrutarás de exclusivas amenidades como:\n\nCasa club.\nAlberca.\nTerraza.\nÁrea de snacks.\nÁreas verdes.\nCanchas de pádel y tenis.\nUno de los mayores atractivos de Tierra Dentro es su ubicación estratégica. A tan solo unos minutos del Centro Histórico de San Miguel de Allende, encontrarás una gran variedad de atractivos turísticos como Senderos, La Playita, glampings y otros espacios recreativos, ideales para disfrutar de la naturaleza, la gastronomía y actividades al aire libre sin recorrer largas distancias.\n\nEste entorno convierte a Tierra Dentro en una excelente opción tanto para vivir como para invertir, ya que ofrece la combinación perfecta entre tranquilidad, comodidad y cercanía a los principales puntos de interés de la ciudad.\n\nSi buscas una casa de excelente tamaño, dentro de un desarrollo consolidado, con amenidades de primer nivel y rodeada de experiencias únicas, Tierra Dentro es el lugar ideal para ti.\n\r\n\r\n            ",
       "development": null,
@@ -8509,13 +8509,13 @@
       "photos": [
         {
           "description": null,
-          "image": "https://static.tokkobroker.com/pictures/10490807_76259298792663249461105008189836151501592148839362982572700849103983217342641.jpg",
+          "image": "https://static.tokkobroker.com/pictures/10490807_110844770559303867744155513683892448163148077208105900427631204797502641049558.jpg",
           "is_blueprint": false,
           "is_front_cover": true,
-          "order": 7,
-          "original": "https://static.tokkobroker.com/original_pictures/10490807_762592987926632494611050081898361515015921488393629825727008491039832.jpg",
-          "social_media_url": "https://static.tokkobroker.com/sm_pics/168363669_og.jpg",
-          "thumb": "https://static.tokkobroker.com/thumbs/10490807_76259298792663249461105008189836151501592148839362982572700849103983217342641_th.jpg"
+          "order": 13,
+          "original": "https://static.tokkobroker.com/original_pictures/10490807_110844770559303867744155513683892448163148077208105900427631204797502.jpg",
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/168363691_og.jpg",
+          "thumb": "https://static.tokkobroker.com/thumbs/10490807_110844770559303867744155513683892448163148077208105900427631204797502641049558_t.jpg"
         },
         {
           "description": null,
@@ -8589,6 +8589,16 @@
         },
         {
           "description": null,
+          "image": "https://static.tokkobroker.com/pictures/10490807_76259298792663249461105008189836151501592148839362982572700849103983217342641.jpg",
+          "is_blueprint": false,
+          "is_front_cover": false,
+          "order": 7,
+          "original": "https://static.tokkobroker.com/original_pictures/10490807_762592987926632494611050081898361515015921488393629825727008491039832.jpg",
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/168363669_og.jpg",
+          "thumb": "https://static.tokkobroker.com/thumbs/10490807_76259298792663249461105008189836151501592148839362982572700849103983217342641_th.jpg"
+        },
+        {
+          "description": null,
           "image": "https://static.tokkobroker.com/pictures/10490807_64648079152667890132735855881440589164039392487460105995629853421447663619198.jpg",
           "is_blueprint": false,
           "is_front_cover": false,
@@ -8636,16 +8646,6 @@
           "original": "https://static.tokkobroker.com/original_pictures/10490807_823283084491298857545824349251106794223684954044099921354356179111114.jpg",
           "social_media_url": null,
           "thumb": "https://static.tokkobroker.com/thumbs/10490807_82328308449129885754582434925110679422368495404409992135435617911111426622749_th.jpg"
-        },
-        {
-          "description": null,
-          "image": "https://static.tokkobroker.com/pictures/10490807_110844770559303867744155513683892448163148077208105900427631204797502641049558.jpg",
-          "is_blueprint": false,
-          "is_front_cover": false,
-          "order": 13,
-          "original": "https://static.tokkobroker.com/original_pictures/10490807_110844770559303867744155513683892448163148077208105900427631204797502.jpg",
-          "social_media_url": "https://static.tokkobroker.com/sm_pics/168363691_og.jpg",
-          "thumb": "https://static.tokkobroker.com/thumbs/10490807_110844770559303867744155513683892448163148077208105900427631204797502641049558_t.jpg"
         },
         {
           "description": null,
@@ -9430,7 +9430,7 @@
       "zonification": "Residencial"
     },
     {
-      "address": "Residencial Premium ",
+      "address": "Renta Departamento  sin muebles en Residencial premium con amenidades Resort",
       "address_complement": "",
       "age": 0,
       "apartment_door": "C",
@@ -9472,7 +9472,7 @@
       "credit_eligible": "No especificado",
       "custom1": "0.00",
       "custom_tags": [],
-      "deleted_at": "2026-11-04T21:48:20",
+      "deleted_at": "2026-11-05T14:51:33",
       "depth_measure": "0.00",
       "description": "Departamento Recreo en renta | La Serena Residencial\nDisfruta de un estilo de vida tipo resort en un desarrollo privado ubicado a solo *8 minutos del Centro Histórico de San Miguel de Allende*.\nEl departamento cuenta con:• 2 recámaras.  • 2 baños completos.  • Sala y comedor.  • Cocina integral.  • Área de lavandería.  • Terraza.  • 1 cajón de estacionamiento.\nComo residente tendrás acceso a **más de 20 amenidades**, entre ellas albercas climatizadas, gimnasio, spa, canchas de pádel y tenis, áreas verdes, fogateros, restaurante, seguridad 24/7 y actividades para la comunidad, todo en un entorno administrado por **Krystal Grand**.\nIdeal para quienes buscan comodidad, seguridad y una excelente calidad de vida en San Miguel de Allende.\n                \r\n\r\n            ",
       "development": null,
@@ -9482,7 +9482,7 @@
       "down_payment": "0.00",
       "expenses": 0,
       "extra_attributes": [],
-      "fake_address": "Residencial Premium ",
+      "fake_address": "Renta Departamento  sin muebles en Residencial premium con amenidades Resort",
       "files": [],
       "fire_insurance_cost": "0.00",
       "floor": "",
@@ -9797,7 +9797,7 @@
       },
       "property_condition": "---",
       "public_url": "https://ficha.info/p/e43D8dFyuCmcZa",
-      "publication_title": "Renta Departamento Amueblado en Residencial premium con amenidades Resort",
+      "publication_title": "Renta Departamento  sin muebles en Residencial premium con amenidades Resort",
       "quality_level": null,
       "real_address": "HIDALGO 2 Departamento C",
       "reference_code": "BAP13559646",
@@ -9813,7 +9813,18 @@
       "suites_with_closets": 0,
       "surface": "0.00",
       "surface_measurement": "M2",
-      "tags": [],
+      "tags": [
+        {
+          "id": 51,
+          "name": "Pileta",
+          "type": 3
+        },
+        {
+          "id": 1555,
+          "name": "Balcón terraza",
+          "type": 2
+        }
+      ],
       "toilet_amount": 0,
       "total_area": "0.00",
       "total_suites": 0,

@@ -1,7 +1,7 @@
 {
   "meta": {
     "count": 10,
-    "synced_at": "2026-11-05T16:08:10.811Z"
+    "synced_at": "2026-11-05T22:32:09.907Z"
   },
   "objects": [
     {
@@ -5368,7 +5368,7 @@
       "zonification": "Residencial"
     },
     {
-      "address": "Residencial Premium ",
+      "address": "Renta Departamento  sin muebles en Residencial premium con amenidades Resort",
       "address_complement": "",
       "age": 0,
       "apartment_door": "C",
@@ -5410,7 +5410,7 @@
       "credit_eligible": "No especificado",
       "custom1": "0.00",
       "custom_tags": [],
-      "deleted_at": "2026-11-04T21:48:20",
+      "deleted_at": "2026-11-05T14:51:33",
       "depth_measure": "0.00",
       "description": "Departamento Recreo en renta | La Serena Residencial\nDisfruta de un estilo de vida tipo resort en un desarrollo privado ubicado a solo *8 minutos del Centro Histórico de San Miguel de Allende*.\nEl departamento cuenta con:• 2 recámaras.  • 2 baños completos.  • Sala y comedor.  • Cocina integral.  • Área de lavandería.  • Terraza.  • 1 cajón de estacionamiento.\nComo residente tendrás acceso a **más de 20 amenidades**, entre ellas albercas climatizadas, gimnasio, spa, canchas de pádel y tenis, áreas verdes, fogateros, restaurante, seguridad 24/7 y actividades para la comunidad, todo en un entorno administrado por **Krystal Grand**.\nIdeal para quienes buscan comodidad, seguridad y una excelente calidad de vida en San Miguel de Allende.\n                \r\n\r\n            ",
       "development": null,
@@ -5420,7 +5420,7 @@
       "down_payment": "0.00",
       "expenses": 0,
       "extra_attributes": [],
-      "fake_address": "Residencial Premium ",
+      "fake_address": "Renta Departamento  sin muebles en Residencial premium con amenidades Resort",
       "files": [],
       "fire_insurance_cost": "0.00",
       "floor": "",
@@ -5735,7 +5735,7 @@
       },
       "property_condition": "---",
       "public_url": "https://ficha.info/p/e43D8dFyuCmcZa",
-      "publication_title": "Renta Departamento Amueblado en Residencial premium con amenidades Resort",
+      "publication_title": "Renta Departamento  sin muebles en Residencial premium con amenidades Resort",
       "quality_level": null,
       "real_address": "HIDALGO 2 Departamento C",
       "reference_code": "BAP13559646",
@@ -5751,7 +5751,18 @@
       "suites_with_closets": 0,
       "surface": "0.00",
       "surface_measurement": "M2",
-      "tags": [],
+      "tags": [
+        {
+          "id": 51,
+          "name": "Pileta",
+          "type": 3
+        },
+        {
+          "id": 1555,
+          "name": "Balcón terraza",
+          "type": 2
+        }
+      ],
       "toilet_amount": 0,
       "total_area": "0.00",
       "total_suites": 0,

@@ -1,7 +1,7 @@
 {
   "meta": {
     "total_count": 17,
-    "synced_at": "2026-11-10T09:14:55.561Z",
+    "synced_at": "2026-11-10T17:29:18.518Z",
     "lang": "es_ar"
   },
   "objects": [
@@ -9439,7 +9439,7 @@
       "address_complement": "",
       "age": 0,
       "apartment_door": "C",
-      "appartments_per_floor": 0,
+      "appartments_per_floor": 2,
       "bathroom_amount": 2,
       "block_number": "",
       "booking_url": "https://ficha.info/calendar/13559646",
@@ -9477,9 +9477,9 @@
       "credit_eligible": "No especificado",
       "custom1": "0.00",
       "custom_tags": [],
-      "deleted_at": "2026-11-05T14:51:33",
+      "deleted_at": "2026-11-10T16:24:28",
       "depth_measure": "0.00",
-      "description": "Departamento Recreo en renta | La Serena Residencial\nDisfruta de un estilo de vida tipo resort en un desarrollo privado ubicado a solo *8 minutos del Centro Histórico de San Miguel de Allende*.\nEl departamento cuenta con:• 2 recámaras.  • 2 baños completos.  • Sala y comedor.  • Cocina integral.  • Área de lavandería.  • Terraza.  • 1 cajón de estacionamiento.\nComo residente tendrás acceso a **más de 20 amenidades**, entre ellas albercas climatizadas, gimnasio, spa, canchas de pádel y tenis, áreas verdes, fogateros, restaurante, seguridad 24/7 y actividades para la comunidad, todo en un entorno administrado por **Krystal Grand**.\nIdeal para quienes buscan comodidad, seguridad y una excelente calidad de vida en San Miguel de Allende.\n                \r\n\r\n            ",
+      "description": "                Departamento sin muebles en renta en residencial estilo Resort con amenidades premium\nDisfruta de un estilo de vida tipo resort en un desarrollo privado ubicado a solo 8 minutos del Centro Histórico de San Miguel de Allende.\nEl departamento cuenta con:• 2 recámaras.  • 2 baños completos.  • Sala y comedor.  • Cocina integral.  • Área de lavandería.  • Terraza.  • 1 cajón de estacionamiento.\nComo residente tendrás acceso a más de 20 amenidades entre ellas albercas climatizadas, gimnasio, spa, canchas de pádel y tenis, áreas verdes, fogateros, restaurante, seguridad 24/7 y actividades para la comunidad, todo en un entorno administrado por Krystal Grand.\nIdeal para quienes buscan comodidad, seguridad y una excelente calidad de vida en San Miguel de Allende.\nCondiciones de arrendamiento:\nContrato con póliza jurídica 50% Arrendador y 50%  Arrendatario Mantenimiento incluido en la rentaSe requiere 1 mes de deposito en garantía\n\n                \n\n            \r\n\r\n            ",
       "development": null,
       "development_excel_extra_data": "[]",
       "dining_room": 0,
@@ -9525,7 +9525,7 @@
             "work_email": "d.allendebienesraices@gmail.com"
           }
         ],
-        "transaction_requirements": ""
+        "transaction_requirements": "Contrato con póliza jurídica 50% Arrendador y 50%  Arrendatario \nMantenimiento incluido en la renta \nSe renta sin muebles\nSe requiere 1 mes de deposito en garantía "
       },
       "iptu": 0,
       "iptu_type": "No informado",
@@ -9580,13 +9580,13 @@
       "photos": [
         {
           "description": null,
-          "image": "https://static.tokkobroker.com/pictures/13559646_40922787272468047597859902915242049166163404380399178878676548718175489969610.jpg",
+          "image": "https://static.tokkobroker.com/pictures/13559646_70971986287397788942055156771212047969938757029937303894562762832242732615740.jpg",
           "is_blueprint": false,
           "is_front_cover": true,
-          "order": 6,
-          "original": "https://static.tokkobroker.com/original_pictures/13559646_409227872724680475978599029152420491661634043803991788786765487181754.jpg",
-          "social_media_url": "https://static.tokkobroker.com/sm_pics/13559646_40922787272468047597859902915242049166163404380399178878676548718175489969610_og.jpg",
-          "thumb": "https://static.tokkobroker.com/thumbs/13559646_40922787272468047597859902915242049166163404380399178878676548718175489969610_th.jpg"
+          "order": 17,
+          "original": "https://static.tokkobroker.com/original_pictures/13559646_709719862873977889420551567712120479699387570299373038945627628322427.jpg",
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/13559646_70971986287397788942055156771212047969938757029937303894562762832242732615740_og.jpg",
+          "thumb": "https://static.tokkobroker.com/thumbs/13559646_70971986287397788942055156771212047969938757029937303894562762832242732615740_th.jpg"
         },
         {
           "description": null,
@@ -9647,6 +9647,16 @@
           "original": "https://static.tokkobroker.com/original_pictures/13559646_696637560379928113382691955475405983935061183862130881553544851368767.jpg",
           "social_media_url": "https://static.tokkobroker.com/sm_pics/13559646_69663756037992811338269195547540598393506118386213088155354485136876792753823_og.jpg",
           "thumb": "https://static.tokkobroker.com/thumbs/13559646_69663756037992811338269195547540598393506118386213088155354485136876792753823_th.jpg"
+        },
+        {
+          "description": null,
+          "image": "https://static.tokkobroker.com/pictures/13559646_40922787272468047597859902915242049166163404380399178878676548718175489969610.jpg",
+          "is_blueprint": false,
+          "is_front_cover": false,
+          "order": 6,
+          "original": "https://static.tokkobroker.com/original_pictures/13559646_409227872724680475978599029152420491661634043803991788786765487181754.jpg",
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/13559646_40922787272468047597859902915242049166163404380399178878676548718175489969610_og.jpg",
+          "thumb": "https://static.tokkobroker.com/thumbs/13559646_40922787272468047597859902915242049166163404380399178878676548718175489969610_th.jpg"
         },
         {
           "description": null,
@@ -9750,16 +9760,6 @@
         },
         {
           "description": null,
-          "image": "https://static.tokkobroker.com/pictures/13559646_70971986287397788942055156771212047969938757029937303894562762832242732615740.jpg",
-          "is_blueprint": false,
-          "is_front_cover": false,
-          "order": 17,
-          "original": "https://static.tokkobroker.com/original_pictures/13559646_709719862873977889420551567712120479699387570299373038945627628322427.jpg",
-          "social_media_url": "https://static.tokkobroker.com/sm_pics/13559646_70971986287397788942055156771212047969938757029937303894562762832242732615740_og.jpg",
-          "thumb": "https://static.tokkobroker.com/thumbs/13559646_70971986287397788942055156771212047969938757029937303894562762832242732615740_th.jpg"
-        },
-        {
-          "description": null,
           "image": "https://static.tokkobroker.com/pictures/13559646_70411273982357841456899346635468584191719236780596827958329559532037310771954.jpg",
           "is_blueprint": false,
           "is_front_cover": false,
@@ -9800,13 +9800,13 @@
         "picture": "https://static.tokkobroker.com/userprofile/pictures/118295_68455601783879772659063633856394428373791916115826513584528837582221.jpg",
         "position": ""
       },
-      "property_condition": "---",
+      "property_condition": "Excelente",
       "public_url": "https://ficha.info/p/e43D8dFyuCmcZa",
       "publication_title": "Renta Departamento  sin muebles en Residencial premium con amenidades Resort",
       "quality_level": null,
       "real_address": "HIDALGO 2 Departamento C",
       "reference_code": "BAP13559646",
-      "rich_description": "<div>Departamento Recreo en renta | La Serena Residencial<div><br></div><div>Disfruta de un estilo de vida tipo resort en un desarrollo privado ubicado a solo *8 minutos del Centro Histórico de San Miguel de Allende*.</div><div><br></div><div>El departamento cuenta con:</div><div>• 2 recámaras.  </div><div>• 2 baños completos.  </div><div>• Sala y comedor.  </div><div>• Cocina integral.  </div><div>• Área de lavandería.  </div><div>• Terraza.  </div><div>• 1 cajón de estacionamiento.</div><div><br></div><div>Como residente tendrás acceso a **más de 20 amenidades**, entre ellas albercas climatizadas, gimnasio, spa, canchas de pádel y tenis, áreas verdes, fogateros, restaurante, seguridad 24/7 y actividades para la comunidad, todo en un entorno administrado por **Krystal Grand**.</div><div><br></div><div>Ideal para quienes buscan comodidad, seguridad y una excelente calidad de vida en San Miguel de Allende.</div><div><br></div></div>                \r\n\r\n            ",
+      "rich_description": "                <div>Departamento sin muebles en renta en residencial estilo Resort con amenidades premium<div><br></div><div>Disfruta de un estilo de vida tipo resort en un desarrollo privado ubicado a solo <span style=\"font-weight: bold;\">8 minutos del Centro Histórico de San Miguel de Allende.</span></div><div><br></div><div>El departamento cuenta con:</div><div>• 2 recámaras.  </div><div>• 2 baños completos.  </div><div>• Sala y comedor.  </div><div>• Cocina integral.  </div><div>• Área de lavandería.  </div><div>• Terraza.  </div><div>• 1 cajón de estacionamiento.</div><div><br></div><div>Como residente <span style=\"font-weight: bold;\">tendrás acceso a más de 20 amenidades</span>&nbsp;entre ellas <span style=\"font-weight: bold;\">albercas climatizadas, gimnasio, spa, canchas de pádel y tenis, áreas verdes, fogateros, restaurante, seguridad 24/7 y actividades para la comunidad</span>, todo en un entorno administrado por Krystal Grand.</div><div><br></div><div><span style=\"font-style: italic; text-decoration-line: underline; font-weight: bold;\"><span style=\"font-size: 14px;\">I</span><span style=\"font-size: 14px;\">deal para quienes buscan comodidad, seguridad y una excelente calidad de vida en San Miguel de Allende.</span></span></div><div><span style=\"font-style: italic; text-decoration-line: underline; font-weight: bold;\"><span style=\"font-size: 14px;\"><br></span></span></div><div><span style=\"font-style: italic; text-decoration-line: underline;\"><span style=\"font-size: 14px; font-weight: bold;\">Condiciones de arrendamiento:</span></span></div><div><span style=\"font-style: italic; text-decoration-line: underline; font-weight: bold;\"><span style=\"font-size: 14px;\"><br></span></span></div><div>Contrato con póliza jurídica 50% Arrendador y 50%  Arrendatario <div>Mantenimiento incluido en la renta</div><div>Se requiere 1 mes de deposito en garantía</div><div><br></div></div><div><span style=\"font-style: italic; text-decoration-line: underline; font-weight: bold;\"><br></span></div></div><span style=\"font-size: 14px;\">                </span><br><br>            \r\n\r\n            ",
       "roofed_surface": "0.00",
       "room_amount": 0,
       "semiroofed_surface": "0.00",
@@ -9834,7 +9834,7 @@
       "total_area": "0.00",
       "total_suites": 0,
       "total_surface": "0.00",
-      "transaction_requirements": "",
+      "transaction_requirements": "Contrato con póliza jurídica 50% Arrendador y 50%  Arrendatario \nMantenimiento incluido en la renta \nSe renta sin muebles\nSe requiere 1 mes de deposito en garantía ",
       "tv_rooms": 0,
       "type": {
         "code": "AP",

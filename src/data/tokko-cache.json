@@ -1,7 +1,7 @@
 {
   "meta": {
     "total_count": 17,
-    "synced_at": "2026-11-11T02:31:41.490Z",
+    "synced_at": "2026-11-11T10:19:36.646Z",
     "lang": "es_ar"
   },
   "objects": [
@@ -5565,9 +5565,9 @@
       "credit_eligible": "No especificado",
       "custom1": "0.00",
       "custom_tags": [],
-      "deleted_at": "2026-11-11T02:30:35",
+      "deleted_at": "2026-11-11T02:41:19",
       "depth_measure": "0.00",
-      "description": "                DEPARTAMENTO SIN MUEBLES A PASOS DE ALBERCA CLIMATIZADA\nPRECIO POR MES\n$24,000.00, INCLUYE MANTENIMIENTO Y ACCESO A MAS DE 20 AMENIDADES ESTILO RESORT\nOcupación máxima 6 personas\nLa Serena Residencial – San Miguel de Allende\nVive la experiencia de un residencial con estilo resort, donde cada día se siente como vacaciones.\nEste hermoso departamento completamente amueblado ofrece:\n\n• 124 m² de construcción total\n3 recámaras\n  • 2 baños completos\n  • Sala y comedor con excelente iluminación\n  • Cocina equipada con estufa, doble barra de granito desayunador.\n  • Terraza con vista a hermosos atardeceres.\n  • Cuarto de lavado.\n• Terraza privada, con acceso directo a              jardines centrales.\n  • 2 Estacionamientos\n\nRecuerda que disfrutarás de más de 20 amenidades exclusivas, entre ellas: albercas, jacuzzi, spa, gimnasio, restaurante, Sunset Bar, canchas de tenis y pádel, amplias áreas verdes, salón de eventos y seguridad 24/7.\n\nUbicado a solo unos minutos del Centro Histórico de San Miguel de Allende, en un entorno tranquilo, seguro y con una excelente calidad de vida.\nContáctanos para conocer disponibilidad y agenda tu visita.\nBADI 108 Real Estate &amp; Property Management\n\r\n\r\n            ",
+      "description": "                                DEPARTAMENTO SIN MUEBLES A PASOS DE ALBERCA CLIMATIZADA\nPRECIO POR MES $23,000.00, \nINCLUYE MANTENIMIENTO Y ACCESO A MAS DE 20 AMENIDADES ESTILO RESORT\nOcupación máxima 6 personas\nLa Serena Residencial – San Miguel de Allende\nVive la experiencia de un residencial con estilo resort, donde cada día se siente como vacaciones.\nEste hermoso departamento completamente amueblado ofrece:\n\n• 124 m² de construcción total\n3 recámaras\n  • 2 baños completos\n  • Sala y comedor con excelente iluminación\n  • Cocina equipada con estufa, doble barra de granito desayunador.\n  • Terraza con vista a hermosos atardeceres.\n  • Cuarto de lavado.\n• Terraza privada, con acceso directo a              jardines centrales.\n  • 2 Estacionamientos\n\nRecuerda que disfrutarás de más de +20 amenidades exclusivas, entre ellas: albercas, jacuzzi, spa, gimnasio, restaurante, Sunset Bar, canchas de tenis y pádel, amplias áreas verdes, salón de eventos y seguridad 24/7 y más.\n\nUbicado a solo unos minutos del Centro Histórico de San Miguel de Allende, en un entorno tranquilo, seguro y con una excelente calidad de vida.\nContáctanos para conocer disponibilidad y agenda tu visita.\nBADI 108 Real Estate &amp; Property Management\n\n\n            \r\n\r\n            ",
       "development": null,
       "development_excel_extra_data": "[]",
       "dining_room": 0,
@@ -5668,9 +5668,19 @@
       "photos": [
         {
           "description": null,
-          "image": "https://static.tokkobroker.com/pictures/9487055_55990891033183562104370272681731895761742878112616914581840656637032629143245.jpg",
+          "image": "https://static.tokkobroker.com/pictures/9487055_32995334782228953563106628349276899027171975947753329097364410759963185724299.jpg",
           "is_blueprint": false,
           "is_front_cover": true,
+          "order": 18,
+          "original": "https://static.tokkobroker.com/original_pictures/9487055_3299533478222895356310662834927689902717197594775332909736441075996318.jpg",
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/9487055_32995334782228953563106628349276899027171975947753329097364410759963185724299_og.jpg",
+          "thumb": "https://static.tokkobroker.com/thumbs/9487055_32995334782228953563106628349276899027171975947753329097364410759963185724299_thu.jpg"
+        },
+        {
+          "description": null,
+          "image": "https://static.tokkobroker.com/pictures/9487055_55990891033183562104370272681731895761742878112616914581840656637032629143245.jpg",
+          "is_blueprint": false,
+          "is_front_cover": false,
           "order": 0,
           "original": "https://static.tokkobroker.com/original_pictures/9487055_5599089103318356210437027268173189576174287811261691458184065663703262.jpg",
           "social_media_url": "https://static.tokkobroker.com/sm_pics/9487055_55990891033183562104370272681731895761742878112616914581840656637032629143245_og.jpg",
@@ -5751,7 +5761,7 @@
           "image": "https://static.tokkobroker.com/pictures/9487055_22425998214880294826925000071137156639958670037833691167438457880687125438181.jpg",
           "is_blueprint": false,
           "is_front_cover": false,
-          "order": 9,
+          "order": 8,
           "original": "https://static.tokkobroker.com/original_pictures/9487055_2242599821488029482692500007113715663995867003783369116743845788068712.jpg",
           "social_media_url": "https://static.tokkobroker.com/sm_pics/9487055_22425998214880294826925000071137156639958670037833691167438457880687125438181_og.jpg",
           "thumb": "https://static.tokkobroker.com/thumbs/9487055_22425998214880294826925000071137156639958670037833691167438457880687125438181_thu.jpg"
@@ -5761,7 +5771,7 @@
           "image": "https://static.tokkobroker.com/pictures/9487055_1609839747524374709441483287165602524693115653898247464999247477152682469016.jpg",
           "is_blueprint": false,
           "is_front_cover": false,
-          "order": 11,
+          "order": 9,
           "original": "https://static.tokkobroker.com/original_pictures/9487055_1609839747524374709441483287165602524693115653898247464999247477152682.jpg",
           "social_media_url": "https://static.tokkobroker.com/sm_pics/9487055_1609839747524374709441483287165602524693115653898247464999247477152682469016_og.jpg",
           "thumb": "https://static.tokkobroker.com/thumbs/9487055_1609839747524374709441483287165602524693115653898247464999247477152682469016_thum.jpg"
@@ -5771,7 +5781,7 @@
           "image": "https://static.tokkobroker.com/pictures/9487055_48564811417391798574796196383591843156553200216197304370478504125445165396640.jpg",
           "is_blueprint": false,
           "is_front_cover": false,
-          "order": 12,
+          "order": 10,
           "original": "https://static.tokkobroker.com/original_pictures/9487055_4856481141739179857479619638359184315655320021619730437047850412544516.jpg",
           "social_media_url": "https://static.tokkobroker.com/sm_pics/9487055_48564811417391798574796196383591843156553200216197304370478504125445165396640_og.jpg",
           "thumb": "https://static.tokkobroker.com/thumbs/9487055_48564811417391798574796196383591843156553200216197304370478504125445165396640_thu.jpg"
@@ -5781,7 +5791,7 @@
           "image": "https://static.tokkobroker.com/pictures/9487055_72045464243172199849912332218657233576154267985434647487719475167645057982231.jpg",
           "is_blueprint": false,
           "is_front_cover": false,
-          "order": 13,
+          "order": 11,
           "original": "https://static.tokkobroker.com/original_pictures/9487055_7204546424317219984991233221865723357615426798543464748771947516764505.jpg",
           "social_media_url": "https://static.tokkobroker.com/sm_pics/9487055_72045464243172199849912332218657233576154267985434647487719475167645057982231_og.jpg",
           "thumb": "https://static.tokkobroker.com/thumbs/9487055_72045464243172199849912332218657233576154267985434647487719475167645057982231_thu.jpg"
@@ -5791,7 +5801,7 @@
           "image": "https://static.tokkobroker.com/pictures/9487055_47338378081020370805269188277277383746141598164184919799122165291777525054917.jpg",
           "is_blueprint": false,
           "is_front_cover": false,
-          "order": 14,
+          "order": 12,
           "original": "https://static.tokkobroker.com/original_pictures/9487055_4733837808102037080526918827727738374614159816418491979912216529177752.jpg",
           "social_media_url": "https://static.tokkobroker.com/sm_pics/9487055_47338378081020370805269188277277383746141598164184919799122165291777525054917_og.jpg",
           "thumb": "https://static.tokkobroker.com/thumbs/9487055_47338378081020370805269188277277383746141598164184919799122165291777525054917_thu.jpg"
@@ -5801,17 +5811,27 @@
           "image": "https://static.tokkobroker.com/pictures/9487055_40465685201171743100646439645754492645489936956949468023683186258159837817904.jpg",
           "is_blueprint": false,
           "is_front_cover": false,
-          "order": 17,
+          "order": 13,
           "original": "https://static.tokkobroker.com/original_pictures/9487055_4046568520117174310064643964575449264548993695694946802368318625815983.jpg",
           "social_media_url": "https://static.tokkobroker.com/sm_pics/9487055_40465685201171743100646439645754492645489936956949468023683186258159837817904_og.jpg",
           "thumb": "https://static.tokkobroker.com/thumbs/9487055_40465685201171743100646439645754492645489936956949468023683186258159837817904_thu.jpg"
         },
         {
           "description": null,
+          "image": "https://static.tokkobroker.com/pictures/9487055_110412361381625084013685974386562203497804718281371349322014479653054331446510.jpg",
+          "is_blueprint": false,
+          "is_front_cover": false,
+          "order": 14,
+          "original": "https://static.tokkobroker.com/original_pictures/9487055_1104123613816250840136859743865622034978047182813713493220144796530543.jpg",
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/9487055_110412361381625084013685974386562203497804718281371349322014479653054331446510_og.jpg",
+          "thumb": "https://static.tokkobroker.com/thumbs/9487055_110412361381625084013685974386562203497804718281371349322014479653054331446510_th.jpg"
+        },
+        {
+          "description": null,
           "image": "https://static.tokkobroker.com/pictures/9487055_61624909857140958401030897980415452099652665598934834279918329632712872655856.jpg",
           "is_blueprint": false,
           "is_front_cover": false,
-          "order": 18,
+          "order": 15,
           "original": "https://static.tokkobroker.com/original_pictures/9487055_6162490985714095840103089798041545209965266559893483427991832963271287.jpg",
           "social_media_url": "https://static.tokkobroker.com/sm_pics/9487055_61624909857140958401030897980415452099652665598934834279918329632712872655856_og.jpg",
           "thumb": "https://static.tokkobroker.com/thumbs/9487055_61624909857140958401030897980415452099652665598934834279918329632712872655856_thu.jpg"
@@ -5821,7 +5841,7 @@
           "image": "https://static.tokkobroker.com/pictures/9487055_11533102320877535441138959282408939893980635429913916444802296739380135927078.jpg",
           "is_blueprint": false,
           "is_front_cover": false,
-          "order": 19,
+          "order": 16,
           "original": "https://static.tokkobroker.com/original_pictures/9487055_1153310232087753544113895928240893989398063542991391644480229673938013.jpg",
           "social_media_url": "https://static.tokkobroker.com/sm_pics/9487055_11533102320877535441138959282408939893980635429913916444802296739380135927078_og.jpg",
           "thumb": "https://static.tokkobroker.com/thumbs/9487055_11533102320877535441138959282408939893980635429913916444802296739380135927078_thu.jpg"
@@ -5831,27 +5851,17 @@
           "image": "https://static.tokkobroker.com/pictures/9487055_59848393813963540146942599542438998717866807057941338190205486155988761238049.jpg",
           "is_blueprint": false,
           "is_front_cover": false,
-          "order": 20,
+          "order": 17,
           "original": "https://static.tokkobroker.com/original_pictures/9487055_5984839381396354014694259954243899871786680705794133819020548615598876.jpg",
           "social_media_url": "https://static.tokkobroker.com/sm_pics/9487055_59848393813963540146942599542438998717866807057941338190205486155988761238049_og.jpg",
           "thumb": "https://static.tokkobroker.com/thumbs/9487055_59848393813963540146942599542438998717866807057941338190205486155988761238049_thu.jpg"
         },
         {
           "description": null,
-          "image": "https://static.tokkobroker.com/pictures/9487055_32995334782228953563106628349276899027171975947753329097364410759963185724299.jpg",
-          "is_blueprint": false,
-          "is_front_cover": false,
-          "order": 21,
-          "original": "https://static.tokkobroker.com/original_pictures/9487055_3299533478222895356310662834927689902717197594775332909736441075996318.jpg",
-          "social_media_url": "https://static.tokkobroker.com/sm_pics/9487055_32995334782228953563106628349276899027171975947753329097364410759963185724299_og.jpg",
-          "thumb": "https://static.tokkobroker.com/thumbs/9487055_32995334782228953563106628349276899027171975947753329097364410759963185724299_thu.jpg"
-        },
-        {
-          "description": null,
           "image": "https://static.tokkobroker.com/pictures/9487055_98566069051224113896864578230195584877811818673756053184827482137441998287379.jpg",
           "is_blueprint": false,
           "is_front_cover": false,
-          "order": 22,
+          "order": 19,
           "original": "https://static.tokkobroker.com/original_pictures/9487055_9856606905122411389686457823019558487781181867375605318482748213744199.jpg",
           "social_media_url": "https://static.tokkobroker.com/sm_pics/9487055_98566069051224113896864578230195584877811818673756053184827482137441998287379_og.jpg",
           "thumb": "https://static.tokkobroker.com/thumbs/9487055_98566069051224113896864578230195584877811818673756053184827482137441998287379_thu.jpg"
@@ -5861,7 +5871,7 @@
           "image": "https://static.tokkobroker.com/pictures/9487055_25160357073268377131605952368465637929960183895852377068475089287793131958995.jpg",
           "is_blueprint": false,
           "is_front_cover": false,
-          "order": 23,
+          "order": 20,
           "original": "https://static.tokkobroker.com/original_pictures/9487055_2516035707326837713160595236846563792996018389585237706847508928779313.jpg",
           "social_media_url": "https://static.tokkobroker.com/sm_pics/9487055_25160357073268377131605952368465637929960183895852377068475089287793131958995_og.jpg",
           "thumb": "https://static.tokkobroker.com/thumbs/9487055_25160357073268377131605952368465637929960183895852377068475089287793131958995_thu.jpg"
@@ -5884,7 +5894,7 @@
       "quality_level": null,
       "real_address": "Renta | Departamento de 3 recámaras en planta baja, terraza y cerca de la alberca",
       "reference_code": "BAP9487055",
-      "rich_description": "                <p>DEPARTAMENTO SIN MUEBLES A PASOS DE ALBERCA CLIMATIZADA</p><p>PRECIO POR MES</p><p>$24,000.00, INCLUYE MANTENIMIENTO Y ACCESO A MAS DE 20 AMENIDADES ESTILO RESORT</p><p>Ocupación máxima 6 personas</p><p><span style=\"font-size: 14px;\">La Serena Residencial – San Miguel de Allende</span></p><p>Vive la experiencia de un residencial con estilo resort, donde cada día se siente como vacaciones.</p><p>Este hermoso departamento completamente amueblado ofrece:</p><br><p>• 124 m² de construcción total</p><p>3 recámaras</p><p>  • 2 baños completos</p><p>  • Sala y comedor con excelente iluminación</p><p>  • Cocina equipada con estufa, doble barra de granito desayunador.</p><p>  • Terraza con vista a hermosos atardeceres.</p><p>  • Cuarto de lavado.</p><p>• Terraza privada, con acceso directo a              jardines centrales.</p><p>  • 2 Estacionamientos</p><br><p>Recuerda que disfrutarás de más de 20 amenidades exclusivas, entre ellas: albercas, jacuzzi, spa, gimnasio, restaurante, Sunset Bar, canchas de tenis y pádel, amplias áreas verdes, salón de eventos y seguridad 24/7.</p><br><p>Ubicado a solo unos minutos del Centro Histórico de San Miguel de Allende, en un entorno tranquilo, seguro y con una excelente calidad de vida.</p><p>Contáctanos para conocer disponibilidad y agenda tu visita.</p><p>BADI 108 Real Estate &amp; Property Management</p>\r\n\r\n            ",
+      "rich_description": "                                <p>DEPARTAMENTO SIN MUEBLES A PASOS DE ALBERCA CLIMATIZADA</p><p>PRECIO POR MES&nbsp;<span style=\"font-size: 14px;\">$23,000.00, </span></p><p><span style=\"font-size: 14px;\">INCLUYE MANTENIMIENTO Y ACCESO A MAS DE 20 AMENIDADES ESTILO RESORT</span></p><p>Ocupación máxima 6 personas</p><p><span style=\"font-size: 14px;\">La Serena Residencial – San Miguel de Allende</span></p><p>Vive la experiencia de un residencial con estilo resort, donde cada día se siente como vacaciones.</p><p>Este hermoso departamento completamente amueblado ofrece:</p><br><p>• 124 m² de construcción total</p><p>3 recámaras</p><p>  • 2 baños completos</p><p>  • Sala y comedor con excelente iluminación</p><p>  • Cocina equipada con estufa, doble barra de granito desayunador.</p><p>  • Terraza con vista a hermosos atardeceres.</p><p>  • Cuarto de lavado.</p><p>• Terraza privada, con acceso directo a              jardines centrales.</p><p>  • 2 Estacionamientos</p><br><p>Recuerda que disfrutarás de más de +20 amenidades exclusivas, entre ellas: albercas, jacuzzi, spa, gimnasio, restaurante, Sunset Bar, canchas de tenis y pádel, amplias áreas verdes, salón de eventos y seguridad 24/7 y más.</p><br><p>Ubicado a solo unos minutos del Centro Histórico de San Miguel de Allende, en un entorno tranquilo, seguro y con una excelente calidad de vida.</p><p>Contáctanos para conocer disponibilidad y agenda tu visita.</p><p>BADI 108 Real Estate &amp; Property Management</p><br><br>            \r\n\r\n            ",
       "roofed_surface": "0.00",
       "room_amount": 6,
       "semiroofed_surface": "0.00",
@@ -5901,6 +5911,91 @@
           "id": 1,
           "name": "Agua Corriente",
           "type": 1
+        },
+        {
+          "id": 3,
+          "name": "Gas Natural",
+          "type": 1
+        },
+        {
+          "id": 5,
+          "name": "Electricidad",
+          "type": 1
+        },
+        {
+          "id": 19,
+          "name": "Jardín",
+          "type": 2
+        },
+        {
+          "id": 25,
+          "name": "Terraza",
+          "type": 2
+        },
+        {
+          "id": 33,
+          "name": "Gimnasio",
+          "type": 3
+        },
+        {
+          "id": 38,
+          "name": "Sala de juegos",
+          "type": 3
+        },
+        {
+          "id": 41,
+          "name": "SUM",
+          "type": 3
+        },
+        {
+          "id": 46,
+          "name": "Apto mascotas",
+          "type": 3
+        },
+        {
+          "id": 1300,
+          "name": "Restaurante",
+          "type": 3
+        },
+        {
+          "id": 1520,
+          "name": "Club House",
+          "type": 3
+        },
+        {
+          "id": 1524,
+          "name": "Seguridad 24hs",
+          "type": 3
+        },
+        {
+          "id": 1534,
+          "name": "Pileta climatizada",
+          "type": 3
+        },
+        {
+          "id": 1613,
+          "name": "Cancha de Tenis",
+          "type": 3
+        },
+        {
+          "id": 1635,
+          "name": "Recepción 24 Horas",
+          "type": 3
+        },
+        {
+          "id": 1677,
+          "name": "Cancha de Paddle",
+          "type": 3
+        },
+        {
+          "id": 1788,
+          "name": "Amenities",
+          "type": 3
+        },
+        {
+          "id": 1793,
+          "name": "Sala de reuniones",
+          "type": 2
         }
       ],
       "toilet_amount": 0,

@@ -1,7 +1,7 @@
 {
   "meta": {
     "count": 7,
-    "synced_at": "2026-11-12T01:18:41.679Z"
+    "synced_at": "2026-11-12T09:17:50.850Z"
   },
   "objects": [
     {
@@ -2065,7 +2065,7 @@
       "credit_eligible": "No especificado",
       "custom1": "0.00",
       "custom_tags": [],
-      "deleted_at": "2026-11-12T01:12:15",
+      "deleted_at": "2026-11-12T01:28:49",
       "depth_measure": "0.00",
       "description": "Propiedad de Descanso en Residencial Tranquilo - ¡Tu Refugio a Solo 8 Minutos del Centro!            \n\n        \n\nPrecio: $3,850,000\n\nUbicación: A tan solo 8 minutos del centro\n\n\nSi buscas un lugar tranquilo y cómodo para disfrutar de la vida, esta propiedad de descanso es ideal para ti. Con 3 recámaras y 3 baños completos, se encuentra en un residencial con todas las comodidades necesarias para un día a día relajado, y todo a solo 8 minutos del centro.\n\n\nCaracterísticas de la propiedad:\n\n\nRecámara principal con walking closet y baño amplio para un espacio cómodo y privado.\n\n\nSegunda recámara con 2 closets, ideal para una familia o para quienes necesiten espacio adicional.\n\n\nTercera recámara también con 2 closets para una excelente organización.\n\n\nCocina equipada con alacenas que te permitirán tener todo en su lugar.\n\n\nCuarto de lavado independiente, que facilita las tareas del hogar.\n\n\nBaños con vidrio templado, dándole un toque moderno y funcional.\n\n\nMosquiteros en todas las ventanas para tu comodidad.\n\n\nSalpicadero de cocina fácil de limpiar, perfecto para las actividades diarias.\n\n\nInstalación Dragón para reciclaje de basura, ideal si te importa cuidar el medio ambiente.\n\n\n\n\nResidencial con Amenidades para tu Descanso:\n\n\n\n\nAlberca para disfrutar de un día relajante bajo el sol o nadar cuando lo desees.\n\n\nGimnasio para mantenerte activo sin tener que salir de casa.\n\n\nVigilancia 24/7, brindando seguridad y tranquilidad a ti y tu familia.\n\n\nOtros Beneficios de la Propiedad:\n\nMantenimiento mensual de $2,700, que incluye el cuidado de las áreas comunes y servicios del residencial.\n\n\nCondiciones de pago al contado, lo que facilita el proceso de compra.\n\n\nUbicación ideal, a solo 8 minutos del centro, cerca de todo lo que necesitas: tiendas, restaurantes, escuelas, y más.\n\n\n¡Tu hogar de descanso te espera!\n\n\nSi buscas un lugar donde disfrutar de la tranquilidad, con todo lo necesario a tu alcance, esta propiedad es perfecta para ti.\n\n\n ¡Contáctanos hoy mismo para más información o para agendar una visita y conocerla personalmente!\n",
       "development": null,
@@ -2537,6 +2537,26 @@
       "surface": "115.00",
       "surface_measurement": "M2",
       "tags": [
+        {
+          "id": 1,
+          "name": "Agua Corriente",
+          "type": 1
+        },
+        {
+          "id": 3,
+          "name": "Gas Natural",
+          "type": 1
+        },
+        {
+          "id": 4,
+          "name": "Internet",
+          "type": 1
+        },
+        {
+          "id": 5,
+          "name": "Electricidad",
+          "type": 1
+        },
         {
           "id": 11,
           "name": "Baulera",

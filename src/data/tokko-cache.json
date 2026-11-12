@@ -1,7 +1,7 @@
 {
   "meta": {
-    "total_count": 17,
-    "synced_at": "2026-11-11T18:22:44.013Z",
+    "total_count": 18,
+    "synced_at": "2026-11-12T01:18:41.679Z",
     "lang": "es_ar"
   },
   "objects": [
@@ -111,7 +111,7 @@
             "other_email": "",
             "other_phone": "",
             "phone": "56 24183152",
-            "updated_at": "2026-11-04T19:48:59",
+            "updated_at": "2026-11-11T23:56:45",
             "work_email": "d.allendebienesraices@gmail.com"
           }
         ],
@@ -132,6 +132,7 @@
         "position": ""
       },
       "legally_checked": "Desconocido",
+      "links": [],
       "livable_area": "0.00",
       "living_amount": 1,
       "location": {
@@ -843,7 +844,7 @@
             "other_email": "",
             "other_phone": "",
             "phone": "56 24183152",
-            "updated_at": "2026-11-04T19:48:59",
+            "updated_at": "2026-11-11T23:56:45",
             "work_email": "d.allendebienesraices@gmail.com"
           }
         ],
@@ -864,6 +865,7 @@
         "position": ""
       },
       "legally_checked": "Desconocido",
+      "links": [],
       "livable_area": "0.00",
       "living_amount": 1,
       "location": {
@@ -1572,7 +1574,7 @@
             "other_email": "",
             "other_phone": "",
             "phone": "56 24183152",
-            "updated_at": "2026-11-04T19:48:59",
+            "updated_at": "2026-11-11T23:56:45",
             "work_email": "d.allendebienesraices@gmail.com"
           }
         ],
@@ -1593,6 +1595,7 @@
         "position": ""
       },
       "legally_checked": "Desconocido",
+      "links": [],
       "livable_area": "0.00",
       "living_amount": 1,
       "location": {
@@ -2403,6 +2406,7 @@
         "position": ""
       },
       "legally_checked": "Desconocido",
+      "links": [],
       "livable_area": "0.00",
       "living_amount": 0,
       "location": {
@@ -2758,7 +2762,7 @@
     {
       "address": "Residencial con amenidades y seguridad a minutos del centro.",
       "address_complement": "",
-      "age": 0,
+      "age": 3,
       "apartment_door": "",
       "appartments_per_floor": 0,
       "bathroom_amount": 3,
@@ -2798,7 +2802,7 @@
       "credit_eligible": "No especificado",
       "custom1": "0.00",
       "custom_tags": [],
-      "deleted_at": "2026-09-23T03:27:12",
+      "deleted_at": "2026-11-12T01:12:15",
       "depth_measure": "0.00",
       "description": "Propiedad de Descanso en Residencial Tranquilo - ¡Tu Refugio a Solo 8 Minutos del Centro!            \n\n        \n\nPrecio: $3,850,000\n\nUbicación: A tan solo 8 minutos del centro\n\n\nSi buscas un lugar tranquilo y cómodo para disfrutar de la vida, esta propiedad de descanso es ideal para ti. Con 3 recámaras y 3 baños completos, se encuentra en un residencial con todas las comodidades necesarias para un día a día relajado, y todo a solo 8 minutos del centro.\n\n\nCaracterísticas de la propiedad:\n\n\nRecámara principal con walking closet y baño amplio para un espacio cómodo y privado.\n\n\nSegunda recámara con 2 closets, ideal para una familia o para quienes necesiten espacio adicional.\n\n\nTercera recámara también con 2 closets para una excelente organización.\n\n\nCocina equipada con alacenas que te permitirán tener todo en su lugar.\n\n\nCuarto de lavado independiente, que facilita las tareas del hogar.\n\n\nBaños con vidrio templado, dándole un toque moderno y funcional.\n\n\nMosquiteros en todas las ventanas para tu comodidad.\n\n\nSalpicadero de cocina fácil de limpiar, perfecto para las actividades diarias.\n\n\nInstalación Dragón para reciclaje de basura, ideal si te importa cuidar el medio ambiente.\n\n\n\n\nResidencial con Amenidades para tu Descanso:\n\n\n\n\nAlberca para disfrutar de un día relajante bajo el sol o nadar cuando lo desees.\n\n\nGimnasio para mantenerte activo sin tener que salir de casa.\n\n\nVigilancia 24/7, brindando seguridad y tranquilidad a ti y tu familia.\n\n\nOtros Beneficios de la Propiedad:\n\nMantenimiento mensual de $2,700, que incluye el cuidado de las áreas comunes y servicios del residencial.\n\n\nCondiciones de pago al contado, lo que facilita el proceso de compra.\n\n\nUbicación ideal, a solo 8 minutos del centro, cerca de todo lo que necesitas: tiendas, restaurantes, escuelas, y más.\n\n\n¡Tu hogar de descanso te espera!\n\n\nSi buscas un lugar donde disfrutar de la tranquilidad, con todo lo necesario a tu alcance, esta propiedad es perfecta para ti.\n\n\n ¡Contáctanos hoy mismo para más información o para agendar una visita y conocerla personalmente!\n",
       "development": null,
@@ -2861,7 +2865,7 @@
             "other_email": "",
             "other_phone": "",
             "phone": "56 24183152",
-            "updated_at": "2026-11-04T19:48:59",
+            "updated_at": "2026-11-11T23:56:45",
             "work_email": "d.allendebienesraices@gmail.com"
           }
         ],
@@ -2882,6 +2886,7 @@
         "position": ""
       },
       "legally_checked": "Desconocido",
+      "links": [],
       "livable_area": "0.00",
       "living_amount": 0,
       "location": {
@@ -2908,7 +2913,7 @@
               "currency": "MXN",
               "is_promotional": false,
               "period": 0,
-              "price": 3600000
+              "price": 3200000
             }
           ]
         }
@@ -3448,6 +3453,7 @@
         "position": ""
       },
       "legally_checked": "Desconocido",
+      "links": [],
       "livable_area": "0.00",
       "living_amount": 0,
       "location": {
@@ -3938,6 +3944,7 @@
         "position": ""
       },
       "legally_checked": "Desconocido",
+      "links": [],
       "livable_area": "0.00",
       "living_amount": 0,
       "location": {
@@ -4631,6 +4638,7 @@
         "position": ""
       },
       "legally_checked": "Desconocido",
+      "links": [],
       "livable_area": "0.00",
       "living_amount": 0,
       "location": {
@@ -5046,7 +5054,7 @@
     {
       "address": "RENTA DEPARTAMENTO AMUEBLADO CON AMENIDADES RESORT EN LA SERENA",
       "address_complement": "",
-      "age": 0,
+      "age": 1,
       "apartment_door": "A",
       "appartments_per_floor": 2,
       "bathroom_amount": 2,
@@ -5086,7 +5094,7 @@
       "credit_eligible": "No especificado",
       "custom1": "0.00",
       "custom_tags": [],
-      "deleted_at": "2026-09-21T18:21:16",
+      "deleted_at": "2026-11-12T00:08:54",
       "depth_measure": "0.00",
       "description": "SOLO RENTA POR NOCHE: $3,800.00\nSOLO RENTA POR 1 MES: $20,000.00\nNO CONTRATO DE 1 AÑO \nPara 2 a 4 personas\nLa Serena Residencial – San Miguel de Allende \n\nVive la experiencia de un residencial con estilo resort, donde cada día se siente como vacaciones.\n\nEste hermoso departamento completamente amueblado ofrece:\n• 105 m² de construcción total\n• 2 recámaras:\n- 1 habitación con cama King Size\n- 1 habitación con 4 camas\n• 2 baños completos\n• 1 medio baño en el Roof Garden\n• Sala y comedor con excelente iluminación\n• Cocina totalmente equipada\n• Cuarto de lavado, ventilador de extracción\n• Terraza con jardín privado, con asador ideal para disfrutar de reuniones, atardeceres y momentos de descanso\n• Estacionamiento\nAdemás, disfrutarás de más de 20 amenidades exclusivas, entre ellas: albercas, jacuzzi, spa, gimnasio, restaurante, Sunset Bar, canchas de tenis y pádel, amplias áreas verdes, salón de eventos y seguridad 24/7.\n\nUbicado a solo unos minutos del Centro Histórico de San Miguel de Allende, en un entorno tranquilo, seguro y con una excelente calidad de vida.\n\nContáctanos para conocer disponibilidad y agenda tu visita.\n\nBADI108 Real Estate &amp; Property Management\n\n\n\n\r\n\r\n            ",
       "development": null,
@@ -5151,6 +5159,7 @@
         "position": ""
       },
       "legally_checked": "Desconocido",
+      "links": [],
       "livable_area": "0.00",
       "living_amount": 0,
       "location": {
@@ -5630,6 +5639,7 @@
         "position": ""
       },
       "legally_checked": "Desconocido",
+      "links": [],
       "livable_area": "0.00",
       "living_amount": 0,
       "location": {
@@ -6124,6 +6134,7 @@
         "position": ""
       },
       "legally_checked": "Desconocido",
+      "links": [],
       "livable_area": "0.00",
       "living_amount": 0,
       "location": {
@@ -6763,6 +6774,7 @@
         "position": ""
       },
       "legally_checked": "Desconocido",
+      "links": [],
       "livable_area": "0.00",
       "living_amount": 0,
       "location": {
@@ -7273,7 +7285,7 @@
       "credit_eligible": "No especificado",
       "custom1": "0.00",
       "custom_tags": [],
-      "deleted_at": "2026-11-06T00:48:00",
+      "deleted_at": "2026-11-11T20:37:51",
       "depth_measure": "0.00",
       "description": "                Renta Departamento Amueblado en Residencial premium con amenidades estilo Resort\n\nVive todos los días como si estuvieras de vacaciones.\nDescubre este departamento amueblado ubicado en uno de los desarrollos más exclusivos de San Miguel de Allende.\nEste departamento ofrece una distribución funcional y espacios diseñados para disfrutar de comodidad y tranquilidad.\nCaracterísticas del departamento:\n• 2 recámaras amuebladas.• 2 baños completos.• Sala y comedor amueblados.• Cocina integral equipada.• Área flex.• Área de lavandería.• Terraza privada.• 1 cajón de estacionamiento.\nAdemás de disfrutar de un departamento listo para habitar, tendrás acceso a más de 21 amenidades tipo resort:\nAlbercas climatizadas.Jacuzzi.Spa.Gimnasio.Sunset Bar.Restaurante Hacienda El Mortero.Casa Club.Canchas de tenis y pádel.Senderos y áreas verdes.Seguridad y acceso controlado las 24 horas.\nComo valor agregado, el desarrollo cuenta con administración hotelera por Krystal Grand, ofreciendo servicios como room service y atención personalizada para brindar una experiencia de primer nivel.\nUbicado a solo 8 minutos del Centro Histórico de San Miguel de Allende.\nCondiciones de renta:\nRenta mensual: $17,000.Cuota de mantenimiento: Incluida en la renta mensual.Servicios por separado.Contrato mínimo de 1 año.Requisitos de arrendamiento: Póliza 50% y 50%Agenda tu visita y conoce una nueva forma de vivir en San Miguel de Allende.\n            \n\n            \r\n\r\n            ",
       "development": null,
@@ -7338,6 +7350,7 @@
         "position": ""
       },
       "legally_checked": "Desconocido",
+      "links": [],
       "livable_area": "0.00",
       "living_amount": 0,
       "location": {
@@ -7370,7 +7383,7 @@
         }
       ],
       "orientation": null,
-      "parking_lot_amount": 0,
+      "parking_lot_amount": 1,
       "parking_lot_condition": null,
       "parking_lot_type": null,
       "photos": [
@@ -7892,7 +7905,7 @@
       "videos": [],
       "web_price": true,
       "zip_code": "37790",
-      "zonification": ""
+      "zonification": "Villa de los frailes"
     },
     {
       "address": "Casa en venta en Tierra adentro",
@@ -8002,6 +8015,7 @@
         "position": ""
       },
       "legally_checked": "Desconocido",
+      "links": [],
       "livable_area": "0.00",
       "living_amount": 0,
       "location": {
@@ -8571,6 +8585,7 @@
         "position": ""
       },
       "legally_checked": "Desconocido",
+      "links": [],
       "livable_area": "0.00",
       "living_amount": 0,
       "location": {
@@ -8980,6 +8995,7 @@
         "position": ""
       },
       "legally_checked": "Desconocido",
+      "links": [],
       "livable_area": "0.00",
       "living_amount": 0,
       "location": {
@@ -9622,7 +9638,7 @@
             "other_email": "",
             "other_phone": "",
             "phone": "56 24183152",
-            "updated_at": "2026-11-04T19:48:59",
+            "updated_at": "2026-11-11T23:56:45",
             "work_email": "d.allendebienesraices@gmail.com"
           }
         ],
@@ -9643,6 +9659,7 @@
         "position": ""
       },
       "legally_checked": "Desconocido",
+      "links": [],
       "livable_area": "0.00",
       "living_amount": 0,
       "location": {
@@ -9936,6 +9953,461 @@
       "total_suites": 0,
       "total_surface": "0.00",
       "transaction_requirements": "Contrato con póliza jurídica 50% Arrendador y 50%  Arrendatario \nMantenimiento incluido en la renta \nSe renta sin muebles\nSe requiere 1 mes de deposito en garantía ",
+      "tv_rooms": 0,
+      "type": {
+        "code": "AP",
+        "id": 2,
+        "name": "Departamento"
+      },
+      "uncovered_parking_lot": 0,
+      "unroofed_surface": "0.00",
+      "videos": [],
+      "web_price": true,
+      "zip_code": "37790",
+      "zonification": ""
+    },
+    {
+      "address": "Rengta Departamento amueblado en Villa de los Frailes San Miguel de Allende",
+      "address_complement": "",
+      "age": 1,
+      "apartment_door": "",
+      "appartments_per_floor": 0,
+      "bathroom_amount": 2,
+      "block_number": "",
+      "booking_url": "https://ficha.info/calendar/14021261",
+      "branch": {
+        "address": "San Miguel de Allende",
+        "alternative_phone": "4151457780",
+        "alternative_phone_area": "",
+        "alternative_phone_country_code": "+52",
+        "alternative_phone_extension": "",
+        "branch_type": "Internal",
+        "contact_time": "8:00 - 18:00 hrs",
+        "created_date": "2024-10-25T14:50:29",
+        "deleted_at": null,
+        "display_name": "BADI 108 Real Estate & property manager",
+        "email": "d.allendebienesraices@gmail.com",
+        "geo_lat": "20.89165891913776",
+        "geo_long": "-100.76070643556518",
+        "gm_location_type": "BY_HAND",
+        "id": 78063,
+        "is_default": true,
+        "logo": "https://static.tokkobroker.com/branch_logos/78063/logo_oficial_Badi_108.png",
+        "name": "BADI 108 Real Estate & property manager",
+        "pdf_footer_text": "",
+        "phone": "4151457780",
+        "phone_area": "",
+        "phone_country_code": "+52",
+        "phone_extension": "",
+        "use_pdf_footer": false
+      },
+      "building": "",
+      "cleaning_tax": "0.00",
+      "common_area": "0.00",
+      "covered_parking_lot": 0,
+      "created_at": "2026-11-11T23:56:44",
+      "credit_eligible": "No especificado",
+      "custom1": "0.00",
+      "custom_tags": [],
+      "deleted_at": "2026-11-12T00:48:40",
+      "depth_measure": "0.00",
+      "description": "                ¡Vive con comodidad y disfruta de un estilo de vida tipo resort en un Residencial único en su tipo, con administración hotelera, uno de los desarrollos más gustados de San Miguel de Allende!\nEste departamento se encuentra completamente amueblado y equipado, listo para habitar. Es ideal para quienes buscan tranquilidad, seguridad y excelentes amenidades en una ubicación privilegiada.Características:-  2 recámaras.-  2 baños completos.-  Cocina integral equipada.-  Sala y comedor.-  Área de lavado.- 1 cajón de estacionamiento.- Totalmente amueblado.- Listo para habitar.Amenidades del Residencial:- Albercas climatizadas.- Casa Club.- Gimnasio.- Spa.- Canchas de tenis y pádel.- Áreas verdes.- Seguridad 24/7 con acceso controlado.- Estacionamiento para visitas y más.\nUbicado a tan solo 8 minutos del Centro Histórico de San Miguel de Allende, con fácil acceso a la salida a Celaya, restaurantes, supermercados y servicios.Condiciones de arrendamiento:Renta mensual: $17,000 MXNContrato con póliza jurídica 50% Arrendador y 50% ArrendatarioMantenimiento incluido en la rentaSe requiere 1 mes de deposito en garantía\nEn BADI 108 Real Estate, te acompañamos durante todo el proceso para que encuentres la propiedad ideal.\nAgenda tu visita y conoce tu próximo hogar.\n                \n\n            \r\n\r\n            ",
+      "development": null,
+      "development_excel_extra_data": "[]",
+      "dining_room": 0,
+      "disposition": null,
+      "down_payment": "0.00",
+      "expenses": 0,
+      "extra_attributes": [],
+      "fake_address": "Rengta Departamento amueblado en Villa de los Frailes San Miguel de Allende",
+      "files": [],
+      "fire_insurance_cost": "0.00",
+      "floor": "",
+      "floors_amount": 0,
+      "front_measure": "0.00",
+      "geo_lat": "20.8986476",
+      "geo_long": "-100.7761137",
+      "gm_location_type": "ROOFTOP",
+      "guests_amount": 0,
+      "has_temporary_rent": false,
+      "id": 14021261,
+      "internal_data": {
+        "commission": "",
+        "cotization_users": [],
+        "internal_comments": "",
+        "key_location": "Unknown",
+        "legally_checked": 3,
+        "legally_checked_text": "",
+        "maintenance_user": "",
+        "network_information": "",
+        "producer_comision": "0.00",
+        "property_owners": [
+          {
+            "birthdate": null,
+            "cellphone": "55 27486478",
+            "created_at": "2024-10-26T20:47:09",
+            "document_number": "",
+            "email": "d.allendebienesraices@gmail.com",
+            "id": 47581225,
+            "name": "La Serena",
+            "other_email": "",
+            "other_phone": "",
+            "phone": "56 24183152",
+            "updated_at": "2026-11-11T23:56:45",
+            "work_email": "d.allendebienesraices@gmail.com"
+          }
+        ],
+        "transaction_requirements": "Condiciones de arrendamiento:\nContrato de arrendamiento de 12 meses solo con póliza jurídica. (50% Arrendador y 50% Arrendatario)\nMantenimiento incluido en la renta\nSe requiere 1 mes de deposito en garantía (reembolsable cuando vence el contrato)"
+      },
+      "iptu": 0,
+      "iptu_type": "No informado",
+      "is_booking_active": true,
+      "is_denounced": false,
+      "is_starred_on_web": false,
+      "lead_receiver_user": {
+        "cellphone": "4151457780",
+        "email": "d.allendebienesraices@gmail.com",
+        "id": 120672,
+        "name": "Laura Aguirre",
+        "phone": "",
+        "picture": "https://static.tokkobroker.com/userprofile/pictures/118295_68455601783879772659063633856394428373791916115826513584528837582221.jpg",
+        "position": ""
+      },
+      "legally_checked": "Desconocido",
+      "links": [],
+      "livable_area": "0.00",
+      "living_amount": 0,
+      "location": {
+        "divisions": [],
+        "full_location": "México | Guanajuato | San Miguel de Allende | Villa de los Frailes",
+        "id": 131157,
+        "name": "Villa de los Frailes",
+        "parent_division": "/api/v1/location/130980/",
+        "short_location": "Guanajuato | San Miguel de Allende | Villa de los Frailes",
+        "state": null,
+        "type": "Barrio",
+        "weight": 64,
+        "zip_code": "37790"
+      },
+      "location_level": null,
+      "lot_number": "",
+      "occupation": [],
+      "operations": [
+        {
+          "operation_id": 2,
+          "operation_type": "Alquiler",
+          "prices": [
+            {
+              "currency": "MXN",
+              "is_promotional": false,
+              "period": 0,
+              "price": 17000
+            }
+          ]
+        }
+      ],
+      "orientation": null,
+      "parking_lot_amount": 1,
+      "parking_lot_condition": null,
+      "parking_lot_type": null,
+      "photos": [
+        {
+          "description": null,
+          "image": "https://static.tokkobroker.com/pictures/14021261_87243246753057716218292425050631954973900236634117163941191714445884370071853.jpg",
+          "is_blueprint": false,
+          "is_front_cover": true,
+          "order": 5,
+          "original": "https://static.tokkobroker.com/original_pictures/14021261_872432467530577162182924250506319549739002366341171639411917144458843.jpg",
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/14021261_87243246753057716218292425050631954973900236634117163941191714445884370071853_og.jpg",
+          "thumb": "https://static.tokkobroker.com/thumbs/14021261_87243246753057716218292425050631954973900236634117163941191714445884370071853_th.jpg"
+        },
+        {
+          "description": null,
+          "image": "https://static.tokkobroker.com/pictures/14021261_56713905070173591260531557067130354424240746487233485519131306410081128101751.jpg",
+          "is_blueprint": false,
+          "is_front_cover": false,
+          "order": 0,
+          "original": "https://static.tokkobroker.com/original_pictures/14021261_567139050701735912605315570671303544242407464872334855191313064100811.jpg",
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/14021261_56713905070173591260531557067130354424240746487233485519131306410081128101751_og.jpg",
+          "thumb": "https://static.tokkobroker.com/thumbs/14021261_56713905070173591260531557067130354424240746487233485519131306410081128101751_th.jpg"
+        },
+        {
+          "description": null,
+          "image": "https://static.tokkobroker.com/pictures/14021261_89723301859191973763330596471519923311324904344474652325179526147168231782665.jpg",
+          "is_blueprint": false,
+          "is_front_cover": false,
+          "order": 1,
+          "original": "https://static.tokkobroker.com/original_pictures/14021261_897233018591919737633305964715199233113249043444746523251795261471682.jpg",
+          "social_media_url": null,
+          "thumb": "https://static.tokkobroker.com/thumbs/14021261_89723301859191973763330596471519923311324904344474652325179526147168231782665_th.jpg"
+        },
+        {
+          "description": null,
+          "image": "https://static.tokkobroker.com/pictures/14021261_59212754438738853792277868229839203026466194404717554671129880381618795931844.jpg",
+          "is_blueprint": false,
+          "is_front_cover": false,
+          "order": 2,
+          "original": "https://static.tokkobroker.com/original_pictures/14021261_592127544387388537922778682298392030264661944047175546711298803816187.jpg",
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/14021261_59212754438738853792277868229839203026466194404717554671129880381618795931844_og.jpg",
+          "thumb": "https://static.tokkobroker.com/thumbs/14021261_59212754438738853792277868229839203026466194404717554671129880381618795931844_th.jpg"
+        },
+        {
+          "description": null,
+          "image": "https://static.tokkobroker.com/pictures/14021261_60497576657827292078763381553311658373937697516798443177668882845928913634518.jpg",
+          "is_blueprint": false,
+          "is_front_cover": false,
+          "order": 3,
+          "original": "https://static.tokkobroker.com/original_pictures/14021261_604975766578272920787633815533116583739376975167984431776688828459289.jpg",
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/14021261_60497576657827292078763381553311658373937697516798443177668882845928913634518_og.jpg",
+          "thumb": "https://static.tokkobroker.com/thumbs/14021261_60497576657827292078763381553311658373937697516798443177668882845928913634518_th.jpg"
+        },
+        {
+          "description": null,
+          "image": "https://static.tokkobroker.com/pictures/14021261_93506819385954801590399959132404129792371601453833227270426560264587843459304.jpg",
+          "is_blueprint": false,
+          "is_front_cover": false,
+          "order": 4,
+          "original": "https://static.tokkobroker.com/original_pictures/14021261_935068193859548015903999591324041297923716014538332272704265602645878.jpg",
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/14021261_93506819385954801590399959132404129792371601453833227270426560264587843459304_og.jpg",
+          "thumb": "https://static.tokkobroker.com/thumbs/14021261_93506819385954801590399959132404129792371601453833227270426560264587843459304_th.jpg"
+        },
+        {
+          "description": null,
+          "image": "https://static.tokkobroker.com/pictures/14021261_41589055505268861599880927248610985821717061682239980743834631501543292564365.jpg",
+          "is_blueprint": false,
+          "is_front_cover": false,
+          "order": 6,
+          "original": "https://static.tokkobroker.com/original_pictures/14021261_415890555052688615998809272486109858217170616822399807438346315015432.jpg",
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/14021261_41589055505268861599880927248610985821717061682239980743834631501543292564365_og.jpg",
+          "thumb": "https://static.tokkobroker.com/thumbs/14021261_41589055505268861599880927248610985821717061682239980743834631501543292564365_th.jpg"
+        },
+        {
+          "description": null,
+          "image": "https://static.tokkobroker.com/pictures/14021261_61018175471744499818458247042349570811395788311104402392672890025211324771376.jpg",
+          "is_blueprint": false,
+          "is_front_cover": false,
+          "order": 7,
+          "original": "https://static.tokkobroker.com/original_pictures/14021261_610181754717444998184582470423495708113957883111044023926728900252113.jpg",
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/14021261_61018175471744499818458247042349570811395788311104402392672890025211324771376_og.jpg",
+          "thumb": "https://static.tokkobroker.com/thumbs/14021261_61018175471744499818458247042349570811395788311104402392672890025211324771376_th.jpg"
+        },
+        {
+          "description": null,
+          "image": "https://static.tokkobroker.com/pictures/14021261_87281923143707574415734612034842403751904137316518922974579578612959242059191.jpg",
+          "is_blueprint": false,
+          "is_front_cover": false,
+          "order": 8,
+          "original": "https://static.tokkobroker.com/original_pictures/14021261_872819231437075744157346120348424037519041373165189229745795786129592.jpg",
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/14021261_87281923143707574415734612034842403751904137316518922974579578612959242059191_og.jpg",
+          "thumb": "https://static.tokkobroker.com/thumbs/14021261_87281923143707574415734612034842403751904137316518922974579578612959242059191_th.jpg"
+        },
+        {
+          "description": null,
+          "image": "https://static.tokkobroker.com/pictures/14021261_108588514816770645807960448235857259910601698923858472204742282802914097888090.jpg",
+          "is_blueprint": false,
+          "is_front_cover": false,
+          "order": 9,
+          "original": "https://static.tokkobroker.com/original_pictures/14021261_108588514816770645807960448235857259910601698923858472204742282802914.jpg",
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/14021261_108588514816770645807960448235857259910601698923858472204742282802914097888090_og.jpg",
+          "thumb": "https://static.tokkobroker.com/thumbs/14021261_108588514816770645807960448235857259910601698923858472204742282802914097888090_t.jpg"
+        },
+        {
+          "description": null,
+          "image": "https://static.tokkobroker.com/pictures/14021261_84976203293865882904186005446738714297535301470568459628707065762978253029524.jpg",
+          "is_blueprint": false,
+          "is_front_cover": false,
+          "order": 10,
+          "original": "https://static.tokkobroker.com/original_pictures/14021261_849762032938658829041860054467387142975353014705684596287070657629782.jpg",
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/14021261_84976203293865882904186005446738714297535301470568459628707065762978253029524_og.jpg",
+          "thumb": "https://static.tokkobroker.com/thumbs/14021261_84976203293865882904186005446738714297535301470568459628707065762978253029524_th.jpg"
+        },
+        {
+          "description": null,
+          "image": "https://static.tokkobroker.com/pictures/14021261_87948682951393924516810615314404721147485196427321316976995251053954369901990.jpg",
+          "is_blueprint": false,
+          "is_front_cover": false,
+          "order": 11,
+          "original": "https://static.tokkobroker.com/original_pictures/14021261_879486829513939245168106153144047211474851964273213169769952510539543.jpg",
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/14021261_87948682951393924516810615314404721147485196427321316976995251053954369901990_og.jpg",
+          "thumb": "https://static.tokkobroker.com/thumbs/14021261_87948682951393924516810615314404721147485196427321316976995251053954369901990_th.jpg"
+        },
+        {
+          "description": null,
+          "image": "https://static.tokkobroker.com/pictures/14021261_51395546580280073501141328636274035496346006583307266969843166410009559853013.jpg",
+          "is_blueprint": false,
+          "is_front_cover": false,
+          "order": 12,
+          "original": "https://static.tokkobroker.com/original_pictures/14021261_513955465802800735011413286362740354963460065833072669698431664100095.jpg",
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/14021261_51395546580280073501141328636274035496346006583307266969843166410009559853013_og.jpg",
+          "thumb": "https://static.tokkobroker.com/thumbs/14021261_51395546580280073501141328636274035496346006583307266969843166410009559853013_th.jpg"
+        },
+        {
+          "description": null,
+          "image": "https://static.tokkobroker.com/pictures/14021261_78372238195934434220600112533765896104519271002818826992884624929345667809155.jpg",
+          "is_blueprint": false,
+          "is_front_cover": false,
+          "order": 13,
+          "original": "https://static.tokkobroker.com/original_pictures/14021261_783722381959344342206001125337658961045192710028188269928846249293456.jpg",
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/14021261_78372238195934434220600112533765896104519271002818826992884624929345667809155_og.jpg",
+          "thumb": "https://static.tokkobroker.com/thumbs/14021261_78372238195934434220600112533765896104519271002818826992884624929345667809155_th.jpg"
+        },
+        {
+          "description": null,
+          "image": "https://static.tokkobroker.com/pictures/14021261_105199683224188914329507397873970643508131971872016799669920024483299371437623.jpg",
+          "is_blueprint": false,
+          "is_front_cover": false,
+          "order": 14,
+          "original": "https://static.tokkobroker.com/original_pictures/14021261_105199683224188914329507397873970643508131971872016799669920024483299.jpg",
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/14021261_105199683224188914329507397873970643508131971872016799669920024483299371437623_og.jpg",
+          "thumb": "https://static.tokkobroker.com/thumbs/14021261_105199683224188914329507397873970643508131971872016799669920024483299371437623_t.jpg"
+        },
+        {
+          "description": null,
+          "image": "https://static.tokkobroker.com/pictures/14021261_45355316639743622956482847939087747360079424252157718318077076241769892602813.jpg",
+          "is_blueprint": false,
+          "is_front_cover": false,
+          "order": 15,
+          "original": "https://static.tokkobroker.com/original_pictures/14021261_453553166397436229564828479390877473600794242521577183180770762417698.jpg",
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/14021261_45355316639743622956482847939087747360079424252157718318077076241769892602813_og.jpg",
+          "thumb": "https://static.tokkobroker.com/thumbs/14021261_45355316639743622956482847939087747360079424252157718318077076241769892602813_th.jpg"
+        }
+      ],
+      "portal_footer": "",
+      "private_area": "0.00",
+      "producer": {
+        "cellphone": "4151457780",
+        "email": "d.allendebienesraices@gmail.com",
+        "id": 120672,
+        "name": "Laura Aguirre",
+        "phone": "",
+        "picture": "https://static.tokkobroker.com/userprofile/pictures/118295_68455601783879772659063633856394428373791916115826513584528837582221.jpg",
+        "position": ""
+      },
+      "property_condition": "---",
+      "public_url": "https://ficha.info/p/e6ZJxdFyuDkfGa",
+      "publication_title": "Departamento en Renta amueblado en Villa de los Frailes San Miguel de Allende",
+      "quality_level": null,
+      "real_address": "Relox",
+      "reference_code": "BAP14021261",
+      "rich_description": "                <span style=\"font-size: 18px;\"><span style=\"font-weight: bold; font-size: 18px;\">¡V</span><span style=\"font-weight: bold; font-size: 18px;\">ive c</span><span style=\"font-weight: bold; font-size: 18px;\">on comodidad y disfruta</span><span style=\"font-size: 18px;\"><span style=\"font-weight: bold;\"> de un estilo de vida tipo resort en un Residencial único en su tipo, con administración hotelera, uno de los desarrollos más gustados de San Miguel de Allende!</span></span></span><div style=\"line-height: 1.4;\"><br></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px;\">Este departamento se encuentra completamente amueblado y equipado, listo para habitar. </span></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px;\">Es ideal para quienes buscan tranquilidad, seguridad y excelentes amenidades en una ubicación privilegiada.</span></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px;\"><span style=\"font-weight: bold; font-size: 18px;\">Características</span><span style=\"font-size: 18px;\">:</span></span></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px;\">-&nbsp; 2 recámaras.</span></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px;\">-&nbsp; 2 baños completos.</span></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px;\">-&nbsp; Cocina integral equipada.</span></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px;\">-&nbsp; Sala y comedor.</span></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px;\">-&nbsp; Área de lavado.</span></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px;\">- 1 cajón de estacionamiento.</span></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px;\">- Totalmente amueblado.</span></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px;\">- Listo para habitar.</span></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px;\"><span style=\"font-weight: bold; font-size: 18px;\">Amenidades del Residencial</span><span style=\"font-size: 18px;\">:</span></span></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px;\">- Albercas climatizadas.</span></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px;\">- Casa Club.</span></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px;\">- Gimnasio.</span></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px;\">- Spa.</span></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px;\">- Canchas de tenis y pádel.</span></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px;\">- Áreas verdes.</span></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px;\">- Seguridad 24/7 con acceso controlado.</span></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px;\">- Estacionamiento para visitas y más.</span></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px;\"><br></span></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px;\">Ubicado a tan solo 8 minutos del Centro Histórico de San Miguel de Allende, con fácil acceso a la salida a Celaya, restaurantes, supermercados y servicios.</span></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px; font-weight: bold;\">Condiciones de arrendamiento:</span></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px; font-weight: bold;\">Renta mensual: $17,000 MXN</span></div><div style=\"line-height: 1.4;\"><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px;\">Contrato con póliza jurídica 50% Arrendador y 50% Arrendatario</span></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px;\">Mantenimiento incluido en la renta</span></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px;\">Se requiere 1 mes de deposito en garantía</span></div><div style=\"line-height: 1.4;\"><br></div></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px; font-weight: bold; font-style: italic;\">En BADI 108 Real Estate, te acompañamos durante todo el proceso para que encuentres la propiedad ideal.</span></div><div style=\"line-height: 1.4;\"><span style=\"font-weight: bold; font-style: italic;\"><br></span></div><div style=\"line-height: 1.4;\"><span style=\"font-size: 18px; font-weight: bold; font-style: italic;\">Agenda tu visita y conoce tu próximo hogar.</span></div><div style=\"line-height: 1.4;\"><br></div>                <br><br>            \r\n\r\n            ",
+      "roofed_surface": "0.00",
+      "room_amount": 6,
+      "semiroofed_surface": "18.00",
+      "seo_description": "",
+      "seo_keywords": "",
+      "situation": "---",
+      "status": 2,
+      "suite_amount": 2,
+      "suites_with_closets": 0,
+      "surface": "0.00",
+      "surface_measurement": "M2",
+      "tags": [
+        {
+          "id": 1,
+          "name": "Agua Corriente",
+          "type": 1
+        },
+        {
+          "id": 3,
+          "name": "Gas Natural",
+          "type": 1
+        },
+        {
+          "id": 4,
+          "name": "Internet",
+          "type": 1
+        },
+        {
+          "id": 5,
+          "name": "Electricidad",
+          "type": 1
+        },
+        {
+          "id": 25,
+          "name": "Terraza",
+          "type": 2
+        },
+        {
+          "id": 30,
+          "name": "Amoblado",
+          "type": 3
+        },
+        {
+          "id": 33,
+          "name": "Gimnasio",
+          "type": 3
+        },
+        {
+          "id": 35,
+          "name": "Parrilla",
+          "type": 3
+        },
+        {
+          "id": 38,
+          "name": "Sala de juegos",
+          "type": 3
+        },
+        {
+          "id": 41,
+          "name": "SUM",
+          "type": 3
+        },
+        {
+          "id": 46,
+          "name": "Apto mascotas",
+          "type": 3
+        },
+        {
+          "id": 946,
+          "name": "Ubicación tranquila",
+          "type": 3
+        },
+        {
+          "id": 1300,
+          "name": "Restaurante",
+          "type": 3
+        },
+        {
+          "id": 1443,
+          "name": "Agua Potable",
+          "type": 1
+        },
+        {
+          "id": 1524,
+          "name": "Seguridad 24hs",
+          "type": 3
+        },
+        {
+          "id": 1534,
+          "name": "Pileta climatizada",
+          "type": 3
+        },
+        {
+          "id": 1613,
+          "name": "Cancha de Tenis",
+          "type": 3
+        },
+        {
+          "id": 1635,
+          "name": "Recepción 24 Horas",
+          "type": 3
+        },
+        {
+          "id": 1677,
+          "name": "Cancha de Paddle",
+          "type": 3
+        },
+        {
+          "id": 1788,
+          "name": "Amenities",
+          "type": 3
+        }
+      ],
+      "toilet_amount": 0,
+      "total_area": "0.00",
+      "total_suites": 0,
+      "total_surface": "89.00",
+      "transaction_requirements": "Condiciones de arrendamiento:\nContrato de arrendamiento de 12 meses solo con póliza jurídica. (50% Arrendador y 50% Arrendatario)\nMantenimiento incluido en la renta\nSe requiere 1 mes de deposito en garantía (reembolsable cuando vence el contrato)",
       "tv_rooms": 0,
       "type": {
         "code": "AP",

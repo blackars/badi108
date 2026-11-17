@@ -1,7 +1,7 @@
 {
   "meta": {
     "count": 11,
-    "synced_at": "2026-11-17T10:11:24.424Z"
+    "synced_at": "2026-11-17T19:37:17.277Z"
   },
   "objects": [
     {
@@ -1437,7 +1437,7 @@
     {
       "address": "Relox 7",
       "address_complement": "",
-      "age": 3,
+      "age": 1,
       "apartment_door": "E",
       "appartments_per_floor": 2,
       "bathroom_amount": 2,
@@ -1477,7 +1477,7 @@
       "credit_eligible": "No especificado",
       "custom1": "0.00",
       "custom_tags": [],
-      "deleted_at": "2026-10-10T16:17:58",
+      "deleted_at": "2026-11-17T17:26:35",
       "depth_measure": "0.00",
       "description": "\nDepartamento completamente Amueblado con roof top privado\n\n\n La Serena Residencial – San Miguel de Allende\n\n\n\nVive la experiencia de un residencial con estilo resort, donde cada día se siente como vacaciones.\n\n\nEste hermoso departamento completamente amueblado ofrece:\n\n\nMantenimiento incluido \n\n\n• 162 m² total\n\n\n•79 m² Roof \n\n\n•83 m² interiores \n\n\n 2 recámaras:\n\n\n- 1 habitación con cama King Size\n\n\n- 1 habitación cuádruple\n\n\n2 baños completos (uno dentro de la recamara)\n\n  • 1 medio baño en el Roof Garden\n\n\n  • Sala y comedor con excelente iluminación\n\n\n  • Cocina totalmente equipada\n\n\n  • Cuarto de lavandería, ventilador de extracción\n\n\n  • Roof Garden privado, con asador ideal para disfrutar de reuniones, atardeceres y momentos de descanso\n\n\n  • Estacionamiento\n\n\nAdemás, disfrutarás de más de 20 amenidades exclusivas, entre ellas: albercas, jacuzzi, spa, gimnasio, restaurante, Sunset Bar, canchas de tenis y pádel, amplias áreas verdes, salón de eventos y seguridad 24/7.\n\n\n\n\nUbicado a unos minutos del Centro Histórico de San Miguel de Allende, en un entorno tranquilo, seguro y con una excelente calidad de vida.\n\n\n\n\nContáctanos para conocer disponibilidad y agenda tu visita.\n\n\n\n\nBADI108 Real Estate &amp; Property Management\n\n\n\n\n            \n",
       "development": null,
@@ -1576,13 +1576,7 @@
               "currency": "MXN",
               "is_promotional": false,
               "period": 0,
-              "price": 19000
-            },
-            {
-              "currency": "USD",
-              "is_promotional": false,
-              "period": 0,
-              "price": 1200
+              "price": 18000
             }
           ]
         }
@@ -1594,13 +1588,13 @@
       "photos": [
         {
           "description": null,
-          "image": "https://static.tokkobroker.com/pictures/8688398_60829370331967556670232429010998445963345666944680514928547239285169376893028.jpg",
+          "image": "https://static.tokkobroker.com/pictures/8688398_89114554160449268106183753571772741030389804767597310478181524990144528750018.jpg",
           "is_blueprint": false,
           "is_front_cover": true,
-          "order": 8,
-          "original": "https://static.tokkobroker.com/original_pictures/8688398_6082937033196755667023242901099844596334566694468051492854723928516937.jpg",
-          "social_media_url": "https://static.tokkobroker.com/sm_pics/8688398_60829370331967556670232429010998445963345666944680514928547239285169376893028_og.jpg",
-          "thumb": "https://static.tokkobroker.com/thumbs/8688398_60829370331967556670232429010998445963345666944680514928547239285169376893028_thu.jpg"
+          "order": 5,
+          "original": "https://static.tokkobroker.com/original_pictures/8688398_8911455416044926810618375357177274103038980476759731047818152499014452.jpg",
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/8688398_89114554160449268106183753571772741030389804767597310478181524990144528750018_og.jpg",
+          "thumb": "https://static.tokkobroker.com/thumbs/8688398_89114554160449268106183753571772741030389804767597310478181524990144528750018_thu.jpg"
         },
         {
           "description": null,
@@ -1654,16 +1648,6 @@
         },
         {
           "description": null,
-          "image": "https://static.tokkobroker.com/pictures/8688398_89114554160449268106183753571772741030389804767597310478181524990144528750018.jpg",
-          "is_blueprint": false,
-          "is_front_cover": false,
-          "order": 5,
-          "original": "https://static.tokkobroker.com/original_pictures/8688398_8911455416044926810618375357177274103038980476759731047818152499014452.jpg",
-          "social_media_url": "https://static.tokkobroker.com/sm_pics/8688398_89114554160449268106183753571772741030389804767597310478181524990144528750018_og.jpg",
-          "thumb": "https://static.tokkobroker.com/thumbs/8688398_89114554160449268106183753571772741030389804767597310478181524990144528750018_thu.jpg"
-        },
-        {
-          "description": null,
           "image": "https://static.tokkobroker.com/pictures/8688398_57019839657007004624665253633275457045058957528980963195671534325355991663047.jpg",
           "is_blueprint": false,
           "is_front_cover": false,
@@ -1681,6 +1665,16 @@
           "original": "https://static.tokkobroker.com/original_pictures/8688398_3152419079248846581239934794571867392477207068178466764502192787573308.jpg",
           "social_media_url": "https://static.tokkobroker.com/sm_pics/8688398_31524190792488465812399347945718673924772070681784667645021927875733082109939_og.jpg",
           "thumb": "https://static.tokkobroker.com/thumbs/8688398_31524190792488465812399347945718673924772070681784667645021927875733082109939_thu.jpg"
+        },
+        {
+          "description": null,
+          "image": "https://static.tokkobroker.com/pictures/8688398_60829370331967556670232429010998445963345666944680514928547239285169376893028.jpg",
+          "is_blueprint": false,
+          "is_front_cover": false,
+          "order": 8,
+          "original": "https://static.tokkobroker.com/original_pictures/8688398_6082937033196755667023242901099844596334566694468051492854723928516937.jpg",
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/8688398_60829370331967556670232429010998445963345666944680514928547239285169376893028_og.jpg",
+          "thumb": "https://static.tokkobroker.com/thumbs/8688398_60829370331967556670232429010998445963345666944680514928547239285169376893028_thu.jpg"
         },
         {
           "description": null,
@@ -2443,7 +2437,7 @@
       "zonification": "Residencial"
     },
     {
-      "address": "Renta | Departamento de 3 recámaras en planta baja, terraza y cerca de la alberca",
+      "address": "Renta Departamento de 3 recámaras en planta baja, terraza y cerca de la alberca",
       "address_complement": "",
       "age": 0,
       "apartment_door": "",
@@ -2485,9 +2479,9 @@
       "credit_eligible": "No especificado",
       "custom1": "0.00",
       "custom_tags": [],
-      "deleted_at": "2026-11-11T02:41:19",
+      "deleted_at": "2026-11-17T17:45:30",
       "depth_measure": "0.00",
-      "description": "                                DEPARTAMENTO SIN MUEBLES A PASOS DE ALBERCA CLIMATIZADA\nPRECIO POR MES $23,000.00, \nINCLUYE MANTENIMIENTO Y ACCESO A MAS DE 20 AMENIDADES ESTILO RESORT\nOcupación máxima 6 personas\nLa Serena Residencial – San Miguel de Allende\nVive la experiencia de un residencial con estilo resort, donde cada día se siente como vacaciones.\nEste hermoso departamento completamente amueblado ofrece:\n\n• 124 m² de construcción total\n3 recámaras\n  • 2 baños completos\n  • Sala y comedor con excelente iluminación\n  • Cocina equipada con estufa, doble barra de granito desayunador.\n  • Terraza con vista a hermosos atardeceres.\n  • Cuarto de lavado.\n• Terraza privada, con acceso directo a              jardines centrales.\n  • 2 Estacionamientos\n\nRecuerda que disfrutarás de más de +20 amenidades exclusivas, entre ellas: albercas, jacuzzi, spa, gimnasio, restaurante, Sunset Bar, canchas de tenis y pádel, amplias áreas verdes, salón de eventos y seguridad 24/7 y más.\n\nUbicado a solo unos minutos del Centro Histórico de San Miguel de Allende, en un entorno tranquilo, seguro y con una excelente calidad de vida.\nContáctanos para conocer disponibilidad y agenda tu visita.\nBADI 108 Real Estate &amp; Property Management\n\n\n            \r\n\r\n            ",
+      "description": "                                                DEPARTAMENTO SIN MUEBLES A PASOS DE ALBERCA CLIMATIZADA\nPRECIO POR MES $22,000.00, \nINCLUYE MANTENIMIENTO Y ACCESO A MAS DE 20 AMENIDADES ESTILO RESORT\nOcupación máxima 6 personas\nLa Serena Residencial – San Miguel de Allende\nVive la experiencia de un residencial con estilo resort, donde cada día se siente como vacaciones.\nEste hermoso departamento SIN MUEBLES ofrece:\n\n• 124 m² de construcción total\n3 recámaras\n  • 2 baños completos\n  • Sala y comedor con excelente iluminación\n  • Cocina equipada con estufa, doble barra de granito desayunador.\n  • Terraza con vista a hermosos atardeceres.\n  • Cuarto de lavado.\n• Terraza privada, con acceso directo a              jardines centrales.\n  • 2 Estacionamientos\n\nRecuerda que disfrutarás de más de 20 amenidades exclusivas, entre ellas: albercas, jacuzzi, spa, gimnasio, restaurante, Sunset Bar, canchas de tenis y pádel, amplias áreas verdes, salón de eventos y seguridad 24/7 y más.\n\nUbicado a solo unos minutos del Centro Histórico de San Miguel de Allende, en un entorno tranquilo, seguro y con una excelente calidad de vida.\nContáctanos para conocer disponibilidad y agenda tu visita.\nBADI 108 Real Estate &amp; Property Management\n\n\n            \n\n            \r\n\r\n            ",
       "development": null,
       "development_excel_extra_data": "[]",
       "dining_room": 0,
@@ -2495,7 +2489,7 @@
       "down_payment": "0.00",
       "expenses": 0,
       "extra_attributes": [],
-      "fake_address": "Renta | Departamento de 3 recámaras en planta baja, terraza y cerca de la alberca",
+      "fake_address": "Renta Departamento de 3 recámaras en planta baja, terraza y cerca de la alberca",
       "files": [],
       "fire_insurance_cost": "0.00",
       "floor": "",
@@ -2533,7 +2527,7 @@
             "work_email": ""
           }
         ],
-        "transaction_requirements": "Con opción a mejorar la tarifa a $21,000 adelantando 6 mensualidades.\nContrato de arrendamiento por 12 meses.\nRenta mensual: $23,000 MXN, con mantenimiento incluido.\nServicios se pagan a parte.\nSe requiere póliza jurídica, (se cubre 50% por el propietario y 50% por el inquilino.)\nSe solicita un mes de depósito en garantía."
+        "transaction_requirements": "\nContrato de arrendamiento por 12 meses.\nRenta mensual: $22,000 MXN, con mantenimiento incluido.\nServicios se pagan a parte.\nSe requiere póliza jurídica, (se cubre 50% por el propietario y 50% por el inquilino.)\nSe solicita un mes de depósito en garantía."
       },
       "iptu": 0,
       "iptu_type": "No informado",
@@ -2577,7 +2571,7 @@
               "currency": "MXN",
               "is_promotional": false,
               "period": 0,
-              "price": 23000
+              "price": 22000
             }
           ]
         }
@@ -2589,19 +2583,9 @@
       "photos": [
         {
           "description": null,
-          "image": "https://static.tokkobroker.com/pictures/9487055_32995334782228953563106628349276899027171975947753329097364410759963185724299.jpg",
-          "is_blueprint": false,
-          "is_front_cover": true,
-          "order": 18,
-          "original": "https://static.tokkobroker.com/original_pictures/9487055_3299533478222895356310662834927689902717197594775332909736441075996318.jpg",
-          "social_media_url": "https://static.tokkobroker.com/sm_pics/9487055_32995334782228953563106628349276899027171975947753329097364410759963185724299_og.jpg",
-          "thumb": "https://static.tokkobroker.com/thumbs/9487055_32995334782228953563106628349276899027171975947753329097364410759963185724299_thu.jpg"
-        },
-        {
-          "description": null,
           "image": "https://static.tokkobroker.com/pictures/9487055_55990891033183562104370272681731895761742878112616914581840656637032629143245.jpg",
           "is_blueprint": false,
-          "is_front_cover": false,
+          "is_front_cover": true,
           "order": 0,
           "original": "https://static.tokkobroker.com/original_pictures/9487055_5599089103318356210437027268173189576174287811261691458184065663703262.jpg",
           "social_media_url": "https://static.tokkobroker.com/sm_pics/9487055_55990891033183562104370272681731895761742878112616914581840656637032629143245_og.jpg",
@@ -2779,6 +2763,16 @@
         },
         {
           "description": null,
+          "image": "https://static.tokkobroker.com/pictures/9487055_32995334782228953563106628349276899027171975947753329097364410759963185724299.jpg",
+          "is_blueprint": false,
+          "is_front_cover": false,
+          "order": 18,
+          "original": "https://static.tokkobroker.com/original_pictures/9487055_3299533478222895356310662834927689902717197594775332909736441075996318.jpg",
+          "social_media_url": "https://static.tokkobroker.com/sm_pics/9487055_32995334782228953563106628349276899027171975947753329097364410759963185724299_og.jpg",
+          "thumb": "https://static.tokkobroker.com/thumbs/9487055_32995334782228953563106628349276899027171975947753329097364410759963185724299_thu.jpg"
+        },
+        {
+          "description": null,
           "image": "https://static.tokkobroker.com/pictures/9487055_98566069051224113896864578230195584877811818673756053184827482137441998287379.jpg",
           "is_blueprint": false,
           "is_front_cover": false,
@@ -2813,9 +2807,9 @@
       "public_url": "https://ficha.info/p/eNYbbdFyutOtva",
       "publication_title": "Renta departamento de 3 recámaras en planta baja, terraza con vista a jardín y cerca de la alberca.",
       "quality_level": null,
-      "real_address": "Renta | Departamento de 3 recámaras en planta baja, terraza y cerca de la alberca",
+      "real_address": "Renta Departamento de 3 recámaras en planta baja, terraza y cerca de la alberca",
       "reference_code": "BAP9487055",
-      "rich_description": "                                <p>DEPARTAMENTO SIN MUEBLES A PASOS DE ALBERCA CLIMATIZADA</p><p>PRECIO POR MES&nbsp;<span style=\"font-size: 14px;\">$23,000.00, </span></p><p><span style=\"font-size: 14px;\">INCLUYE MANTENIMIENTO Y ACCESO A MAS DE 20 AMENIDADES ESTILO RESORT</span></p><p>Ocupación máxima 6 personas</p><p><span style=\"font-size: 14px;\">La Serena Residencial – San Miguel de Allende</span></p><p>Vive la experiencia de un residencial con estilo resort, donde cada día se siente como vacaciones.</p><p>Este hermoso departamento completamente amueblado ofrece:</p><br><p>• 124 m² de construcción total</p><p>3 recámaras</p><p>  • 2 baños completos</p><p>  • Sala y comedor con excelente iluminación</p><p>  • Cocina equipada con estufa, doble barra de granito desayunador.</p><p>  • Terraza con vista a hermosos atardeceres.</p><p>  • Cuarto de lavado.</p><p>• Terraza privada, con acceso directo a              jardines centrales.</p><p>  • 2 Estacionamientos</p><br><p>Recuerda que disfrutarás de más de +20 amenidades exclusivas, entre ellas: albercas, jacuzzi, spa, gimnasio, restaurante, Sunset Bar, canchas de tenis y pádel, amplias áreas verdes, salón de eventos y seguridad 24/7 y más.</p><br><p>Ubicado a solo unos minutos del Centro Histórico de San Miguel de Allende, en un entorno tranquilo, seguro y con una excelente calidad de vida.</p><p>Contáctanos para conocer disponibilidad y agenda tu visita.</p><p>BADI 108 Real Estate &amp; Property Management</p><br><br>            \r\n\r\n            ",
+      "rich_description": "                                                <p>DEPARTAMENTO SIN MUEBLES A PASOS DE ALBERCA CLIMATIZADA</p><p>PRECIO POR MES&nbsp;<span style=\"font-size: 14px;\">$22,000.00, </span></p><p><span style=\"font-size: 14px;\">INCLUYE MANTENIMIENTO Y ACCESO A MAS DE 20 AMENIDADES ESTILO RESORT</span></p><p>Ocupación máxima 6 personas</p><p><span style=\"font-size: 14px;\">La Serena Residencial – San Miguel de Allende</span></p><p>Vive la experiencia de un residencial con estilo resort, donde cada día se siente como vacaciones.</p><p>Este hermoso departamento SIN MUEBLES ofrece:</p><br><p>• 124 m² de construcción total</p><p>3 recámaras</p><p>  • 2 baños completos</p><p>  • Sala y comedor con excelente iluminación</p><p>  • Cocina equipada con estufa, doble barra de granito desayunador.</p><p>  • Terraza con vista a hermosos atardeceres.</p><p>  • Cuarto de lavado.</p><p>• Terraza privada, con acceso directo a              jardines centrales.</p><p>  • 2 Estacionamientos</p><br><p>Recuerda que disfrutarás de más de 20 amenidades exclusivas, entre ellas: albercas, jacuzzi, spa, gimnasio, restaurante, Sunset Bar, canchas de tenis y pádel, amplias áreas verdes, salón de eventos y seguridad 24/7 y más.</p><br><p>Ubicado a solo unos minutos del Centro Histórico de San Miguel de Allende, en un entorno tranquilo, seguro y con una excelente calidad de vida.</p><p>Contáctanos para conocer disponibilidad y agenda tu visita.</p><p>BADI 108 Real Estate &amp; Property Management</p><br><br>            <br><br>            \r\n\r\n            ",
       "roofed_surface": "0.00",
       "room_amount": 6,
       "semiroofed_surface": "0.00",
@@ -2923,7 +2917,7 @@
       "total_area": "0.00",
       "total_suites": 0,
       "total_surface": "124.00",
-      "transaction_requirements": "Con opción a mejorar la tarifa a $21,000 adelantando 6 mensualidades.\nContrato de arrendamiento por 12 meses.\nRenta mensual: $23,000 MXN, con mantenimiento incluido.\nServicios se pagan a parte.\nSe requiere póliza jurídica, (se cubre 50% por el propietario y 50% por el inquilino.)\nSe solicita un mes de depósito en garantía.",
+      "transaction_requirements": "\nContrato de arrendamiento por 12 meses.\nRenta mensual: $22,000 MXN, con mantenimiento incluido.\nServicios se pagan a parte.\nSe requiere póliza jurídica, (se cubre 50% por el propietario y 50% por el inquilino.)\nSe solicita un mes de depósito en garantía.",
       "tv_rooms": 1,
       "type": {
         "code": "AP",

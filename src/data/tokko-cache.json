@@ -1,7 +1,7 @@
 {
   "meta": {
     "total_count": 18,
-    "synced_at": "2026-11-27T22:28:47.662Z",
+    "synced_at": "2026-11-28T04:29:44.654Z",
     "lang": "es_ar"
   },
   "objects": [
@@ -5615,7 +5615,14 @@
       "disposition": "Lateral",
       "down_payment": "0.00",
       "expenses": 0,
-      "extra_attributes": [],
+      "extra_attributes": [
+        {
+          "is_expenditure": false,
+          "is_measure": false,
+          "name": "",
+          "value": ""
+        }
+      ],
       "fake_address": "Renta Departamento de 3 recámaras en planta baja, terraza y cerca de la alberca",
       "files": [],
       "fire_insurance_cost": "0.00",
